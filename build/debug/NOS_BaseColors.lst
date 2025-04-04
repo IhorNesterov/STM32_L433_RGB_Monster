@@ -1,0 +1,405 @@
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc7GlOcC.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"NOS_BaseColors.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.file 1 "Core/Src/NOS_BaseColors.c"
+  20              		.section	.text.NOS_PixelColor_SetColor,"ax",%progbits
+  21              		.align	1
+  22              		.global	NOS_PixelColor_SetColor
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	NOS_PixelColor_SetColor:
+  28              	.LVL0:
+  29              	.LFB132:
+   1:Core/Src/NOS_BaseColors.c **** #include "NOS_BaseColors.h"
+   2:Core/Src/NOS_BaseColors.c **** 
+   3:Core/Src/NOS_BaseColors.c **** void NOS_PixelColor_SetColor(PixelColor* color,uint8_t R,uint8_t G,uint8_t B)
+   4:Core/Src/NOS_BaseColors.c **** {
+  30              		.loc 1 4 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		@ link register save eliminated.
+   5:Core/Src/NOS_BaseColors.c ****     color->R = R;
+  35              		.loc 1 5 5 view .LVU1
+  36              		.loc 1 5 14 is_stmt 0 view .LVU2
+  37 0000 0170     		strb	r1, [r0]
+   6:Core/Src/NOS_BaseColors.c ****     color->G = G;
+  38              		.loc 1 6 5 is_stmt 1 view .LVU3
+  39              		.loc 1 6 14 is_stmt 0 view .LVU4
+  40 0002 4270     		strb	r2, [r0, #1]
+   7:Core/Src/NOS_BaseColors.c ****     color->B = B;
+  41              		.loc 1 7 5 is_stmt 1 view .LVU5
+  42              		.loc 1 7 14 is_stmt 0 view .LVU6
+  43 0004 8370     		strb	r3, [r0, #2]
+   8:Core/Src/NOS_BaseColors.c **** }
+  44              		.loc 1 8 1 view .LVU7
+  45 0006 7047     		bx	lr
+  46              		.cfi_endproc
+  47              	.LFE132:
+  49              		.section	.text.NOS_GetBaseColor,"ax",%progbits
+  50              		.align	1
+  51              		.global	NOS_GetBaseColor
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc7GlOcC.s 			page 2
+
+
+  52              		.syntax unified
+  53              		.thumb
+  54              		.thumb_func
+  56              	NOS_GetBaseColor:
+  57              	.LVL1:
+  58              	.LFB133:
+   9:Core/Src/NOS_BaseColors.c **** 
+  10:Core/Src/NOS_BaseColors.c **** PixelColor NOS_GetBaseColor(NOS_BaseColors color)
+  11:Core/Src/NOS_BaseColors.c **** {
+  59              		.loc 1 11 1 is_stmt 1 view -0
+  60              		.cfi_startproc
+  61              		@ args = 0, pretend = 0, frame = 8
+  62              		@ frame_needed = 0, uses_anonymous_args = 0
+  63              		.loc 1 11 1 is_stmt 0 view .LVU9
+  64 0000 00B5     		push	{lr}
+  65              		.cfi_def_cfa_offset 4
+  66              		.cfi_offset 14, -4
+  67 0002 83B0     		sub	sp, sp, #12
+  68              		.cfi_def_cfa_offset 16
+  12:Core/Src/NOS_BaseColors.c ****     PixelColor result = {0,0,0};
+  69              		.loc 1 12 5 is_stmt 1 view .LVU10
+  70              		.loc 1 12 16 is_stmt 0 view .LVU11
+  71 0004 0023     		movs	r3, #0
+  72 0006 8DF80030 		strb	r3, [sp]
+  73 000a 8DF80130 		strb	r3, [sp, #1]
+  74 000e 8DF80230 		strb	r3, [sp, #2]
+  13:Core/Src/NOS_BaseColors.c ****     
+  14:Core/Src/NOS_BaseColors.c ****     switch(color)
+  75              		.loc 1 14 5 is_stmt 1 view .LVU12
+  76 0012 0B28     		cmp	r0, #11
+  77 0014 0DD8     		bhi	.L3
+  78 0016 DFE800F0 		tbb	[pc, r0]
+  79              	.L5:
+  80 001a 06       		.byte	(.L16-.L5)/2
+  81 001b 22       		.byte	(.L15-.L5)/2
+  82 001c 29       		.byte	(.L14-.L5)/2
+  83 001d 30       		.byte	(.L13-.L5)/2
+  84 001e 37       		.byte	(.L12-.L5)/2
+  85 001f 3E       		.byte	(.L11-.L5)/2
+  86 0020 45       		.byte	(.L10-.L5)/2
+  87 0021 4C       		.byte	(.L9-.L5)/2
+  88 0022 53       		.byte	(.L8-.L5)/2
+  89 0023 5A       		.byte	(.L7-.L5)/2
+  90 0024 61       		.byte	(.L6-.L5)/2
+  91 0025 68       		.byte	(.L4-.L5)/2
+  92              		.p2align 1
+  93              	.L16:
+  15:Core/Src/NOS_BaseColors.c ****     {
+  16:Core/Src/NOS_BaseColors.c ****         case BLUE:
+  17:Core/Src/NOS_BaseColors.c ****             NOS_PixelColor_SetColor(&result,0x00,0x00,0xFF);
+  94              		.loc 1 17 13 view .LVU13
+  95 0026 FF23     		movs	r3, #255
+  96 0028 0022     		movs	r2, #0
+  97 002a 1146     		mov	r1, r2
+  98 002c 6846     		mov	r0, sp
+  99              	.LVL2:
+ 100              		.loc 1 17 13 is_stmt 0 view .LVU14
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc7GlOcC.s 			page 3
+
+
+ 101 002e FFF7FEFF 		bl	NOS_PixelColor_SetColor
+ 102              	.LVL3:
+  18:Core/Src/NOS_BaseColors.c ****         break;
+ 103              		.loc 1 18 9 is_stmt 1 view .LVU15
+ 104              	.L3:
+  19:Core/Src/NOS_BaseColors.c **** 
+  20:Core/Src/NOS_BaseColors.c ****         case OCEAN:
+  21:Core/Src/NOS_BaseColors.c ****             NOS_PixelColor_SetColor(&result,0x00,0x7F,0xFF);
+  22:Core/Src/NOS_BaseColors.c ****         break;
+  23:Core/Src/NOS_BaseColors.c **** 
+  24:Core/Src/NOS_BaseColors.c ****         case CYAN:
+  25:Core/Src/NOS_BaseColors.c ****             NOS_PixelColor_SetColor(&result,0x00,0xFF,0xFF);
+  26:Core/Src/NOS_BaseColors.c ****         break;
+  27:Core/Src/NOS_BaseColors.c **** 
+  28:Core/Src/NOS_BaseColors.c ****         case TURQUOISE:
+  29:Core/Src/NOS_BaseColors.c ****             NOS_PixelColor_SetColor(&result,0x00,0xFF,0x7F);
+  30:Core/Src/NOS_BaseColors.c ****         break;
+  31:Core/Src/NOS_BaseColors.c **** 
+  32:Core/Src/NOS_BaseColors.c ****         case GREEN:
+  33:Core/Src/NOS_BaseColors.c ****             NOS_PixelColor_SetColor(&result,0x00,0xFF,0x00);
+  34:Core/Src/NOS_BaseColors.c ****         break;
+  35:Core/Src/NOS_BaseColors.c **** 
+  36:Core/Src/NOS_BaseColors.c ****         case SGREEN:
+  37:Core/Src/NOS_BaseColors.c ****             NOS_PixelColor_SetColor(&result,0x7F,0xFF,0x00);
+  38:Core/Src/NOS_BaseColors.c ****         break;
+  39:Core/Src/NOS_BaseColors.c **** 
+  40:Core/Src/NOS_BaseColors.c ****         case YELLOW:
+  41:Core/Src/NOS_BaseColors.c ****             NOS_PixelColor_SetColor(&result,0xFF,0xFF,0x00);
+  42:Core/Src/NOS_BaseColors.c ****         break;
+  43:Core/Src/NOS_BaseColors.c **** 
+  44:Core/Src/NOS_BaseColors.c ****         case ORANGE:
+  45:Core/Src/NOS_BaseColors.c ****             NOS_PixelColor_SetColor(&result,0xFF,0x7F,0x00);
+  46:Core/Src/NOS_BaseColors.c ****         break;
+  47:Core/Src/NOS_BaseColors.c **** 
+  48:Core/Src/NOS_BaseColors.c ****         case RED:
+  49:Core/Src/NOS_BaseColors.c ****             NOS_PixelColor_SetColor(&result,0xFF,0x00,0x00);
+  50:Core/Src/NOS_BaseColors.c ****         break;
+  51:Core/Src/NOS_BaseColors.c **** 
+  52:Core/Src/NOS_BaseColors.c ****         case RASPBERRY:
+  53:Core/Src/NOS_BaseColors.c ****             NOS_PixelColor_SetColor(&result,0xFF,0x00,0x7F);
+  54:Core/Src/NOS_BaseColors.c ****         break;
+  55:Core/Src/NOS_BaseColors.c **** 
+  56:Core/Src/NOS_BaseColors.c ****         case MAGENTA:
+  57:Core/Src/NOS_BaseColors.c ****             NOS_PixelColor_SetColor(&result,0xFF,0x00,0xFF);
+  58:Core/Src/NOS_BaseColors.c ****         break;
+  59:Core/Src/NOS_BaseColors.c **** 
+  60:Core/Src/NOS_BaseColors.c ****         case VIOLET:
+  61:Core/Src/NOS_BaseColors.c ****             NOS_PixelColor_SetColor(&result,0x7F,0x00,0xFF);
+  62:Core/Src/NOS_BaseColors.c ****         break;
+  63:Core/Src/NOS_BaseColors.c ****         
+  64:Core/Src/NOS_BaseColors.c ****     }
+  65:Core/Src/NOS_BaseColors.c ****     return result;
+ 105              		.loc 1 65 5 view .LVU16
+ 106              		.loc 1 65 12 is_stmt 0 view .LVU17
+ 107 0032 009B     		ldr	r3, [sp]
+ 108 0034 ADF80430 		strh	r3, [sp, #4]	@ movhi
+ 109 0038 1B0C     		lsrs	r3, r3, #16
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc7GlOcC.s 			page 4
+
+
+ 110 003a 8DF80630 		strb	r3, [sp, #6]
+ 111 003e 0020     		movs	r0, #0
+ 112 0040 9DF80430 		ldrb	r3, [sp, #4]	@ zero_extendqisi2
+ 113 0044 63F30700 		bfi	r0, r3, #0, #8
+ 114 0048 9DF80530 		ldrb	r3, [sp, #5]	@ zero_extendqisi2
+ 115 004c 63F30F20 		bfi	r0, r3, #8, #8
+ 116 0050 9DF80630 		ldrb	r3, [sp, #6]	@ zero_extendqisi2
+ 117 0054 63F31740 		bfi	r0, r3, #16, #8
+  66:Core/Src/NOS_BaseColors.c **** }...
+ 118              		.loc 1 66 1 view .LVU18
+ 119 0058 03B0     		add	sp, sp, #12
+ 120              		.cfi_remember_state
+ 121              		.cfi_def_cfa_offset 4
+ 122              		@ sp needed
+ 123 005a 5DF804FB 		ldr	pc, [sp], #4
+ 124              	.LVL4:
+ 125              	.L15:
+ 126              		.cfi_restore_state
+  21:Core/Src/NOS_BaseColors.c ****             NOS_PixelColor_SetColor(&result,0x00,0x7F,0xFF);
+ 127              		.loc 1 21 13 is_stmt 1 view .LVU19
+ 128 005e FF23     		movs	r3, #255
+ 129 0060 7F22     		movs	r2, #127
+ 130 0062 0021     		movs	r1, #0
+ 131 0064 6846     		mov	r0, sp
+ 132              	.LVL5:
+  21:Core/Src/NOS_BaseColors.c ****             NOS_PixelColor_SetColor(&result,0x00,0x7F,0xFF);
+ 133              		.loc 1 21 13 is_stmt 0 view .LVU20
+ 134 0066 FFF7FEFF 		bl	NOS_PixelColor_SetColor
+ 135              	.LVL6:
+  22:Core/Src/NOS_BaseColors.c ****         break;
+ 136              		.loc 1 22 9 is_stmt 1 view .LVU21
+ 137 006a E2E7     		b	.L3
+ 138              	.LVL7:
+ 139              	.L14:
+  25:Core/Src/NOS_BaseColors.c ****             NOS_PixelColor_SetColor(&result,0x00,0xFF,0xFF);
+ 140              		.loc 1 25 13 view .LVU22
+ 141 006c FF23     		movs	r3, #255
+ 142 006e 1A46     		mov	r2, r3
+ 143 0070 0021     		movs	r1, #0
+ 144 0072 6846     		mov	r0, sp
+ 145              	.LVL8:
+  25:Core/Src/NOS_BaseColors.c ****             NOS_PixelColor_SetColor(&result,0x00,0xFF,0xFF);
+ 146              		.loc 1 25 13 is_stmt 0 view .LVU23
+ 147 0074 FFF7FEFF 		bl	NOS_PixelColor_SetColor
+ 148              	.LVL9:
+  26:Core/Src/NOS_BaseColors.c ****         break;
+ 149              		.loc 1 26 9 is_stmt 1 view .LVU24
+ 150 0078 DBE7     		b	.L3
+ 151              	.LVL10:
+ 152              	.L13:
+  29:Core/Src/NOS_BaseColors.c ****             NOS_PixelColor_SetColor(&result,0x00,0xFF,0x7F);
+ 153              		.loc 1 29 13 view .LVU25
+ 154 007a 7F23     		movs	r3, #127
+ 155 007c FF22     		movs	r2, #255
+ 156 007e 0021     		movs	r1, #0
+ 157 0080 6846     		mov	r0, sp
+ 158              	.LVL11:
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc7GlOcC.s 			page 5
+
+
+  29:Core/Src/NOS_BaseColors.c ****             NOS_PixelColor_SetColor(&result,0x00,0xFF,0x7F);
+ 159              		.loc 1 29 13 is_stmt 0 view .LVU26
+ 160 0082 FFF7FEFF 		bl	NOS_PixelColor_SetColor
+ 161              	.LVL12:
+  30:Core/Src/NOS_BaseColors.c ****         break;
+ 162              		.loc 1 30 9 is_stmt 1 view .LVU27
+ 163 0086 D4E7     		b	.L3
+ 164              	.LVL13:
+ 165              	.L12:
+  33:Core/Src/NOS_BaseColors.c ****             NOS_PixelColor_SetColor(&result,0x00,0xFF,0x00);
+ 166              		.loc 1 33 13 view .LVU28
+ 167 0088 0023     		movs	r3, #0
+ 168 008a FF22     		movs	r2, #255
+ 169 008c 1946     		mov	r1, r3
+ 170 008e 6846     		mov	r0, sp
+ 171              	.LVL14:
+  33:Core/Src/NOS_BaseColors.c ****             NOS_PixelColor_SetColor(&result,0x00,0xFF,0x00);
+ 172              		.loc 1 33 13 is_stmt 0 view .LVU29
+ 173 0090 FFF7FEFF 		bl	NOS_PixelColor_SetColor
+ 174              	.LVL15:
+  34:Core/Src/NOS_BaseColors.c ****         break;
+ 175              		.loc 1 34 9 is_stmt 1 view .LVU30
+ 176 0094 CDE7     		b	.L3
+ 177              	.LVL16:
+ 178              	.L11:
+  37:Core/Src/NOS_BaseColors.c ****             NOS_PixelColor_SetColor(&result,0x7F,0xFF,0x00);
+ 179              		.loc 1 37 13 view .LVU31
+ 180 0096 0023     		movs	r3, #0
+ 181 0098 FF22     		movs	r2, #255
+ 182 009a 7F21     		movs	r1, #127
+ 183 009c 6846     		mov	r0, sp
+ 184              	.LVL17:
+  37:Core/Src/NOS_BaseColors.c ****             NOS_PixelColor_SetColor(&result,0x7F,0xFF,0x00);
+ 185              		.loc 1 37 13 is_stmt 0 view .LVU32
+ 186 009e FFF7FEFF 		bl	NOS_PixelColor_SetColor
+ 187              	.LVL18:
+  38:Core/Src/NOS_BaseColors.c ****         break;
+ 188              		.loc 1 38 9 is_stmt 1 view .LVU33
+ 189 00a2 C6E7     		b	.L3
+ 190              	.LVL19:
+ 191              	.L10:
+  41:Core/Src/NOS_BaseColors.c ****             NOS_PixelColor_SetColor(&result,0xFF,0xFF,0x00);
+ 192              		.loc 1 41 13 view .LVU34
+ 193 00a4 0023     		movs	r3, #0
+ 194 00a6 FF22     		movs	r2, #255
+ 195 00a8 1146     		mov	r1, r2
+ 196 00aa 6846     		mov	r0, sp
+ 197              	.LVL20:
+  41:Core/Src/NOS_BaseColors.c ****             NOS_PixelColor_SetColor(&result,0xFF,0xFF,0x00);
+ 198              		.loc 1 41 13 is_stmt 0 view .LVU35
+ 199 00ac FFF7FEFF 		bl	NOS_PixelColor_SetColor
+ 200              	.LVL21:
+  42:Core/Src/NOS_BaseColors.c ****         break;
+ 201              		.loc 1 42 9 is_stmt 1 view .LVU36
+ 202 00b0 BFE7     		b	.L3
+ 203              	.LVL22:
+ 204              	.L9:
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc7GlOcC.s 			page 6
+
+
+  45:Core/Src/NOS_BaseColors.c ****             NOS_PixelColor_SetColor(&result,0xFF,0x7F,0x00);
+ 205              		.loc 1 45 13 view .LVU37
+ 206 00b2 0023     		movs	r3, #0
+ 207 00b4 7F22     		movs	r2, #127
+ 208 00b6 FF21     		movs	r1, #255
+ 209 00b8 6846     		mov	r0, sp
+ 210              	.LVL23:
+  45:Core/Src/NOS_BaseColors.c ****             NOS_PixelColor_SetColor(&result,0xFF,0x7F,0x00);
+ 211              		.loc 1 45 13 is_stmt 0 view .LVU38
+ 212 00ba FFF7FEFF 		bl	NOS_PixelColor_SetColor
+ 213              	.LVL24:
+  46:Core/Src/NOS_BaseColors.c ****         break;
+ 214              		.loc 1 46 9 is_stmt 1 view .LVU39
+ 215 00be B8E7     		b	.L3
+ 216              	.LVL25:
+ 217              	.L8:
+  49:Core/Src/NOS_BaseColors.c ****             NOS_PixelColor_SetColor(&result,0xFF,0x00,0x00);
+ 218              		.loc 1 49 13 view .LVU40
+ 219 00c0 0023     		movs	r3, #0
+ 220 00c2 1A46     		mov	r2, r3
+ 221 00c4 FF21     		movs	r1, #255
+ 222 00c6 6846     		mov	r0, sp
+ 223              	.LVL26:
+  49:Core/Src/NOS_BaseColors.c ****             NOS_PixelColor_SetColor(&result,0xFF,0x00,0x00);
+ 224              		.loc 1 49 13 is_stmt 0 view .LVU41
+ 225 00c8 FFF7FEFF 		bl	NOS_PixelColor_SetColor
+ 226              	.LVL27:
+  50:Core/Src/NOS_BaseColors.c ****         break;
+ 227              		.loc 1 50 9 is_stmt 1 view .LVU42
+ 228 00cc B1E7     		b	.L3
+ 229              	.LVL28:
+ 230              	.L7:
+  53:Core/Src/NOS_BaseColors.c ****             NOS_PixelColor_SetColor(&result,0xFF,0x00,0x7F);
+ 231              		.loc 1 53 13 view .LVU43
+ 232 00ce 7F23     		movs	r3, #127
+ 233 00d0 0022     		movs	r2, #0
+ 234 00d2 FF21     		movs	r1, #255
+ 235 00d4 6846     		mov	r0, sp
+ 236              	.LVL29:
+  53:Core/Src/NOS_BaseColors.c ****             NOS_PixelColor_SetColor(&result,0xFF,0x00,0x7F);
+ 237              		.loc 1 53 13 is_stmt 0 view .LVU44
+ 238 00d6 FFF7FEFF 		bl	NOS_PixelColor_SetColor
+ 239              	.LVL30:
+  54:Core/Src/NOS_BaseColors.c ****         break;
+ 240              		.loc 1 54 9 is_stmt 1 view .LVU45
+ 241 00da AAE7     		b	.L3
+ 242              	.LVL31:
+ 243              	.L6:
+  57:Core/Src/NOS_BaseColors.c ****             NOS_PixelColor_SetColor(&result,0xFF,0x00,0xFF);
+ 244              		.loc 1 57 13 view .LVU46
+ 245 00dc FF23     		movs	r3, #255
+ 246 00de 0022     		movs	r2, #0
+ 247 00e0 1946     		mov	r1, r3
+ 248 00e2 6846     		mov	r0, sp
+ 249              	.LVL32:
+  57:Core/Src/NOS_BaseColors.c ****             NOS_PixelColor_SetColor(&result,0xFF,0x00,0xFF);
+ 250              		.loc 1 57 13 is_stmt 0 view .LVU47
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc7GlOcC.s 			page 7
+
+
+ 251 00e4 FFF7FEFF 		bl	NOS_PixelColor_SetColor
+ 252              	.LVL33:
+  58:Core/Src/NOS_BaseColors.c ****         break;
+ 253              		.loc 1 58 9 is_stmt 1 view .LVU48
+ 254 00e8 A3E7     		b	.L3
+ 255              	.LVL34:
+ 256              	.L4:
+  61:Core/Src/NOS_BaseColors.c ****             NOS_PixelColor_SetColor(&result,0x7F,0x00,0xFF);
+ 257              		.loc 1 61 13 view .LVU49
+ 258 00ea FF23     		movs	r3, #255
+ 259 00ec 0022     		movs	r2, #0
+ 260 00ee 7F21     		movs	r1, #127
+ 261 00f0 6846     		mov	r0, sp
+ 262              	.LVL35:
+  61:Core/Src/NOS_BaseColors.c ****             NOS_PixelColor_SetColor(&result,0x7F,0x00,0xFF);
+ 263              		.loc 1 61 13 is_stmt 0 view .LVU50
+ 264 00f2 FFF7FEFF 		bl	NOS_PixelColor_SetColor
+ 265              	.LVL36:
+  62:Core/Src/NOS_BaseColors.c ****         break;
+ 266              		.loc 1 62 9 is_stmt 1 view .LVU51
+ 267 00f6 9CE7     		b	.L3
+ 268              		.cfi_endproc
+ 269              	.LFE133:
+ 271              		.text
+ 272              	.Letext0:
+ 273              		.file 2 "c:\\users\\igorn\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpa
+ 274              		.file 3 "c:\\users\\igorn\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpa
+ 275              		.file 4 "Core/Inc/NOS_Typedefs.h"
+ 276              		.file 5 "Core/Inc/NOS_BaseColors.h"
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc7GlOcC.s 			page 8
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 NOS_BaseColors.c
+C:\Users\igorn\AppData\Local\Temp\cc7GlOcC.s:21     .text.NOS_PixelColor_SetColor:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\cc7GlOcC.s:27     .text.NOS_PixelColor_SetColor:00000000 NOS_PixelColor_SetColor
+C:\Users\igorn\AppData\Local\Temp\cc7GlOcC.s:50     .text.NOS_GetBaseColor:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\cc7GlOcC.s:56     .text.NOS_GetBaseColor:00000000 NOS_GetBaseColor
+C:\Users\igorn\AppData\Local\Temp\cc7GlOcC.s:80     .text.NOS_GetBaseColor:0000001a $d
+C:\Users\igorn\AppData\Local\Temp\cc7GlOcC.s:92     .text.NOS_GetBaseColor:00000026 $t
+
+NO UNDEFINED SYMBOLS

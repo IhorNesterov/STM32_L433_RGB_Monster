@@ -1,0 +1,288 @@
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccHJYsw7.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"WS2812B_Effects.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.file 1 "Core/Src/WS2812B_Effects.c"
+  20              		.section	.text.visInit,"ax",%progbits
+  21              		.align	1
+  22              		.global	visInit
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	visInit:
+  28              	.LFB132:
+   1:Core/Src/WS2812B_Effects.c **** /*
+   2:Core/Src/WS2812B_Effects.c **** 
+   3:Core/Src/WS2812B_Effects.c ****   WS2812B CPU and memory efficient library
+   4:Core/Src/WS2812B_Effects.c **** 
+   5:Core/Src/WS2812B_Effects.c ****   Date: 28.9.2016
+   6:Core/Src/WS2812B_Effects.c **** 
+   7:Core/Src/WS2812B_Effects.c ****   Author: Martin Hubacek
+   8:Core/Src/WS2812B_Effects.c ****   	  	  http://www.martinhubacek.cz
+   9:Core/Src/WS2812B_Effects.c ****   	  	  @hubmartin
+  10:Core/Src/WS2812B_Effects.c **** 
+  11:Core/Src/WS2812B_Effects.c ****   Licence: MIT License
+  12:Core/Src/WS2812B_Effects.c **** 
+  13:Core/Src/WS2812B_Effects.c **** */
+  14:Core/Src/WS2812B_Effects.c **** 
+  15:Core/Src/WS2812B_Effects.c **** #include <stdint.h>
+  16:Core/Src/WS2812B_Effects.c **** 
+  17:Core/Src/WS2812B_Effects.c **** #include "WS2812B_Core.h"
+  18:Core/Src/WS2812B_Effects.c **** #include <stdlib.h>
+  19:Core/Src/WS2812B_Effects.c **** 
+  20:Core/Src/WS2812B_Effects.c **** extern WS2812_Struct ws2812b;
+  21:Core/Src/WS2812B_Effects.c **** // RGB Framebuffers
+  22:Core/Src/WS2812B_Effects.c **** uint8_t frameBufferA[3*512];
+  23:Core/Src/WS2812B_Effects.c **** uint8_t frameBufferB[3*512];
+  24:Core/Src/WS2812B_Effects.c **** uint8_t frameBufferC[3*512];
+  25:Core/Src/WS2812B_Effects.c **** uint8_t frameBufferD[3*512];
+  26:Core/Src/WS2812B_Effects.c **** 
+  27:Core/Src/WS2812B_Effects.c **** // Helper defines
+  28:Core/Src/WS2812B_Effects.c **** #define newColor(r, g, b) (((uint32_t)(r) << 16) | ((uint32_t)(g) <<  8) | (b))
+  29:Core/Src/WS2812B_Effects.c **** #define Red(c) ((uint8_t)((c >> 16) & 0xFF))
+  30:Core/Src/WS2812B_Effects.c **** #define Green(c) ((uint8_t)((c >> 8) & 0xFF))
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccHJYsw7.s 			page 2
+
+
+  31:Core/Src/WS2812B_Effects.c **** #define Blue(c) ((uint8_t)(c & 0xFF))
+  32:Core/Src/WS2812B_Effects.c **** 
+  33:Core/Src/WS2812B_Effects.c **** 
+  34:Core/Src/WS2812B_Effects.c **** 
+  35:Core/Src/WS2812B_Effects.c **** 
+  36:Core/Src/WS2812B_Effects.c **** void visInit()
+  37:Core/Src/WS2812B_Effects.c **** {
+  29              		.loc 1 37 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33 0000 08B5     		push	{r3, lr}
+  34              		.cfi_def_cfa_offset 8
+  35              		.cfi_offset 3, -8
+  36              		.cfi_offset 14, -4
+  38:Core/Src/WS2812B_Effects.c **** 		// Set output channel/pin, GPIO_PIN_0 = 0, for GPIO_PIN_5 = 5 - this has to correspond to WS2812B
+  39:Core/Src/WS2812B_Effects.c **** 		ws2812b.item[0].channel = 4;
+  37              		.loc 1 39 3 view .LVU1
+  38              		.loc 1 39 27 is_stmt 0 view .LVU2
+  39 0002 0E4B     		ldr	r3, .L3
+  40 0004 0422     		movs	r2, #4
+  41 0006 1A73     		strb	r2, [r3, #12]
+  40:Core/Src/WS2812B_Effects.c **** 		ws2812b.item[0].frameBufferPointer = frameBufferA;
+  42              		.loc 1 40 3 is_stmt 1 view .LVU3
+  43              		.loc 1 40 38 is_stmt 0 view .LVU4
+  44 0008 0D4A     		ldr	r2, .L3+4
+  45 000a 1A60     		str	r2, [r3]
+  41:Core/Src/WS2812B_Effects.c **** 	    ws2812b.item[0].frameBufferSize = sizeof(frameBufferA);
+  46              		.loc 1 41 6 is_stmt 1 view .LVU5
+  47              		.loc 1 41 38 is_stmt 0 view .LVU6
+  48 000c 4FF4C062 		mov	r2, #1536
+  49 0010 5A60     		str	r2, [r3, #4]
+  42:Core/Src/WS2812B_Effects.c **** 		ws2812b.item[1].channel = 5;
+  50              		.loc 1 42 3 is_stmt 1 view .LVU7
+  51              		.loc 1 42 27 is_stmt 0 view .LVU8
+  52 0012 0521     		movs	r1, #5
+  53 0014 1977     		strb	r1, [r3, #28]
+  43:Core/Src/WS2812B_Effects.c **** 		ws2812b.item[1].frameBufferPointer = frameBufferB;
+  54              		.loc 1 43 3 is_stmt 1 view .LVU9
+  55              		.loc 1 43 38 is_stmt 0 view .LVU10
+  56 0016 0B49     		ldr	r1, .L3+8
+  57 0018 1961     		str	r1, [r3, #16]
+  44:Core/Src/WS2812B_Effects.c **** 	    ws2812b.item[1].frameBufferSize = sizeof(frameBufferB);
+  58              		.loc 1 44 6 is_stmt 1 view .LVU11
+  59              		.loc 1 44 38 is_stmt 0 view .LVU12
+  60 001a 5A61     		str	r2, [r3, #20]
+  45:Core/Src/WS2812B_Effects.c **** 		ws2812b.item[2].channel = 6;
+  61              		.loc 1 45 3 is_stmt 1 view .LVU13
+  62              		.loc 1 45 27 is_stmt 0 view .LVU14
+  63 001c 0621     		movs	r1, #6
+  64 001e 83F82C10 		strb	r1, [r3, #44]
+  46:Core/Src/WS2812B_Effects.c **** 		ws2812b.item[2].frameBufferPointer = frameBufferC;
+  65              		.loc 1 46 3 is_stmt 1 view .LVU15
+  66              		.loc 1 46 38 is_stmt 0 view .LVU16
+  67 0022 0949     		ldr	r1, .L3+12
+  68 0024 1962     		str	r1, [r3, #32]
+  47:Core/Src/WS2812B_Effects.c **** 	    ws2812b.item[2].frameBufferSize = sizeof(frameBufferC);
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccHJYsw7.s 			page 3
+
+
+  69              		.loc 1 47 6 is_stmt 1 view .LVU17
+  70              		.loc 1 47 38 is_stmt 0 view .LVU18
+  71 0026 5A62     		str	r2, [r3, #36]
+  48:Core/Src/WS2812B_Effects.c **** 		ws2812b.item[3].channel = 7;
+  72              		.loc 1 48 3 is_stmt 1 view .LVU19
+  73              		.loc 1 48 27 is_stmt 0 view .LVU20
+  74 0028 0721     		movs	r1, #7
+  75 002a 83F83C10 		strb	r1, [r3, #60]
+  49:Core/Src/WS2812B_Effects.c **** 		ws2812b.item[3].frameBufferPointer = frameBufferD;
+  76              		.loc 1 49 3 is_stmt 1 view .LVU21
+  77              		.loc 1 49 38 is_stmt 0 view .LVU22
+  78 002e 0749     		ldr	r1, .L3+16
+  79 0030 1963     		str	r1, [r3, #48]
+  50:Core/Src/WS2812B_Effects.c **** 	    ws2812b.item[3].frameBufferSize = sizeof(frameBufferD);
+  80              		.loc 1 50 6 is_stmt 1 view .LVU23
+  81              		.loc 1 50 38 is_stmt 0 view .LVU24
+  82 0032 5A63     		str	r2, [r3, #52]
+  51:Core/Src/WS2812B_Effects.c **** 		ws2812b_init();
+  83              		.loc 1 51 3 is_stmt 1 view .LVU25
+  84 0034 FFF7FEFF 		bl	ws2812b_init
+  85              	.LVL0:
+  52:Core/Src/WS2812B_Effects.c **** }
+  86              		.loc 1 52 1 is_stmt 0 view .LVU26
+  87 0038 08BD     		pop	{r3, pc}
+  88              	.L4:
+  89 003a 00BF     		.align	2
+  90              	.L3:
+  91 003c 00000000 		.word	ws2812b
+  92 0040 00000000 		.word	frameBufferA
+  93 0044 00000000 		.word	frameBufferB
+  94 0048 00000000 		.word	frameBufferC
+  95 004c 00000000 		.word	frameBufferD
+  96              		.cfi_endproc
+  97              	.LFE132:
+  99              		.section	.text.visHandle,"ax",%progbits
+ 100              		.align	1
+ 101              		.global	visHandle
+ 102              		.syntax unified
+ 103              		.thumb
+ 104              		.thumb_func
+ 106              	visHandle:
+ 107              	.LFB133:
+  53:Core/Src/WS2812B_Effects.c **** 
+  54:Core/Src/WS2812B_Effects.c **** 
+  55:Core/Src/WS2812B_Effects.c **** void visHandle()
+  56:Core/Src/WS2812B_Effects.c **** {
+ 108              		.loc 1 56 1 is_stmt 1 view -0
+ 109              		.cfi_startproc
+ 110              		@ args = 0, pretend = 0, frame = 0
+ 111              		@ frame_needed = 0, uses_anonymous_args = 0
+ 112 0000 08B5     		push	{r3, lr}
+ 113              		.cfi_def_cfa_offset 8
+ 114              		.cfi_offset 3, -8
+ 115              		.cfi_offset 14, -4
+  57:Core/Src/WS2812B_Effects.c **** 
+  58:Core/Src/WS2812B_Effects.c **** 	if(ws2812b.transferComplete)
+ 116              		.loc 1 58 2 view .LVU28
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccHJYsw7.s 			page 4
+
+
+ 117              		.loc 1 58 12 is_stmt 0 view .LVU29
+ 118 0002 064B     		ldr	r3, .L9
+ 119 0004 93F84030 		ldrb	r3, [r3, #64]	@ zero_extendqisi2
+ 120              		.loc 1 58 4 view .LVU30
+ 121 0008 03B9     		cbnz	r3, .L8
+ 122              	.L5:
+  59:Core/Src/WS2812B_Effects.c **** 	{
+  60:Core/Src/WS2812B_Effects.c **** 		// Update your framebuffer here or swap buffers
+  61:Core/Src/WS2812B_Effects.c **** 		//visHandle2();
+  62:Core/Src/WS2812B_Effects.c **** 
+  63:Core/Src/WS2812B_Effects.c **** 		// Signal that buffer is changed and transfer new data
+  64:Core/Src/WS2812B_Effects.c **** 		ws2812b.startTransfer = 1;
+  65:Core/Src/WS2812B_Effects.c **** 		ws2812b_handle();
+  66:Core/Src/WS2812B_Effects.c **** 	}
+  67:Core/Src/WS2812B_Effects.c **** }
+ 123              		.loc 1 67 1 view .LVU31
+ 124 000a 08BD     		pop	{r3, pc}
+ 125              	.L8:
+  64:Core/Src/WS2812B_Effects.c **** 		ws2812b_handle();
+ 126              		.loc 1 64 3 is_stmt 1 view .LVU32
+  64:Core/Src/WS2812B_Effects.c **** 		ws2812b_handle();
+ 127              		.loc 1 64 25 is_stmt 0 view .LVU33
+ 128 000c 034B     		ldr	r3, .L9
+ 129 000e 0122     		movs	r2, #1
+ 130 0010 83F84120 		strb	r2, [r3, #65]
+  65:Core/Src/WS2812B_Effects.c **** 	}
+ 131              		.loc 1 65 3 is_stmt 1 view .LVU34
+ 132 0014 FFF7FEFF 		bl	ws2812b_handle
+ 133              	.LVL1:
+ 134              		.loc 1 67 1 is_stmt 0 view .LVU35
+ 135 0018 F7E7     		b	.L5
+ 136              	.L10:
+ 137 001a 00BF     		.align	2
+ 138              	.L9:
+ 139 001c 00000000 		.word	ws2812b
+ 140              		.cfi_endproc
+ 141              	.LFE133:
+ 143              		.global	frameBufferD
+ 144              		.section	.bss.frameBufferD,"aw",%nobits
+ 145              		.align	2
+ 148              	frameBufferD:
+ 149 0000 00000000 		.space	1536
+ 149      00000000 
+ 149      00000000 
+ 149      00000000 
+ 149      00000000 
+ 150              		.global	frameBufferC
+ 151              		.section	.bss.frameBufferC,"aw",%nobits
+ 152              		.align	2
+ 155              	frameBufferC:
+ 156 0000 00000000 		.space	1536
+ 156      00000000 
+ 156      00000000 
+ 156      00000000 
+ 156      00000000 
+ 157              		.global	frameBufferB
+ 158              		.section	.bss.frameBufferB,"aw",%nobits
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccHJYsw7.s 			page 5
+
+
+ 159              		.align	2
+ 162              	frameBufferB:
+ 163 0000 00000000 		.space	1536
+ 163      00000000 
+ 163      00000000 
+ 163      00000000 
+ 163      00000000 
+ 164              		.global	frameBufferA
+ 165              		.section	.bss.frameBufferA,"aw",%nobits
+ 166              		.align	2
+ 169              	frameBufferA:
+ 170 0000 00000000 		.space	1536
+ 170      00000000 
+ 170      00000000 
+ 170      00000000 
+ 170      00000000 
+ 171              		.text
+ 172              	.Letext0:
+ 173              		.file 2 "c:\\users\\igorn\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpa
+ 174              		.file 3 "c:\\users\\igorn\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpa
+ 175              		.file 4 "Core/Inc/WS2812B_Core.h"
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccHJYsw7.s 			page 6
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 WS2812B_Effects.c
+C:\Users\igorn\AppData\Local\Temp\ccHJYsw7.s:21     .text.visInit:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccHJYsw7.s:27     .text.visInit:00000000 visInit
+C:\Users\igorn\AppData\Local\Temp\ccHJYsw7.s:91     .text.visInit:0000003c $d
+C:\Users\igorn\AppData\Local\Temp\ccHJYsw7.s:169    .bss.frameBufferA:00000000 frameBufferA
+C:\Users\igorn\AppData\Local\Temp\ccHJYsw7.s:162    .bss.frameBufferB:00000000 frameBufferB
+C:\Users\igorn\AppData\Local\Temp\ccHJYsw7.s:155    .bss.frameBufferC:00000000 frameBufferC
+C:\Users\igorn\AppData\Local\Temp\ccHJYsw7.s:148    .bss.frameBufferD:00000000 frameBufferD
+C:\Users\igorn\AppData\Local\Temp\ccHJYsw7.s:100    .text.visHandle:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccHJYsw7.s:106    .text.visHandle:00000000 visHandle
+C:\Users\igorn\AppData\Local\Temp\ccHJYsw7.s:139    .text.visHandle:0000001c $d
+C:\Users\igorn\AppData\Local\Temp\ccHJYsw7.s:145    .bss.frameBufferD:00000000 $d
+C:\Users\igorn\AppData\Local\Temp\ccHJYsw7.s:152    .bss.frameBufferC:00000000 $d
+C:\Users\igorn\AppData\Local\Temp\ccHJYsw7.s:159    .bss.frameBufferB:00000000 $d
+C:\Users\igorn\AppData\Local\Temp\ccHJYsw7.s:166    .bss.frameBufferA:00000000 $d
+
+UNDEFINED SYMBOLS
+ws2812b_init
+ws2812b
+ws2812b_handle

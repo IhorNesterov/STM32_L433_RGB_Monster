@@ -1,0 +1,10 @@
+#ifndef NOS_CONFIG
+#define NOS_CONFIG
+
+#define MEMORY_MODULE_ENABLED
+#define UART_MODULE_ENABLED
+#define WS2812B_MODULE_ENABLED
+
+#define SERIES_L4
+
+#endif
