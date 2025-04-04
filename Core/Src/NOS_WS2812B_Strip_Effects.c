@@ -65,7 +65,7 @@ void NOS_WS2812B_Strip_Effects_Check_Conflicts(WS2812B_Strip* strip,Effect_Struc
             NOS_WS2812B_Strip_Effect_Disable(strip,EFFECT_STEADY_COLOR_ID);
             NOS_WS2812B_Strip_Effect_Disable(strip,EFFECT_DOTS_ID);
             
-            NOS_WS2812B_Strip_ColorFill(strip,color);
+            NOS_WS2812B_Strip_ColorFill(strip, color);
         break;
         
         case EFFECT_DOTS_ID:
