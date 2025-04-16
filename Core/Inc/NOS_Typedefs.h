@@ -161,11 +161,11 @@ typedef struct Effect_Struct_t
   NOS_Short speed;
   NOS_Short step;
 
-  uint16_t timer;
+  uint32_t timer;
   uint16_t minValue;
   uint16_t maxValue;
 
-  uint16_t param1;
+  uint32_t param1;
   uint16_t param2;
   uint16_t param3;
   uint16_t param4;
@@ -174,7 +174,37 @@ typedef struct Effect_Struct_t
 
   bool enabled;
   uint8_t effectId;
+
 } Effect_Struct;
+
+typedef struct Strip_Effects_Init_Struct_t
+{
+  PixelColor* color;
+  uint16_t speed;
+  uint16_t step;
+  uint16_t minValue;
+  uint16_t maxValue;
+  uint16_t param1;
+  uint16_t param2;
+  uint16_t param3;
+  uint16_t param4;
+  uint8_t effectID;
+  bool enabled;
+
+}Strip_Effects_Init_Struct;
+
+typedef union Strip_Effects_Init_Struct_Flash_Chunk_u
+{
+  Strip_Effects_Init_Struct initStruct;
+  uint64_t data[3];
+}Strip_Effects_Init_Struct_Flash_Chunk;
+
+typedef union Effect_Wrap_u
+{
+  Effect_Struct effect;
+  uint64_t data[6];
+}Effect_Wrap;
+
 
 typedef struct
 {

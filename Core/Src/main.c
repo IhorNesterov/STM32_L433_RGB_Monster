@@ -26,7 +26,16 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
+typedef union NOS_RealTime_Union_t
+{
+  uint64_t compressedTime;
+  uint8_t particles[8];
+}NOS_RealTime_Union;
 
+typedef enum NOS_RealTime_Union_Decoder_e
+{
+  Seconds,Minutes,Hours,Days,Month,Year
+}NOS_RealTime_Union_Decoder;
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -40,9 +49,10 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+RTC_HandleTypeDef hrtc;
+
 SPI_HandleTypeDef hspi2;
 
-TIM_HandleTypeDef htim1;
 TIM_HandleTypeDef htim2;
 DMA_HandleTypeDef hdma_tim2_ch1;
 DMA_HandleTypeDef hdma_tim2_up;
@@ -58,6 +68,7 @@ extern uint8_t frameBufferC[3 * 512];
 extern uint8_t frameBufferD[3 * 512];
 
 NOS_TimeEvent screenUpdateEvent = {0};
+NOS_TimeEvent timeTestEvent = {0};
 
 WS2812B_Strip stripA = {0};
 WS2812B_Strip stripB = {0};
@@ -85,6 +96,8 @@ Effect_Struct dotsA = {0};
 Effect_Struct walkingPixelA = {0};
 Effect_Struct steadyColorA = {0};
 
+Effect_Wrap effects[5];
+
 NOS_Short value;
 
 UART_Message lastMessage;
@@ -97,6 +110,10 @@ NOS_Flash_Memory_Struct flashMemoryStruct = {0};
 PixelColor nullColor = {0,0,0};
 PixelColor white = {255,255,255};
 
+RTC_TimeTypeDef sTime = {0};
+RTC_DateTypeDef sDate = {0};
+
+NOS_RealTime_Union RealTimeUnion = {0};
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -107,7 +124,7 @@ static void MX_SPI2_Init(void);
 static void MX_USART1_UART_Init(void);
 static void MX_USART2_UART_Init(void);
 static void MX_TIM2_Init(void);
-static void MX_TIM1_Init(void);
+static void MX_RTC_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -133,8 +150,89 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef* huart) {
 bool tick = false;
 bool screenUpdate = false;
 
-#define FLASH_REBUILD
+//#define FLASH_REBUILD
+//#define FLASH_TEST
 /* USER CODE END 0 */
+
+
+void SetRealTimeUnion(NOS_RealTime_Union* rt, uint8_t _sec,uint8_t _min, uint8_t _hour, uint8_t _day, uint8_t _month, uint8_t _year)
+{
+  rt->particles[Seconds] = _sec;
+  rt->particles[Minutes] = _min;
+  rt->particles[Hours] = _hour;
+  rt->particles[Days] = _day;
+  rt->particles[Month] = _month;
+  rt->particles[Year] = _year;
+}
+
+void PrintRealTimeUnion(UART_HandleTypeDef* huart, NOS_RealTime_Union* rt)
+{
+  char message[20];
+
+  message[0] = (rt->particles[Month] / 10) + 48;
+  message[1] = (rt->particles[Month] % 10) + 48;
+  message[2] = '/';
+  message[3] = (rt->particles[Days] / 10) + 48;
+  message[4] = (rt->particles[Days] % 10) + 48;
+  message[5] = '/';
+  message[6] = (rt->particles[Year] / 10) + 48;
+  message[7] = (rt->particles[Year] % 10) + 48;
+  message[8] = ' ';
+  message[9] = (rt->particles[Hours] / 10) + 48;
+  message[10] = (rt->particles[Hours] % 10) + 48;
+  message[11] = '/';
+  message[12] = (rt->particles[Minutes] / 10) + 48;
+  message[13] = (rt->particles[Minutes] % 10) + 48;
+  message[14] = '/';
+  message[15] = (rt->particles[Seconds] / 10) + 48;
+  message[16] = (rt->particles[Seconds] % 10) + 48;
+  message[17] = ' ';
+  message[18] = '\n';
+  message[19] = '\0';
+
+  HAL_UART_Transmit(huart,message,20,1000);
+}
+
+void PrintRealTime(UART_HandleTypeDef* huart, RTC_TimeTypeDef* time, RTC_DateTypeDef* date)
+{
+  char message[20];
+
+  // mm/dd/yy hh/mm/ss 
+  
+  message[0] = (date->Month / 10) + 48;
+  message[1] = (date->Month % 10) + 48;
+
+  message[2] = '/';
+
+  message[3] = (date->Date / 10) + 48;
+  message[4] = (date->Date % 10) + 48;
+
+  message[5] = '/';
+
+  message[6] = (date->Year / 10) + 48;
+  message[7] = (date->Year % 10) + 48;
+
+  message[8] = ' ';
+
+  message[9] = (time->Hours / 10) + 48;
+  message[10] = (time->Hours % 10) + 48;
+
+  message[11] = '/';
+
+  message[12] = (time->Minutes / 10) + 48;
+  message[13] = (time->Minutes % 10) + 48;
+
+  message[14] = '/';
+
+  message[15] = (time->Seconds / 10) + 48;
+  message[16] = (time->Seconds % 10) + 48;
+
+  message[17] = ' ';
+  message[18] = '\n';
+  message[19] = '\0';
+
+  HAL_UART_Transmit(huart,message,20,1000);
+}
 
 /**
   * @brief  The application entry point.
@@ -153,6 +251,7 @@ int main(void)
 
   /* USER CODE BEGIN Init */
 
+  
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -169,7 +268,7 @@ int main(void)
   MX_USART1_UART_Init();
   MX_USART2_UART_Init();
   MX_TIM2_Init();
-  MX_TIM1_Init();
+  MX_RTC_Init();
   /* USER CODE BEGIN 2 */
   HAL_UART_Receive_IT(&huart1,UART1.rx_buff,1);
   HAL_UART_Receive_IT(&huart2,UART2.rx_buff,1);
@@ -185,26 +284,32 @@ int main(void)
   NOS_WS2812B_Strip_FullInit(&stripD,&frameBufferD,&pixelsD,128);
 
   NOS_TimeEvent_Init(&screenUpdateEvent, 20);
+  NOS_TimeEvent_Init(&timeTestEvent,60000);
 
   NOS_UART_ReceiveAbort(&UART2,&huart2);
   NOS_UART_ReceiveAbort(&UART1,&huart1);
 
-  /*
+  NOS_WS2812B_Strip_Effect_Copy(&effects[0],&breatheA);
+  NOS_WS2812B_Strip_Effect_Copy(&effects[1],&rainbowA);
+  NOS_WS2812B_Strip_Effect_Copy(&effects[2],&dotsA);
+  NOS_WS2812B_Strip_Effect_Copy(&effects[3],&walkingPixelA);
+  NOS_WS2812B_Strip_Effect_Copy(&effects[4],&steadyColorA);
+
   NOS_FlashMemory_Struct_Init(&flashMemoryStruct,FLASH_STORAGE_A);
 
-  NOS_Flash_Chunk_Init(&tempInitChunk,&breatheA,sizeof(Effect_Struct));
+  NOS_Flash_Chunk_Init(&tempInitChunk,&effects[0].data,48);
+  NOS_FlashMemory_Struct_AddChunk(&flashMemoryStruct,&tempInitChunk);
+  
+  NOS_Flash_Chunk_Init(&tempInitChunk,&effects[1].data,sizeof(Effect_Struct));
   NOS_FlashMemory_Struct_AddChunk(&flashMemoryStruct,&tempInitChunk);
 
-  NOS_Flash_Chunk_Init(&tempInitChunk,&rainbowA,sizeof(Effect_Struct));
+  NOS_Flash_Chunk_Init(&tempInitChunk,&effects[2].data,sizeof(Effect_Struct));
   NOS_FlashMemory_Struct_AddChunk(&flashMemoryStruct,&tempInitChunk);
 
-  NOS_Flash_Chunk_Init(&tempInitChunk,&dotsA,sizeof(Effect_Struct));
+  NOS_Flash_Chunk_Init(&tempInitChunk,&effects[3].data,sizeof(Effect_Struct));
   NOS_FlashMemory_Struct_AddChunk(&flashMemoryStruct,&tempInitChunk);
 
-  NOS_Flash_Chunk_Init(&tempInitChunk,&walkingPixelA,sizeof(Effect_Struct));
-  NOS_FlashMemory_Struct_AddChunk(&flashMemoryStruct,&tempInitChunk);
-
-  NOS_Flash_Chunk_Init(&tempInitChunk,&steadyColorA,sizeof(Effect_Struct));
+  NOS_Flash_Chunk_Init(&tempInitChunk,&effects[4].data,sizeof(Effect_Struct));
   NOS_FlashMemory_Struct_AddChunk(&flashMemoryStruct,&tempInitChunk);
   
   #ifndef FLASH_REBUILD
@@ -214,60 +319,52 @@ int main(void)
   }
   else
   {
-    NOS_WS2812B_Strip_Effect_Init(&breatheA,&nullColor,100,1,60,80,0,0,0,0,EFFECT_BREATHE_ID,true);
-    NOS_WS2812B_Strip_Effect_Init(&rainbowA,&nullColor,1000,1,200,800,0,0,0,0,EFFECT_RAINBOW_ID,true);
-    NOS_WS2812B_Strip_Effect_Init(&dotsA,&white,40,1,0,100,0,0,0,0,EFFECT_DOTS_ID,true);
-    NOS_WS2812B_Strip_Effect_Init(&walkingPixelA,&white,1000,1,0,48,3,0,0,0,EFFECT_WALKING_PIXELS_ID,true);
-    NOS_WS2812B_Strip_Effect_Init(&steadyColorA,&white,0,0,0,0,0,0,0,0,EFFECT_STEADY_COLOR_ID,true);
+    NOS_WS2812B_Strip_Effect_Init(&effects[0],&nullColor,100,1,60,80,0,0,0,0,EFFECT_BREATHE_ID,true);
+    NOS_WS2812B_Strip_Effect_Init(&effects[1],&nullColor,1000,1,200,800,0,0,0,0,EFFECT_RAINBOW_ID,true);
+    NOS_WS2812B_Strip_Effect_Init(&effects[2],&white,40,1,0,100,0,0,0,0,EFFECT_DOTS_ID,true);
+    NOS_WS2812B_Strip_Effect_Init(&effects[3],&white,1000,1,0,48,3,0,0,0,EFFECT_WALKING_PIXELS_ID,true);
+    NOS_WS2812B_Strip_Effect_Init(&effects[4],&white,0,0,0,0,0,0,0,0,EFFECT_STEADY_COLOR_ID,true);
   }
   #endif
-*/
+
   #ifdef FLASH_REBUILD
-  NOS_WS2812B_Strip_Effect_Init(&breatheA,&nullColor,20,1,40,60,0,0,0,0,EFFECT_BREATHE_ID,true);
-  NOS_WS2812B_Strip_Effect_Init(&rainbowA,&nullColor,1000,1,200,800,0,0,0,0,EFFECT_RAINBOW_ID,false);
-  NOS_WS2812B_Strip_Effect_Init(&dotsA,&white,40,1,0,100,0,0,0,0,EFFECT_DOTS_ID,false);
-  NOS_WS2812B_Strip_Effect_Init(&walkingPixelA,&white,100,1,0,48,3,0,0,0,EFFECT_WALKING_PIXELS_ID,false);
-  NOS_WS2812B_Strip_Effect_Init(&steadyColorA,&white,0,0,0,0,0,0,0,0,EFFECT_STEADY_COLOR_ID,false);
+  NOS_WS2812B_Strip_Effect_Init(&effects[0],&nullColor,20,1,40,60,0,0,0,0,EFFECT_BREATHE_ID,true);
+  NOS_WS2812B_Strip_Effect_Init(&effects[1],&nullColor,1000,1,200,800,0,0,0,0,EFFECT_RAINBOW_ID,false);
+  NOS_WS2812B_Strip_Effect_Init(&effects[2],&white,40,1,0,100,0,0,0,0,EFFECT_DOTS_ID,false);
+  NOS_WS2812B_Strip_Effect_Init(&effects[3],&white,100,1,0,48,3,0,0,0,EFFECT_WALKING_PIXELS_ID,false);
+  NOS_WS2812B_Strip_Effect_Init(&effects[4],&white,0,0,0,0,0,0,0,0,EFFECT_STEADY_COLOR_ID,false);
   #endif
 
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripA,breatheA);
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripB,breatheA);
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripC,breatheA);
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripD,breatheA);
+  NOS_WS2812B_Strip_Effects_AddEffect(&stripA,effects[0].effect);
+  NOS_WS2812B_Strip_Effects_AddEffect(&stripB,effects[0].effect);
+  NOS_WS2812B_Strip_Effects_AddEffect(&stripC,effects[0].effect);
+  NOS_WS2812B_Strip_Effects_AddEffect(&stripD,effects[0].effect);
 
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripA,rainbowA);
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripB,rainbowA);
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripC,rainbowA);
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripD,rainbowA);
+  NOS_WS2812B_Strip_Effects_AddEffect(&stripA,effects[1].effect);
+  NOS_WS2812B_Strip_Effects_AddEffect(&stripB,effects[1].effect);
+  NOS_WS2812B_Strip_Effects_AddEffect(&stripC,effects[1].effect);
+  NOS_WS2812B_Strip_Effects_AddEffect(&stripD,effects[1].effect);
 
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripA,dotsA);
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripB,dotsA);
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripC,dotsA);
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripD,dotsA);
+  NOS_WS2812B_Strip_Effects_AddEffect(&stripA,effects[2].effect);
+  NOS_WS2812B_Strip_Effects_AddEffect(&stripB,effects[2].effect);
+  NOS_WS2812B_Strip_Effects_AddEffect(&stripC,effects[2].effect);
+  NOS_WS2812B_Strip_Effects_AddEffect(&stripD,effects[2].effect);
 
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripA,walkingPixelA);
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripB,walkingPixelA);
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripC,walkingPixelA);
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripD,walkingPixelA);
+  NOS_WS2812B_Strip_Effects_AddEffect(&stripA,effects[3].effect);
+  NOS_WS2812B_Strip_Effects_AddEffect(&stripB,effects[3].effect);
+  NOS_WS2812B_Strip_Effects_AddEffect(&stripC,effects[3].effect);
+  NOS_WS2812B_Strip_Effects_AddEffect(&stripD,effects[3].effect);
 
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripA,steadyColorA);
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripB,steadyColorA);
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripC,steadyColorA);
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripD,steadyColorA);
+  NOS_WS2812B_Strip_Effects_AddEffect(&stripA,effects[4].effect);
+  NOS_WS2812B_Strip_Effects_AddEffect(&stripB,effects[4].effect);
+  NOS_WS2812B_Strip_Effects_AddEffect(&stripC,effects[4].effect);
+  NOS_WS2812B_Strip_Effects_AddEffect(&stripD,effects[4].effect);
 
-  NOS_WS2812B_Strip_ColorFill(&stripA,white);
-  NOS_WS2812B_Strip_ColorFill(&stripB,white);
-  NOS_WS2812B_Strip_ColorFill(&stripC,white);
-  NOS_WS2812B_Strip_ColorFill(&stripD,white);
-
-  NOS_WS2812B_Strip_Update(&stripA);
-  NOS_WS2812B_Strip_Update(&stripB);
-  NOS_WS2812B_Strip_Update(&stripC);
-  NOS_WS2812B_Strip_Update(&stripD);
-
-  NOS_Strip_UART_ParseStringCommand(&stripA,"&/Breathe/70/80/20/true/&/Rainbow/#0000ff/#7f00ff/60/false/&/Dots/#ffff00/60/true/&/Walking/#ffff00/5/70/false/&/Steady/#00ff00/false/&",136);
-  NOS_Strip_UART_ParseStringCommand(&stripB,"&/Breathe/70/80/20/true/&/Rainbow/#0000ff/#7f00ff/60/false/&/Dots/#ffff00/60/true/&/Walking/#ffff00/5/70/false/&/Steady/#00ff00/false/&",136);
-  NOS_Strip_UART_ParseStringCommand(&stripC,"&/Breathe/70/80/20/true/&/Rainbow/#0000ff/#7f00ff/60/false/&/Dots/#ffff00/60/true/&/Walking/#ffff00/5/70/false/&/Steady/#00ff00/false/&",136);
+  SetRealTimeUnion(&RealTimeUnion,sTime.Seconds,sTime.Minutes,sTime.Hours,sDate.Date,sDate.Month,sDate.Year);
+  PrintRealTimeUnion(&huart1,&RealTimeUnion);
+  //NOS_Strip_UART_ParseStringCommand(&stripA,"&/Breathe/70/80/20/true/&/Rainbow/#0000ff/#7f00ff/60/false/&/Dots/#ffff00/60/true/&/Walking/#ffff00/5/70/false/&/Steady/#00ff00/false/&",136);
+  //NOS_Strip_UART_ParseStringCommand(&stripB,"&/Breathe/70/80/20/true/&/Rainbow/#0000ff/#7f00ff/60/false/&/Dots/#ffff00/60/true/&/Walking/#ffff00/5/70/false/&/Steady/#00ff00/false/&",136);
+  //NOS_Strip_UART_ParseStringCommand(&stripC,"&/Breathe/70/80/20/true/&/Rainbow/#0000ff/#7f00ff/60/false/&/Dots/#ffff00/60/true/&/Walking/#ffff00/5/70/false/&/Steady/#00ff00/false/&",136);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -280,12 +377,22 @@ int main(void)
           NOS_UART_Timer_Handler(&UART1);
 
           NOS_TimeEvent_TickHandler(&screenUpdateEvent);
+          NOS_TimeEvent_TickHandler(&timeTestEvent);
 
           NOS_WS2812B_Strip_Effects_Handler(&stripA);
           NOS_WS2812B_Strip_Effects_Handler(&stripB);
           NOS_WS2812B_Strip_Effects_Handler(&stripC);
           NOS_WS2812B_Strip_Effects_Handler(&stripD);
           tick = false;
+    }
+
+    if(NOS_TimeEvent_Check(&timeTestEvent))
+    { 
+      HAL_RTC_GetTime(&hrtc,&sTime,RTC_FORMAT_BIN);
+      HAL_RTC_GetDate(&hrtc,&sDate,RTC_FORMAT_BIN);
+      SetRealTimeUnion(&RealTimeUnion,sTime.Seconds,sTime.Minutes,sTime.Hours,sDate.Date,sDate.Month,sDate.Year);
+      PrintRealTimeUnion(&huart1,&RealTimeUnion);
+      NOS_TimeEvent_FinishEvent(&timeTestEvent);
     }
 
     if(NOS_UART_CheckReceive(&UART1))
@@ -296,15 +403,15 @@ int main(void)
         NOS_Strip_UART_ParseStringCommand(&stripC,UART1.rx_buff,UART1.lastMessageSize);
         NOS_Strip_UART_ParseStringCommand(&stripD,UART1.rx_buff,UART1.lastMessageSize);
 
-        /*
-        NOS_WS2812B_Strip_Effect_Copy(&breatheA,&stripA.effects[0]);
-        NOS_WS2812B_Strip_Effect_Copy(&rainbowA,&stripA.effects[1]);
-        NOS_WS2812B_Strip_Effect_Copy(&dotsA,&stripA.effects[2]);
-        NOS_WS2812B_Strip_Effect_Copy(&walkingPixelA,&stripA.effects[3]);
-        NOS_WS2812B_Strip_Effect_Copy(&steadyColorA,&stripA.effects[4]);
-        */
+        
+        NOS_WS2812B_Strip_Effect_Copy(&effects[0].effect,&stripA.effects[0]);
+        NOS_WS2812B_Strip_Effect_Copy(&effects[1].effect,&stripA.effects[1]);
+        NOS_WS2812B_Strip_Effect_Copy(&effects[2].effect,&stripA.effects[2]);
+        NOS_WS2812B_Strip_Effect_Copy(&effects[3].effect,&stripA.effects[3]);
+        NOS_WS2812B_Strip_Effect_Copy(&effects[4].effect,&stripA.effects[4]);
+        
 
-        //NOS_Flash_Memory_Struct_Save(&flashMemoryStruct);
+        NOS_Flash_Memory_Struct_Save(&flashMemoryStruct);
       }
 
       NOS_UART_EndReceive(&UART1);
@@ -320,6 +427,8 @@ int main(void)
 
     if(NOS_UART_CheckReceive(&UART2))
     {
+      NOS_Flash_Memory_Struct_Load(&flashMemoryStruct);
+      /*
       if(NOS_UART_ParsePacket(&UART2,&lastMessage)) 
       {
       
@@ -385,7 +494,6 @@ int main(void)
         }
       }
 
-      NOS_UART_EndReceive(&UART2);
       HAL_GPIO_TogglePin(GPIOC,GPIO_PIN_13);
       
       NOS_UART_PacketApprovedNotice(&lastMessage,&huart2);
@@ -395,7 +503,8 @@ int main(void)
       NOS_WS2812B_Strip_Update(&stripC);
       NOS_WS2812B_Strip_Update(&stripD);
       visHandle();
-      
+      */
+     NOS_UART_EndReceive(&UART2);
     }
 
     if (NOS_TimeEvent_Check(&screenUpdateEvent))
@@ -436,9 +545,10 @@ void SystemClock_Config(void)
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI|RCC_OSCILLATORTYPE_LSI;
   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+  RCC_OscInitStruct.LSIState = RCC_LSI_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
   RCC_OscInitStruct.PLL.PLLM = 1;
@@ -464,6 +574,69 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+}
+
+/**
+  * @brief RTC Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_RTC_Init(void)
+{
+
+  /* USER CODE BEGIN RTC_Init 0 */
+
+  /* USER CODE END RTC_Init 0 */
+
+
+  /* USER CODE BEGIN RTC_Init 1 */
+
+  /* USER CODE END RTC_Init 1 */
+
+  /** Initialize RTC Only
+  */
+  hrtc.Instance = RTC;
+  hrtc.Init.HourFormat = RTC_HOURFORMAT_24;
+  hrtc.Init.AsynchPrediv = 127;
+  hrtc.Init.SynchPrediv = 255;
+  hrtc.Init.OutPut = RTC_OUTPUT_DISABLE;
+  hrtc.Init.OutPutRemap = RTC_OUTPUT_REMAP_NONE;
+  hrtc.Init.OutPutPolarity = RTC_OUTPUT_POLARITY_HIGH;
+  hrtc.Init.OutPutType = RTC_OUTPUT_TYPE_OPENDRAIN;
+  if (HAL_RTC_Init(&hrtc) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /* USER CODE BEGIN Check_RTC_BKUP */
+
+  /* USER CODE END Check_RTC_BKUP */
+
+  /** Initialize RTC and set the Time and Date
+  */
+  sTime.Hours = 20;
+  sTime.Minutes = 27;
+  sTime.Seconds = 15;
+  sTime.TimeFormat = RTC_HOURFORMAT_24;
+  sTime.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
+  sTime.StoreOperation = RTC_STOREOPERATION_RESET;
+  if (HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BIN) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sDate.WeekDay = RTC_WEEKDAY_TUESDAY;
+  sDate.Month = RTC_MONTH_APRIL;
+  sDate.Date = 8;
+  sDate.Year = 25;
+
+  if (HAL_RTC_SetDate(&hrtc, &sDate, RTC_FORMAT_BIN) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN RTC_Init 2 */
+
+  /* USER CODE END RTC_Init 2 */
+
 }
 
 /**
@@ -503,75 +676,6 @@ static void MX_SPI2_Init(void)
   /* USER CODE BEGIN SPI2_Init 2 */
 
   /* USER CODE END SPI2_Init 2 */
-
-}
-
-/**
-  * @brief TIM1 Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_TIM1_Init(void)
-{
-
-  /* USER CODE BEGIN TIM1_Init 0 */
-
-  /* USER CODE END TIM1_Init 0 */
-
-  TIM_MasterConfigTypeDef sMasterConfig = {0};
-  TIM_OC_InitTypeDef sConfigOC = {0};
-  TIM_BreakDeadTimeConfigTypeDef sBreakDeadTimeConfig = {0};
-
-  /* USER CODE BEGIN TIM1_Init 1 */
-
-  /* USER CODE END TIM1_Init 1 */
-  htim1.Instance = TIM1;
-  htim1.Init.Prescaler = 0;
-  htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim1.Init.Period = 65535;
-  htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
-  htim1.Init.RepetitionCounter = 0;
-  htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
-  if (HAL_TIM_OC_Init(&htim1) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
-  sMasterConfig.MasterOutputTrigger2 = TIM_TRGO2_RESET;
-  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
-  if (HAL_TIMEx_MasterConfigSynchronization(&htim1, &sMasterConfig) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  sConfigOC.OCMode = TIM_OCMODE_TIMING;
-  sConfigOC.Pulse = 0;
-  sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
-  sConfigOC.OCNPolarity = TIM_OCNPOLARITY_HIGH;
-  sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
-  sConfigOC.OCIdleState = TIM_OCIDLESTATE_RESET;
-  sConfigOC.OCNIdleState = TIM_OCNIDLESTATE_RESET;
-  if (HAL_TIM_OC_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  sBreakDeadTimeConfig.OffStateRunMode = TIM_OSSR_DISABLE;
-  sBreakDeadTimeConfig.OffStateIDLEMode = TIM_OSSI_DISABLE;
-  sBreakDeadTimeConfig.LockLevel = TIM_LOCKLEVEL_OFF;
-  sBreakDeadTimeConfig.DeadTime = 0;
-  sBreakDeadTimeConfig.BreakState = TIM_BREAK_DISABLE;
-  sBreakDeadTimeConfig.BreakPolarity = TIM_BREAKPOLARITY_HIGH;
-  sBreakDeadTimeConfig.BreakFilter = 0;
-  sBreakDeadTimeConfig.Break2State = TIM_BREAK2_DISABLE;
-  sBreakDeadTimeConfig.Break2Polarity = TIM_BREAK2POLARITY_HIGH;
-  sBreakDeadTimeConfig.Break2Filter = 0;
-  sBreakDeadTimeConfig.AutomaticOutput = TIM_AUTOMATICOUTPUT_DISABLE;
-  if (HAL_TIMEx_ConfigBreakDeadTime(&htim1, &sBreakDeadTimeConfig) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN TIM1_Init 2 */
-
-  /* USER CODE END TIM1_Init 2 */
 
 }
 
@@ -678,7 +782,7 @@ static void MX_USART2_UART_Init(void)
 
   /* USER CODE END USART2_Init 1 */
   huart2.Instance = USART2;
-  huart2.Init.BaudRate = 460800;
+  huart2.Init.BaudRate = 230400;
   huart2.Init.WordLength = UART_WORDLENGTH_8B;
   huart2.Init.StopBits = UART_STOPBITS_1;
   huart2.Init.Parity = UART_PARITY_NONE;

@@ -3,8 +3,19 @@
 
 #include "NOS_Includes.h"
 
+#ifdef SERIES_F1
+
 #define FLASH_PAGE_SIZE 0x400
 #define FLASH_STORAGE_A 0x0800A000
+
+#endif
+
+#ifdef SERIES_L4
+
+#define FLASH_PAGE_NUMBER 63
+#define FLASH_STORAGE_A (0x08000000 + (FLASH_PAGE_SIZE * FLASH_PAGE_NUMBER))
+
+#endif
 
 /**
   * @brief  Flash chunk init
@@ -67,5 +78,8 @@ void NOS_Flash_Memory_Struct_Save(NOS_Flash_Memory_Struct* flashMemory);
   */
 void NOS_Flash_Memory_Struct_Load(NOS_Flash_Memory_Struct* flashMemory);
 
+uint32_t GetPage(uint32_t Addr);
+
+uint32_t GetAddress(uint32_t page);
 
 #endif

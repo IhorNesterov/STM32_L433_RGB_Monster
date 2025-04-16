@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc5BEUrC.s 			page 1
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccxvyeYD.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc5BEUrC.s 			page 1
    9:Core/Src/NOS_Math.c ****     
   10:Core/Src/NOS_Math.c ****     return value;
   47              		.loc 1 10 5 view .LVU6
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc5BEUrC.s 			page 2
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccxvyeYD.s 			page 2
 
 
   11:Core/Src/NOS_Math.c **** }
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc5BEUrC.s 			page 1
   92 000e 5B00     		lsls	r3, r3, #1
   93              	.LVL8:
   94              	.L5:
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc5BEUrC.s 			page 3
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccxvyeYD.s 			page 3
 
 
   17:Core/Src/NOS_Math.c ****     while (value >= probe)
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc5BEUrC.s 			page 1
  141              		@ frame_needed = 0, uses_anonymous_args = 0
  142              		@ link register save eliminated.
   32:Core/Src/NOS_Math.c ****     if(value->rise)
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc5BEUrC.s 			page 4
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccxvyeYD.s 			page 4
 
 
  143              		.loc 1 32 5 view .LVU29
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc5BEUrC.s 			page 1
  185              		.loc 1 44 22 view .LVU51
  186 0026 9B1A     		subs	r3, r3, r2
  187 0028 0360     		str	r3, [r0]
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc5BEUrC.s 			page 5
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccxvyeYD.s 			page 5
 
 
   45:Core/Src/NOS_Math.c ****         if(value->value < value->minValue)
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc5BEUrC.s 			page 1
  231 0002 4160     		str	r1, [r0, #4]
   58:Core/Src/NOS_Math.c ****     value->maxValue = maxValue;
  232              		.loc 1 58 5 is_stmt 1 view .LVU67
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc5BEUrC.s 			page 6
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccxvyeYD.s 			page 6
 
 
  233              		.loc 1 58 21 is_stmt 0 view .LVU68
@@ -327,20 +327,20 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc5BEUrC.s 			page 1
  253              		.text
  254              	.Letext0:
  255              		.file 2 "Core/Inc/NOS_Typedefs.h"
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc5BEUrC.s 			page 7
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccxvyeYD.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 NOS_Math.c
-C:\Users\igorn\AppData\Local\Temp\cc5BEUrC.s:21     .text.NOS_Math_NormalizeValue:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\cc5BEUrC.s:27     .text.NOS_Math_NormalizeValue:00000000 NOS_Math_NormalizeValue
-C:\Users\igorn\AppData\Local\Temp\cc5BEUrC.s:54     .text.NOS_Math_GetNumberPower:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\cc5BEUrC.s:60     .text.NOS_Math_GetNumberPower:00000000 NOS_Math_GetNumberPower
-C:\Users\igorn\AppData\Local\Temp\cc5BEUrC.s:105    .text.NOS_Math_GetSinValue:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\cc5BEUrC.s:111    .text.NOS_Math_GetSinValue:00000000 NOS_Math_GetSinValue
-C:\Users\igorn\AppData\Local\Temp\cc5BEUrC.s:129    .text.NOS_Math_SinValue_Handler:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\cc5BEUrC.s:135    .text.NOS_Math_SinValue_Handler:00000000 NOS_Math_SinValue_Handler
-C:\Users\igorn\AppData\Local\Temp\cc5BEUrC.s:212    .text.NOS_Math_SinValue_Init:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\cc5BEUrC.s:218    .text.NOS_Math_SinValue_Init:00000000 NOS_Math_SinValue_Init
+C:\Users\igorn\AppData\Local\Temp\ccxvyeYD.s:21     .text.NOS_Math_NormalizeValue:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccxvyeYD.s:27     .text.NOS_Math_NormalizeValue:00000000 NOS_Math_NormalizeValue
+C:\Users\igorn\AppData\Local\Temp\ccxvyeYD.s:54     .text.NOS_Math_GetNumberPower:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccxvyeYD.s:60     .text.NOS_Math_GetNumberPower:00000000 NOS_Math_GetNumberPower
+C:\Users\igorn\AppData\Local\Temp\ccxvyeYD.s:105    .text.NOS_Math_GetSinValue:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccxvyeYD.s:111    .text.NOS_Math_GetSinValue:00000000 NOS_Math_GetSinValue
+C:\Users\igorn\AppData\Local\Temp\ccxvyeYD.s:129    .text.NOS_Math_SinValue_Handler:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccxvyeYD.s:135    .text.NOS_Math_SinValue_Handler:00000000 NOS_Math_SinValue_Handler
+C:\Users\igorn\AppData\Local\Temp\ccxvyeYD.s:212    .text.NOS_Math_SinValue_Init:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccxvyeYD.s:218    .text.NOS_Math_SinValue_Init:00000000 NOS_Math_SinValue_Init
 
 NO UNDEFINED SYMBOLS

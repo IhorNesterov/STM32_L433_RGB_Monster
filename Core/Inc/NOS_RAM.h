@@ -3,7 +3,7 @@
 #define RAM_OVERFLOW 0x01
 
 #define RAM_CHUNK_MAX_COUNT 128
-#define RAM_SIZE 4096
+#define RAM_SIZE 8192
 
 typedef struct 
 {
@@ -64,6 +64,8 @@ void* NOS_RAM_Alloc(NOS_RAM_Struct* ram,size_t size)
     ram->chunks[ram->chunksCount].dataPtr = result;
     ram->chunks[ram->chunksCount].size = size;
 
+    ram->chunksCount++;
+
     return result;
 }
 
@@ -81,7 +83,7 @@ void NOS_RAM_Free(NOS_RAM_Struct* ram, void* ptr)
             }
 
             ram->chunks[i].dataPtr = NULL;
-            ram->chunks[i].size = 0;
+            //ram->chunks[i].size = 0;
         }
     }
 }

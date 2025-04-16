@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
   28:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****                       ##### TIMER Extended features #####
   29:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   ==============================================================================
   30:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   [..]
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 2
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 2
 
 
   31:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****     The Timer Extended features include:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
   85:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** /** @addtogroup STM32L4xx_HAL_Driver
   86:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   * @{
   87:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   */
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 3
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 3
 
 
   88:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  142:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   TIM_OC_InitTypeDef OC_Config;
  143:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
  144:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   /* Check the TIM handle allocation */
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 4
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 4
 
 
  145:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   if (htim == NULL)
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  199:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   htim->Instance->SMCR &= ~TIM_SMCR_TS;
  200:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   htim->Instance->SMCR |= TIM_TS_TI1F_ED;
  201:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 5
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 5
 
 
  202:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   /* Use the TIM_TS_TI1F_ED signal to reset the TIM counter each edge detection */
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  256:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   }
  257:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   /* DeInit the low level hardware */
  258:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   htim->HallSensor_MspDeInitCallback(htim);
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 6
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 6
 
 
  259:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** #else
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  313:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   * @brief  Starts the TIM Hall Sensor Interface.
  314:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   * @param  htim TIM Hall Sensor Interface handle
  315:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   * @retval HAL status
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 7
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 7
 
 
  316:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   */
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  370:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   */
  371:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** HAL_StatusTypeDef HAL_TIMEx_HallSensor_Stop(TIM_HandleTypeDef *htim)
  372:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** {
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 8
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 8
 
 
  373:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   /* Check the parameters */
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  427:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
  428:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   /* Enable the Input Capture channel 1
  429:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   (in the Hall Sensor Interface the three possible channels that can be used are TIM_CHANNEL_1,
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 9
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 9
 
 
  430:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   TIM_CHANNEL_2 and TIM_CHANNEL_3) */
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  484:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   * @param  htim TIM Hall Sensor Interface handle
  485:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   * @param  pData The destination Buffer address.
  486:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   * @param  Length The length of data to be transferred from TIM peripheral to memory.
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 10
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 10
 
 
  487:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   * @retval HAL status
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  541:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
  542:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   /* Enable the Peripheral, except in trigger mode where enable is automatically done with trigger 
  543:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   if (IS_TIM_SLAVE_INSTANCE(htim->Instance))
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 11
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 11
 
 
  544:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   {
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  598:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   *
  599:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** @verbatim
  600:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   ==============================================================================
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 12
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 12
 
 
  601:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****               ##### Timer Complementary Output Compare functions #####
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  655:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****       __HAL_TIM_ENABLE(htim);
  656:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****     }
  657:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   }
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 13
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 13
 
 
  658:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   else
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  712:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   HAL_StatusTypeDef status = HAL_OK;
  713:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   uint32_t tmpsmcr;
  714:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 14
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 14
 
 
  715:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   /* Check the parameters */
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  769:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****     {
  770:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****       tmpsmcr = htim->Instance->SMCR & TIM_SMCR_SMS;
  771:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****       if (!IS_TIM_SLAVEMODE_TRIGGER_ENABLED(tmpsmcr))
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 15
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 15
 
 
  772:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****       {
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  826:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****     }
  827:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
  828:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****     default:
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 16
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 16
 
 
  829:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****       status = HAL_ERROR;
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  883:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   {
  884:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****     return HAL_BUSY;
  885:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   }
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 17
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 17
 
 
  886:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   else if (TIM_CHANNEL_N_STATE_GET(htim, Channel) == HAL_TIM_CHANNEL_STATE_READY)
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  940:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****       }
  941:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****       /* Enable the TIM Output Compare DMA request */
  942:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****       __HAL_TIM_ENABLE_DMA(htim, TIM_DMA_CC2);
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 18
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 18
 
 
  943:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****       break;
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  997:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** }
  998:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
  999:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** /**
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 19
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 19
 
 
 1000:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   * @brief  Stops the TIM Output Compare signal generation in DMA mode
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 1054:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****     __HAL_TIM_MOE_DISABLE(htim);
 1055:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
 1056:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****     /* Disable the Peripheral */
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 20
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 20
 
 
 1057:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****     __HAL_TIM_DISABLE(htim);
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 1111:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   }
 1112:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
 1113:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   /* Set the TIM complementary channel state */
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 21
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 21
 
 
 1114:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   TIM_CHANNEL_N_STATE_SET(htim, Channel, HAL_TIM_CHANNEL_STATE_BUSY);
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 1168:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   return HAL_OK;
 1169:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** }
 1170:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 22
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 22
 
 
 1171:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** /**
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 1225:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   }
 1226:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
 1227:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   if (status == HAL_OK)
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 23
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 23
 
 
 1228:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   {
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 1282:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****       break;
 1283:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****     }
 1284:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 24
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 24
 
 
 1285:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****     case TIM_CHANNEL_2:
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 1339:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   * @param  pData The source Buffer address.
 1340:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   * @param  Length The length of data to be transferred from memory to TIM peripheral
 1341:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   * @retval HAL status
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 25
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 25
 
 
 1342:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   */
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 1396:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****     case TIM_CHANNEL_2:
 1397:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****     {
 1398:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****       /* Set the DMA compare callbacks */
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 26
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 26
 
 
 1399:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****       htim->hdma[TIM_DMA_ID_CC2]->XferCpltCallback = TIM_DMADelayPulseNCplt;
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 1453:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****     {
 1454:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****       tmpsmcr = htim->Instance->SMCR & TIM_SMCR_SMS;
 1455:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****       if (!IS_TIM_SLAVEMODE_TRIGGER_ENABLED(tmpsmcr))
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 27
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 27
 
 
 1456:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****       {
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 1510:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****       (void)HAL_DMA_Abort_IT(htim->hdma[TIM_DMA_ID_CC3]);
 1511:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****       break;
 1512:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****     }
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 28
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 28
 
 
 1513:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 1567:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   *          This parameter can be one of the following values:
 1568:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   *            @arg TIM_CHANNEL_1: TIM Channel 1 selected
 1569:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   *            @arg TIM_CHANNEL_2: TIM Channel 2 selected
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 29
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 29
 
 
 1570:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   * @retval HAL status
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 1624:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
 1625:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   /* Check the parameters */
 1626:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   assert_param(IS_TIM_CCXN_INSTANCE(htim->Instance, OutputChannel));
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 30
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 30
 
 
 1627:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 1681:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   TIM_CHANNEL_STATE_SET(htim, TIM_CHANNEL_1, HAL_TIM_CHANNEL_STATE_BUSY);
 1682:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   TIM_CHANNEL_STATE_SET(htim, TIM_CHANNEL_2, HAL_TIM_CHANNEL_STATE_BUSY);
 1683:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   TIM_CHANNEL_N_STATE_SET(htim, TIM_CHANNEL_1, HAL_TIM_CHANNEL_STATE_BUSY);
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 31
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 31
 
 
 1684:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   TIM_CHANNEL_N_STATE_SET(htim, TIM_CHANNEL_2, HAL_TIM_CHANNEL_STATE_BUSY);
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 1738:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   /* Set the TIM  channels state */
 1739:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   TIM_CHANNEL_STATE_SET(htim, TIM_CHANNEL_1, HAL_TIM_CHANNEL_STATE_READY);
 1740:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   TIM_CHANNEL_STATE_SET(htim, TIM_CHANNEL_2, HAL_TIM_CHANNEL_STATE_READY);
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 32
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 32
 
 
 1741:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   TIM_CHANNEL_N_STATE_SET(htim, TIM_CHANNEL_1, HAL_TIM_CHANNEL_STATE_READY);
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 1795:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** HAL_StatusTypeDef HAL_TIMEx_ConfigCommutEvent(TIM_HandleTypeDef *htim, uint32_t  InputTrigger,
 1796:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****                                               uint32_t  CommutationSource)
 1797:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** {
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 33
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 33
 
 
 1798:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   /* Check the parameters */
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 1852:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****                                                  uint32_t  CommutationSource)
 1853:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** {
 1854:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   /* Check the parameters */
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 34
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 34
 
 
 1855:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   assert_param(IS_TIM_COMMUTATION_EVENT_INSTANCE(htim->Instance));
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 1909:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****                                                   uint32_t  CommutationSource)
 1910:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** {
 1911:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   /* Check the parameters */
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 35
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 35
 
 
 1912:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   assert_param(IS_TIM_COMMUTATION_EVENT_INSTANCE(htim->Instance));
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 1966:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   assert_param(IS_TIM_MSM_STATE(sMasterConfig->MasterSlaveMode));
 1967:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
 1968:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   /* Check input state */
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 36
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 36
 
 
 1969:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   __HAL_LOCK(htim);
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 2023:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   * @param  sBreakDeadTimeConfig pointer to a TIM_ConfigBreakDeadConfigTypeDef structure that
 2024:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   *         contains the BDTR Register configuration  information for the TIM peripheral.
 2025:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   * @note   Interrupts can be generated when an active level is detected on the
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 37
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 37
 
 
 2026:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   *         break input, the break 2 input or the system break input. Break
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 2080:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
 2081:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   return HAL_OK;
 2082:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** }
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 38
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 38
 
 
 2083:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 2137:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****       bkin_polarity_bitpos = TIM1_OR2_BKCMP1P_Pos;
 2138:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****       break;
 2139:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****     }
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 39
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 39
 
 
 2140:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****     case TIM_BREAKINPUTSOURCE_COMP2:
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 2194:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****     {
 2195:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****       /* Get the TIMx_OR3 register value */
 2196:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****       tmporx = htim->Instance->OR3;
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 40
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 40
 
 
 2197:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 2251:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   *
 2252:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   *                   field2 can have the following values:
 2253:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   *            @arg TIM_TIM1_ETR_ADC3_NONE:           TIM1_ETR is not connected to any ADC3 AWD (an
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 41
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 41
 
 
 2254:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   *            @arg TIM_TIM1_ETR_ADC3_AWD1:           TIM1_ETR is connected to ADC3 AWD1
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 2308:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   *
 2309:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   *                   field1 can have the following values:
 2310:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   *            @arg TIM_TIM2_ITR1_NONE:               No internal trigger on TIM2_ITR1
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 42
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 42
 
 
 2311:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   *            @arg TIM_TIM2_ITR1_USB_SOF:            TIM2_ITR1 is connected to USB SOF
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 2365:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   *
 2366:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   *                   field2 can have the following values:
 2367:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   *            @arg TIM_TIM8_ETR_ADC3_NONE:          TIM8_ETR is not connected to any ADC3 AWD (ana
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 43
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 43
 
 
 2368:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   *            @arg TIM_TIM8_ETR_ADC3_AWD1:          TIM8_ETR is connected to ADC3 AWD1
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 2422:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   *            @arg TIM_TIM16_TI1_HSE_32:            TIM16 TI1 is connected to HSE div 32  (note th
 2423:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   *            @arg TIM_TIM16_TI1_MCO:               TIM16 TI1 is connected to MCO
 2424:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   *
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 44
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 44
 
 
 2425:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   @endif
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 2479:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** }
 2480:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
 2481:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** /**
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 45
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 45
 
 
 2482:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   * @brief  Group channel 5 and channel 1, 2 or 3
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 2536:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
 2537:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** /**
 2538:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   * @brief  Commutation callback in non-blocking mode
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 46
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 46
 
 
 2539:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   * @param  htim TIM handle
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 2593:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****    */
 2594:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** }
 2595:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** /**
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 47
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 47
 
 
 2596:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   * @}
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 2650:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   * @}
 2651:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   */
 2652:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 48
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 48
 
 
 2653:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** /* Private functions ---------------------------------------------------------*/
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 2707:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   {
 2708:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****     htim->Channel = HAL_TIM_ACTIVE_CHANNEL_1;
 2709:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 49
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 49
 
 
 2710:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****     if (hdma->Init.Mode == DMA_NORMAL)
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 2764:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****     TIM_CHANNEL_N_STATE_SET(htim, TIM_CHANNEL_2, HAL_TIM_CHANNEL_STATE_READY);
 2765:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   }
 2766:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   else if (hdma == htim->hdma[TIM_DMA_ID_CC3])
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 50
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 50
 
 
 2767:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   {
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
   45 000c 036A     		ldr	r3, [r0, #32]
   46              		.loc 1 2804 14 view .LVU7
   47 000e 23EA0C03 		bic	r3, r3, ip
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 51
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 51
 
 
   48 0012 0362     		str	r3, [r0, #32]
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 2761:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   {
   92              		.loc 1 2761 30 is_stmt 0 view .LVU21
   93 000a A36A     		ldr	r3, [r4, #40]
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 52
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 52
 
 
 2761:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   {
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  132 0030 0123     		movs	r3, #1
  133 0032 84F84530 		strb	r3, [r4, #69]
  134 0036 EEE7     		b	.L4
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 53
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 53
 
 
  135              	.L9:
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  178              		.loc 1 2715 11 view .LVU50
  179 000c 8342     		cmp	r3, r0
  180 000e 11D0     		beq	.L16
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 54
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 54
 
 
 2724:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   {
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 2717:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
  219              		.loc 1 2717 19 is_stmt 0 view .LVU67
  220 0034 0223     		movs	r3, #2
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 55
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 55
 
 
  221 0036 2377     		strb	r3, [r4, #28]
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  265              		.loc 1 290 3 view .LVU79
  295:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
  266              		.loc 1 295 1 is_stmt 0 view .LVU80
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 56
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 56
 
 
  267 0000 7047     		bx	lr
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  309              		.loc 1 160 3 view .LVU94
  160:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   {
  310              		.loc 1 160 11 is_stmt 0 view .LVU95
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 57
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 57
 
 
  311 000c 90F83D30 		ldrb	r3, [r0, #61]	@ zero_extendqisi2
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  193:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
  350              		.loc 1 193 25 view .LVU111
  351 0040 0B43     		orrs	r3, r3, r1
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 58
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 58
 
 
  352 0042 9361     		str	r3, [r2, #24]
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  388 0070 2268     		ldr	r2, [r4]
  204:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
  389              		.loc 1 204 17 view .LVU130
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 59
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 59
 
 
  390 0072 9368     		ldr	r3, [r2, #8]
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  425              		.loc 1 219 7 is_stmt 0 view .LVU149
  426 0096 2268     		ldr	r2, [r4]
  219:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   htim->Instance->CR2 |= TIM_TRGO_OC2REF;
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 60
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 60
 
 
  427              		.loc 1 219 17 view .LVU150
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  465              	.L27:
  466              		.cfi_restore_state
  163:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 61
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 61
 
 
  467              		.loc 1 163 5 is_stmt 1 view .LVU167
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  516              		.thumb_func
  518              	HAL_TIMEx_HallSensor_DeInit:
  519              	.LVL25:
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 62
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 62
 
 
  520              	.LFB133:
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  265:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
  561              		.loc 1 265 23 is_stmt 0 discriminator 5 view .LVU189
  562 002e 0020     		movs	r0, #0
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 63
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 63
 
 
  563 0030 84F84800 		strb	r0, [r4, #72]
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  605 0002 0446     		mov	r4, r0
  319:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   HAL_TIM_ChannelStateTypeDef channel_1_state = TIM_CHANNEL_STATE_GET(htim, TIM_CHANNEL_1);
  606              		.loc 1 319 3 is_stmt 1 view .LVU204
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 64
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 64
 
 
  320:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   HAL_TIM_ChannelStateTypeDef channel_2_state = TIM_CHANNEL_STATE_GET(htim, TIM_CHANNEL_2);
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  644 002a 01D0     		beq	.L42
  334:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   }
  645              		.loc 1 334 12 view .LVU222
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 65
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 65
 
 
  646 002c 1046     		mov	r0, r2
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  359:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   }
  686              		.loc 1 359 5 is_stmt 1 view .LVU237
  687 0060 1A68     		ldr	r2, [r3]
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 66
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 66
 
 
  688 0062 42F00102 		orr	r2, r2, #1
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  729              	.LVL45:
  334:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   }
  730              		.loc 1 334 12 view .LVU251
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 67
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 67
 
 
  731 008e FCE7     		b	.L33
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  779 000e 2368     		ldr	r3, [r4]
  780 0010 196A     		ldr	r1, [r3, #32]
  781 0012 41F21112 		movw	r2, #4369
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 68
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 68
 
 
  782 0016 1142     		tst	r1, r2
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  826              		.loc 1 400 1 is_stmt 0 view .LVU271
  827 0000 10B5     		push	{r4, lr}
  828              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 69
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 69
 
 
  829              		.cfi_offset 4, -8
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  866 0024 012A     		cmp	r2, #1
  867 0026 37D1     		bne	.L53
  414:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   {
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 70
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 70
 
 
  868              		.loc 1 414 7 view .LVU289
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  908 0056 2368     		ldr	r3, [r4]
  434:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   {
  909              		.loc 1 434 6 view .LVU304
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 71
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 71
 
 
  910 0058 124A     		ldr	r2, .L59
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  951              	.LVL65:
  952              	.L52:
  416:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   }
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 72
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 72
 
 
  953              		.loc 1 416 12 view .LVU318
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  1002              		.loc 1 459 3 is_stmt 1 view .LVU325
  464:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
  1003              		.loc 1 464 3 view .LVU326
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 73
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 73
 
 
  1004 0004 0022     		movs	r2, #0
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  1045 0048 0020     		movs	r0, #0
  1046 004a 10BD     		pop	{r4, pc}
  480:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 74
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 74
 
 
  1047              		.loc 1 480 1 discriminator 5 view .LVU340
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  500:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   {
  1093              		.loc 1 500 7 view .LVU351
  1094 001c 022D     		cmp	r5, #2
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 75
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 75
 
 
  1095 001e 45D0     		beq	.L68
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  528:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   htim->hdma[TIM_DMA_ID_CC1]->XferHalfCpltCallback = TIM_DMACaptureHalfCplt;
  1134              		.loc 1 528 13 is_stmt 0 view .LVU367
  1135 0046 636A     		ldr	r3, [r4, #36]
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 76
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 76
 
 
  528:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   htim->hdma[TIM_DMA_ID_CC1]->XferHalfCpltCallback = TIM_DMACaptureHalfCplt;
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  543:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   {
  1175              		.loc 1 543 7 discriminator 1 view .LVU383
  1176 007a B3F1804F 		cmp	r3, #1073741824
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 77
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 77
 
 
  1177 007e 08D0     		beq	.L66
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  1218              		.loc 1 519 12 view .LVU396
  1219 00b0 0120     		movs	r0, #1
  1220              	.LVL88:
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 78
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 78
 
 
  1221              	.L65:
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  1269 0004 0022     		movs	r2, #0
  1270 0006 1146     		mov	r1, r2
  1271 0008 0068     		ldr	r0, [r0]
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 79
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 79
 
 
  1272              	.LVL93:
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  590:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
  1313              		.loc 1 590 1 discriminator 5 view .LVU418
  1314              		.cfi_endproc
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 80
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 80
 
 
  1315              	.LFE141:
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  1359              		.loc 1 641 3 is_stmt 0 discriminator 1 view .LVU430
  1360 001c 0223     		movs	r3, #2
  1361 001e 84F84430 		strb	r3, [r4, #68]
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 81
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 81
 
 
  1362              	.L87:
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  635:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   {
  1404              		.loc 1 635 46 discriminator 5 view .LVU443
  1405 005c 0829     		cmp	r1, #8
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 82
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 82
 
 
  1406 005e 0DD0     		beq	.L97
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  641:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
  1450              		.loc 1 641 3 discriminator 6 view .LVU454
  1451 00a2 0223     		movs	r3, #2
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 83
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 83
 
 
  1452 00a4 84F84630 		strb	r3, [r4, #70]
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  1494 00d0 FAE7     		b	.L85
  1495              	.L101:
  1496 00d2 00BF     		.align	2
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 84
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 84
 
 
  1497              	.L100:
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  1545 0022 03D1     		bne	.L103
  687:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
  1546              		.loc 1 687 3 discriminator 3 view .LVU475
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 85
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 85
 
 
  1547 0024 5A6C     		ldr	r2, [r3, #68]
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  1588              		.loc 1 693 3 discriminator 7 view .LVU488
  1589 005e 0123     		movs	r3, #1
  1590 0060 84F84730 		strb	r3, [r4, #71]
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 86
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 86
 
 
  1591 0064 F5E7     		b	.L106
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  1636              		.loc 1 719 7 discriminator 1 view .LVU499
  1637 000a 94F84430 		ldrb	r3, [r4, #68]	@ zero_extendqisi2
  1638 000e DBB2     		uxtb	r3, r3
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 87
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 87
 
 
  719:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   {
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  1681 004a 5364     		str	r3, [r2, #68]
  768:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****     {
  1682              		.loc 1 768 5 view .LVU512
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 88
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 88
 
 
  768:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****     {
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  1726 0090 C1E7     		b	.L114
  1727              	.L133:
  719:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   {
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 89
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 89
 
 
  1728              		.loc 1 719 7 discriminator 7 view .LVU524
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  756:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   {
  1771              		.loc 1 756 3 view .LVU536
  1772 00ce AEE7     		b	.L124
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 90
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 90
 
 
  1773              	.L135:
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  1813              		.loc 1 721 12 view .LVU550
  1814 00fe 0120     		movs	r0, #1
  1815              	.LVL125:
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 91
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 91
 
 
  1816              	.L117:
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  1864 0008 3CD0     		beq	.L139
  1865 000a 0829     		cmp	r1, #8
  1866 000c 40D0     		beq	.L140
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 92
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 92
 
 
  1867 000e 09B1     		cbz	r1, .L151
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  1907 0036 22F08002 		bic	r2, r2, #128
  1908 003a DA60     		str	r2, [r3, #12]
  1909              	.L143:
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 93
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 93
 
 
  846:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  1951 007a 0123     		movs	r3, #1
  1952 007c 85F84430 		strb	r3, [r5, #68]
  1953 0080 0020     		movs	r0, #0
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 94
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 94
 
 
  1954 0082 C6E7     		b	.L141
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  1997 00be 0020     		movs	r0, #0
  1998 00c0 A7E7     		b	.L141
  1999              		.cfi_endproc
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 95
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 95
 
 
  2000              	.LFE145:
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  2045              		.loc 1 882 6 discriminator 12 view .LVU607
  2046 001a 0028     		cmp	r0, #0
  2047 001c 40F0D380 		bne	.L173
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 96
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 96
 
 
  886:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   {
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  2087 0052 D162     		str	r1, [r2, #44]
  908:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
  2088              		.loc 1 908 7 is_stmt 1 view .LVU623
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 97
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 97
 
 
  908:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  2129 008a 43F40043 		orr	r3, r3, #32768
  2130 008e 5364     		str	r3, [r2, #68]
  981:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****     {
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 98
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 98
 
 
  2131              		.loc 1 981 5 view .LVU638
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  2174              	.LVL148:
  882:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   {
  2175              		.loc 1 882 7 discriminator 4 view .LVU650
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 99
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 99
 
 
  2176 00d2 C0B2     		uxtb	r0, r0
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  2219              		.loc 1 886 12 discriminator 4 view .LVU661
  2220 010a D2B2     		uxtb	r2, r2
  886:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   {
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 100
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 100
 
 
  2221              		.loc 1 886 51 discriminator 4 view .LVU662
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  2265              	.L167:
  928:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****       htim->hdma[TIM_DMA_ID_CC2]->XferHalfCpltCallback = TIM_DMADelayPulseHalfCplt;
  2266              		.loc 1 928 7 view .LVU673
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 101
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 101
 
 
  928:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****       htim->hdma[TIM_DMA_ID_CC2]->XferHalfCpltCallback = TIM_DMADelayPulseHalfCplt;
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  2305 0176 81E7     		b	.L170
  2306              	.LVL158:
  2307              	.L189:
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 102
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 102
 
 
  894:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****     }
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  2345 019e 2268     		ldr	r2, [r4]
  2346 01a0 D368     		ldr	r3, [r2, #12]
  2347 01a2 43F40063 		orr	r3, r3, #2048
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 103
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 103
 
 
  2348 01a6 D360     		str	r3, [r2, #12]
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  2389              	.L175:
  890:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****     }
  2390              		.loc 1 890 14 view .LVU720
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 104
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 104
 
 
  2391 01ce 0120     		movs	r0, #1
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 1011:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   HAL_StatusTypeDef status = HAL_OK;
  2442              		.loc 1 1011 1 is_stmt 0 view .LVU726
  2443 0000 38B5     		push	{r3, r4, r5, lr}
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 105
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 105
 
 
  2444              		.cfi_def_cfa_offset 16
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  2486 0028 2868     		ldr	r0, [r5]
  2487 002a FFF7FEFF 		bl	TIM_CCxNChannelCmd
  2488              	.LVL175:
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 106
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 106
 
 
 1054:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  2531 0074 CDE7     		b	.L195
  2532              	.LVL176:
  2533              	.L193:
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 107
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 107
 
 
 1030:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****       (void)HAL_DMA_Abort_IT(htim->hdma[TIM_DMA_ID_CC2]);
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  2573              		.loc 1 1060 5 discriminator 7 view .LVU765
  2574 00a2 0123     		movs	r3, #1
  2575 00a4 85F84730 		strb	r3, [r5, #71]
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 108
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 108
 
 
  2576 00a8 0020     		movs	r0, #0
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  2622 0008 94F84430 		ldrb	r3, [r4, #68]	@ zero_extendqisi2
  2623 000c DBB2     		uxtb	r3, r3
 1108:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   {
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 109
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 109
 
 
  2624              		.loc 1 1108 46 discriminator 1 view .LVU776
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  2666 0048 9342     		cmp	r3, r2
  2667 004a 2ED0     		beq	.L217
 1133:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   }
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 110
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 110
 
 
  2668              		.loc 1 1133 5 is_stmt 1 view .LVU789
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  2712 008c 05D0     		beq	.L225
 1114:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
  2713              		.loc 1 1114 3 discriminator 4 view .LVU800
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 111
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 111
 
 
  2714 008e 0828     		cmp	r0, #8
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  2756              	.L219:
 1110:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   }
  2757              		.loc 1 1110 12 view .LVU813
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 112
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 112
 
 
  2758 00c6 0120     		movs	r0, #1
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  2807              		.loc 1 1156 3 is_stmt 0 view .LVU820
  2808 000a FFF7FEFF 		bl	TIM_CCxNChannelCmd
  2809              	.LVL196:
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 113
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 113
 
 
 1159:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 1168:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** }
  2852              		.loc 1 1168 3 is_stmt 1 view .LVU833
 1169:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 114
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 114
 
 
  2853              		.loc 1 1169 1 is_stmt 0 view .LVU834
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  2901              		.loc 1 1184 3 is_stmt 1 view .LVU842
  2902              	.LVL199:
 1185:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 115
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 115
 
 
  2903              		.loc 1 1185 3 view .LVU843
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  2943              		.loc 1 1233 5 view .LVU857
  2944 0038 0422     		movs	r2, #4
  2945 003a 0146     		mov	r1, r0
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 116
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 116
 
 
  2946              	.LVL201:
@@ -6958,7 +6958,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  2988 007a DBB2     		uxtb	r3, r3
 1191:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   {
  2989              		.loc 1 1191 46 discriminator 8 view .LVU870
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 117
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 117
 
 
  2990 007c 013B     		subs	r3, r3, #1
@@ -7018,7 +7018,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  3034              	.LVL206:
  3035              	.L261:
 1197:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 118
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 118
 
 
  3036              		.loc 1 1197 3 view .LVU881
@@ -7078,7 +7078,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 1242:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****       {
  3076              		.loc 1 1242 11 discriminator 1 view .LVU896
  3077 00ec B2F5803F 		cmp	r2, #65536
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 119
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 119
 
 
  3078 00f0 09D0     		beq	.L257
@@ -7138,7 +7138,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  3127              		.cfi_def_cfa_offset 16
  3128              		.cfi_offset 3, -16
  3129              		.cfi_offset 4, -12
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 120
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 120
 
 
  3130              		.cfi_offset 5, -8
@@ -7198,7 +7198,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 1310:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****     if ((tmpccer & TIM_CCER_CCxNE_MASK) == (uint32_t)RESET)
  3171              		.loc 1 1310 19 is_stmt 0 view .LVU917
  3172 0028 2B68     		ldr	r3, [r5]
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 121
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 121
 
 
 1310:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****     if ((tmpccer & TIM_CCER_CCxNE_MASK) == (uint32_t)RESET)
@@ -7258,7 +7258,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  3214 0066 196A     		ldr	r1, [r3, #32]
  3215 0068 40F24442 		movw	r2, #1092
  3216 006c 1142     		tst	r1, r2
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 122
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 122
 
 
  3217 006e 03D1     		bne	.L272
@@ -7318,7 +7318,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  3258              		.loc 1 1323 5 discriminator 7 view .LVU943
  3259 00a4 0123     		movs	r3, #1
  3260 00a6 85F84730 		strb	r3, [r5, #71]
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 123
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 123
 
 
  3261 00aa 0020     		movs	r0, #0
@@ -7378,7 +7378,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  3308 0008 0029     		cmp	r1, #0
  3309 000a 54D1     		bne	.L282
 1353:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   {
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 124
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 124
 
 
  3310              		.loc 1 1353 7 discriminator 1 view .LVU953
@@ -7438,7 +7438,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  3351 0046 6ED1     		bne	.L291
  3352 0048 0222     		movs	r2, #2
  3353 004a 84F84420 		strb	r2, [r4, #68]
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 125
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 125
 
 
 1373:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   {
@@ -7498,7 +7498,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  3392 007a D360     		str	r3, [r2, #12]
 1393:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****     }
  3393              		.loc 1 1393 7 view .LVU983
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 126
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 126
 
 
 1443:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   {
@@ -7558,7 +7558,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  3436 00be 90F84700 		ldrb	r0, [r0, #71]	@ zero_extendqisi2
  3437              	.LVL232:
 1353:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   {
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 127
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 127
 
 
  3438              		.loc 1 1353 7 discriminator 8 view .LVU996
@@ -7618,7 +7618,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 1357:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   {
  3482              		.loc 1 1357 12 discriminator 8 view .LVU1007
  3483 00fa D2B2     		uxtb	r2, r2
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 128
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 128
 
 
 1357:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   {
@@ -7678,7 +7678,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  3527 0134 042D     		cmp	r5, #4
  3528 0136 08D0     		beq	.L294
 1373:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   {
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 129
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 129
 
 
  3529              		.loc 1 1373 3 is_stmt 0 view .LVU1019
@@ -7738,7 +7738,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  3568 0162 A06A     		ldr	r0, [r4, #40]
  3569 0164 FFF7FEFF 		bl	HAL_DMA_Start_IT
  3570              	.LVL243:
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 130
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 130
 
 
 1406:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****                            Length) != HAL_OK)
@@ -7798,7 +7798,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 1427:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****                            Length) != HAL_OK)
  3609              		.loc 1 1427 7 is_stmt 1 view .LVU1051
 1427:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****                            Length) != HAL_OK)
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 131
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 131
 
 
  3610              		.loc 1 1427 88 is_stmt 0 view .LVU1052
@@ -7858,7 +7858,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  3651              	.LVL249:
  3652              	.L300:
 1355:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   }
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 132
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 132
 
 
  3653              		.loc 1 1355 12 view .LVU1066
@@ -7918,7 +7918,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  3700 01fc 07000100 		.word	65543
  3701              		.cfi_endproc
  3702              	.LFE152:
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 133
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 133
 
 
  3704              		.section	.text.HAL_TIMEx_PWMN_Stop_DMA,"ax",%progbits
@@ -7978,7 +7978,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 1494:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****       break;
  3750              		.loc 1 1494 13 is_stmt 0 view .LVU1083
  3751 001e 406A     		ldr	r0, [r0, #36]
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 134
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 134
 
 
  3752              	.LVL259:
@@ -8038,7 +8038,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  3794 0060 03D1     		bne	.L325
 1528:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
  3795              		.loc 1 1528 5 discriminator 3 view .LVU1096
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 135
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 135
 
 
  3796 0062 1A68     		ldr	r2, [r3]
@@ -8098,7 +8098,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  3837 0094 FFF7FEFF 		bl	HAL_DMA_Abort_IT
  3838              	.LVL267:
 1511:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****     }
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 136
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 136
 
 
  3839              		.loc 1 1511 7 is_stmt 1 view .LVU1110
@@ -8158,7 +8158,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  3887              		.cfi_offset 4, -12
  3888              		.cfi_offset 5, -8
  3889              		.cfi_offset 14, -4
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 137
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 137
 
 
  3890 0002 0446     		mov	r4, r0
@@ -8218,7 +8218,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  3928              		.loc 1 1586 7 view .LVU1134
  3929 002c 012A     		cmp	r2, #1
  3930 002e 22D1     		bne	.L339
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 138
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 138
 
 
 1587:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   {
@@ -8278,7 +8278,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  3971 005c 2946     		mov	r1, r5
  3972 005e 2068     		ldr	r0, [r4]
  3973 0060 FFF7FEFF 		bl	TIM_CCxChannelCmd
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 139
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 139
 
 
  3974              	.LVL283:
@@ -8338,7 +8338,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  4021              		.cfi_offset 5, -8
  4022              		.cfi_offset 14, -4
  4023 0002 0446     		mov	r4, r0
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 140
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 140
 
 
 1623:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
@@ -8398,7 +8398,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  4065 003a 2368     		ldr	r3, [r4]
  4066 003c 196A     		ldr	r1, [r3, #32]
  4067 003e 41F21112 		movw	r2, #4369
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 141
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 141
 
 
  4068 0042 1142     		tst	r1, r2
@@ -8458,7 +8458,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  4113              		.cfi_startproc
  4114              		@ args = 0, pretend = 0, frame = 0
  4115              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 142
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 142
 
 
 1661:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   uint32_t input_channel = (OutputChannel == TIM_CHANNEL_1) ? TIM_CHANNEL_2 : TIM_CHANNEL_1;
@@ -8518,7 +8518,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  4155              		.loc 1 1672 6 is_stmt 0 discriminator 4 view .LVU1196
  4156 0024 0128     		cmp	r0, #1
  4157 0026 2ED1     		bne	.L353
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 143
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 143
 
 
 1673:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****       || (complementary_channel_1_state != HAL_TIM_CHANNEL_STATE_READY)
@@ -8578,7 +8578,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  4198 005a 2268     		ldr	r2, [r4]
  4199 005c D368     		ldr	r3, [r2, #12]
  4200 005e 43F00403 		orr	r3, r3, #4
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 144
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 144
 
 
  4201 0062 D360     		str	r3, [r2, #12]
@@ -8638,7 +8638,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  4245              		.section	.text.HAL_TIMEx_OnePulseN_Stop_IT,"ax",%progbits
  4246              		.align	1
  4247              		.global	HAL_TIMEx_OnePulseN_Stop_IT
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 145
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 145
 
 
  4248              		.syntax unified
@@ -8698,7 +8698,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  4293 0026 0022     		movs	r2, #0
  4294 0028 2946     		mov	r1, r5
  4295 002a 2068     		ldr	r0, [r4]
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 146
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 146
 
 
  4296 002c FFF7FEFF 		bl	TIM_CCxChannelCmd
@@ -8758,7 +8758,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  4338 0072 84F83F30 		strb	r3, [r4, #63]
 1741:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   TIM_CHANNEL_N_STATE_SET(htim, TIM_CHANNEL_2, HAL_TIM_CHANNEL_STATE_READY);
  4339              		.loc 1 1741 3 discriminator 5 view .LVU1244
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 147
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 147
 
 
  4340 0076 84F84430 		strb	r3, [r4, #68]
@@ -8818,7 +8818,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  4384              		.cfi_offset 4, -4
 1802:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
  4385              		.loc 1 1802 3 is_stmt 1 discriminator 2 view .LVU1257
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 148
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 148
 
 
  4386 000c 0120     		movs	r0, #1
@@ -8878,7 +8878,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  4423 0032 1868     		ldr	r0, [r3]
 1813:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   /* Select the Commutation event source */
  4424              		.loc 1 1813 17 view .LVU1275
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 149
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 149
 
 
  4425 0034 4168     		ldr	r1, [r0, #4]
@@ -8938,7 +8938,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 1827:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
  4463              		.loc 1 1827 1 is_stmt 0 view .LVU1292
  4464 0068 5DF8044B 		ldr	r4, [sp], #4
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 150
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 150
 
 
  4465              		.cfi_restore 4
@@ -8998,7 +8998,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 1858:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
  4510              		.loc 1 1858 3 discriminator 2 view .LVU1304
 1860:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****       (InputTrigger == TIM_TS_ITR2) || (InputTrigger == TIM_TS_ITR3))
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 151
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 151
 
 
  4511              		.loc 1 1860 3 discriminator 2 view .LVU1305
@@ -9058,7 +9058,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  4548              		.loc 1 1869 23 view .LVU1322
  4549 0036 41F00101 		orr	r1, r1, #1
  4550 003a 4160     		str	r1, [r0, #4]
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 152
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 152
 
 
 1871:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   htim->Instance->CR2 |= CommutationSource;
@@ -9118,7 +9118,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  4589 006c 7047     		bx	lr
  4590              	.LVL329:
  4591              	.L377:
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 153
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 153
 
 
 1858:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
@@ -9178,7 +9178,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  4634              		.loc 1 1917 6 is_stmt 0 discriminator 2 view .LVU1352
  4635 0012 29B1     		cbz	r1, .L384
 1917:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****       (InputTrigger == TIM_TS_ITR2) || (InputTrigger == TIM_TS_ITR3))
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 154
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 154
 
 
  4636              		.loc 1 1917 37 discriminator 1 view .LVU1353
@@ -9238,7 +9238,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 1928:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   htim->Instance->CR2 |= CommutationSource;
  4674              		.loc 1 1928 7 is_stmt 0 view .LVU1370
  4675 003c 1868     		ldr	r0, [r3]
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 155
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 155
 
 
 1928:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   htim->Instance->CR2 |= CommutationSource;
@@ -9298,7 +9298,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  4713 0068 CA60     		str	r2, [r1, #12]
 1942:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
  4714              		.loc 1 1942 3 view .LVU1388
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 156
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 156
 
 
  4715 006a 1968     		ldr	r1, [r3]
@@ -9358,7 +9358,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  4761              		.loc 1 1961 3 view .LVU1398
 1964:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   assert_param(IS_TIM_TRGO_SOURCE(sMasterConfig->MasterOutputTrigger));
  4762              		.loc 1 1964 3 view .LVU1399
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 157
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 157
 
 
 1965:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   assert_param(IS_TIM_MSM_STATE(sMasterConfig->MasterSlaveMode));
@@ -9418,7 +9418,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 1993:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   /* Select the TRGO source */
  4801              		.loc 1 1993 3 is_stmt 1 view .LVU1416
 1993:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   /* Select the TRGO source */
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 158
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 158
 
 
  4802              		.loc 1 1993 10 is_stmt 0 view .LVU1417
@@ -9478,7 +9478,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  4841              	.LVL345:
 2008:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   }
  4842              		.loc 1 2008 5 is_stmt 1 view .LVU1433
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 159
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 159
 
 
 2008:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   }
@@ -9538,7 +9538,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  4882              		.cfi_def_cfa_offset 0
  4883              		.cfi_restore 4
  4884              		.cfi_restore 5
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 160
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 160
 
 
 1969:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
@@ -9598,7 +9598,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  4926 0006 3BD0     		beq	.L409
 2032:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   /* Keep this variable initialized to 0 as it is used to configure BDTR register */
  4927              		.loc 1 2032 1 is_stmt 0 discriminator 2 view .LVU1464
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 161
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 161
 
 
  4928 0008 10B4     		push	{r4}
@@ -9658,7 +9658,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 2058:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   MODIFY_REG(tmpbdtr, TIM_BDTR_BKP, sBreakDeadTimeConfig->BreakPolarity);
  4969              		.loc 1 2058 3 is_stmt 0 discriminator 2 view .LVU1478
  4970 0030 0869     		ldr	r0, [r1, #16]
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 162
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 162
 
 
  4971              	.LVL364:
@@ -9718,7 +9718,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  5011              		.loc 1 2077 3 is_stmt 1 view .LVU1492
 2077:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
  5012              		.loc 1 2077 24 is_stmt 0 view .LVU1493
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 163
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 163
 
 
  5013 0056 4364     		str	r3, [r0, #68]
@@ -9778,7 +9778,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  5052 007a 096A     		ldr	r1, [r1, #32]
  5053              	.LVL383:
 2073:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   }
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 164
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 164
 
 
  5054              		.loc 1 2073 5 view .LVU1509
@@ -9838,7 +9838,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  5098              		.loc 1 2106 3 view .LVU1521
 2107:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   assert_param(IS_TIM_BREAKINPUTSOURCE(sBreakInputConfig->Source));
  5099              		.loc 1 2107 3 view .LVU1522
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 165
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 165
 
 
 2108:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   assert_param(IS_TIM_BREAKINPUTSOURCE_STATE(sBreakInputConfig->Enable));
@@ -9898,7 +9898,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 2161:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****       bkin_polarity_mask = 0U;
  5138              		.loc 1 2161 24 view .LVU1539
  5139 0028 6046     		mov	r0, ip
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 166
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 166
 
 
  5140              	.L419:
@@ -9958,7 +9958,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  5181              	.LVL393:
  5182              	.L420:
 2174:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 167
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 167
 
 
  5183              		.loc 1 2174 7 is_stmt 1 view .LVU1553
@@ -10018,7 +10018,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  5220              		.loc 1 2191 7 view .LVU1570
  5221 0080 D8E7     		b	.L422
  5222              	.LVL400:
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 168
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 168
 
 
  5223              	.L421:
@@ -10078,7 +10078,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  5260              	.LVL406:
 2213:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****     }
  5261              		.loc 1 2213 7 view .LVU1588
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 169
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 169
 
 
  5262 00a2 C7E7     		b	.L422
@@ -10138,7 +10138,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  5306              		.loc 1 2456 3 discriminator 2 view .LVU1600
 2459:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   {
  5307              		.loc 1 2459 3 discriminator 2 view .LVU1601
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 170
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 170
 
 
 2459:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   {
@@ -10198,7 +10198,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 2474:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
  5345              		.loc 1 2474 7 is_stmt 0 view .LVU1619
  5346 0032 1A68     		ldr	r2, [r3]
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 171
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 171
 
 
 2474:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
@@ -10258,7 +10258,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  5390 0000 90F83C30 		ldrb	r3, [r0, #60]	@ zero_extendqisi2
  5391 0004 012B     		cmp	r3, #1
  5392 0006 18D0     		beq	.L441
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 172
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 172
 
 
 2493:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   /* Check parameters */
@@ -10318,7 +10318,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 2514:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** }
  5429              		.loc 1 2514 3 discriminator 2 view .LVU1651
 2514:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** }
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 173
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 173
 
 
  5430              		.loc 1 2514 10 is_stmt 0 discriminator 2 view .LVU1652
@@ -10378,7 +10378,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  5481              		@ args = 0, pretend = 0, frame = 0
  5482              		@ frame_needed = 0, uses_anonymous_args = 0
 2664:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   TIM_HandleTypeDef *htim = (TIM_HandleTypeDef *)((DMA_HandleTypeDef *)hdma)->Parent;
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 174
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 174
 
 
  5483              		.loc 1 2664 1 is_stmt 0 view .LVU1660
@@ -10438,7 +10438,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  5532              	TIMEx_DMACommutationHalfCplt:
  5533              	.LVL426:
  5534              	.LFB173:
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 175
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 175
 
 
 2683:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   TIM_HandleTypeDef *htim = (TIM_HandleTypeDef *)((DMA_HandleTypeDef *)hdma)->Parent;
@@ -10498,7 +10498,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  5581              		.section	.text.HAL_TIMEx_Break2Callback,"ax",%progbits
  5582              		.align	1
  5583              		.weak	HAL_TIMEx_Break2Callback
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 176
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 176
 
 
  5584              		.syntax unified
@@ -10558,7 +10558,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
 2635:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c ****   HAL_TIM_ChannelStateTypeDef channel_state;
  5636              		.loc 1 2635 1 is_stmt 1 view -0
  5637              		.cfi_startproc
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 177
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 177
 
 
  5638              		@ args = 0, pretend = 0, frame = 0
@@ -10618,7 +10618,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  5678              	.L461:
 2641:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c **** 
  5679              		.loc 1 2641 19 discriminator 7 view .LVU1703
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 178
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 178
 
 
  5680 0022 90F84600 		ldrb	r0, [r0, #70]	@ zero_extendqisi2
@@ -10639,117 +10639,117 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 1
  5695              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h"
  5696              		.file 8 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h"
  5697              		.file 9 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h"
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 179
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 179
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32l4xx_hal_tim_ex.c
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:21     .text.TIM_CCxNChannelCmd:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:26     .text.TIM_CCxNChannelCmd:00000000 TIM_CCxNChannelCmd
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:64     .text.TIM_DMAErrorCCxN:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:69     .text.TIM_DMAErrorCCxN:00000000 TIM_DMAErrorCCxN
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:148    .text.TIM_DMADelayPulseNCplt:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:153    .text.TIM_DMADelayPulseNCplt:00000000 TIM_DMADelayPulseNCplt
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:251    .text.HAL_TIMEx_HallSensor_MspInit:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:257    .text.HAL_TIMEx_HallSensor_MspInit:00000000 HAL_TIMEx_HallSensor_MspInit
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:272    .text.HAL_TIMEx_HallSensor_Init:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:278    .text.HAL_TIMEx_HallSensor_Init:00000000 HAL_TIMEx_HallSensor_Init
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:491    .text.HAL_TIMEx_HallSensor_MspDeInit:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:497    .text.HAL_TIMEx_HallSensor_MspDeInit:00000000 HAL_TIMEx_HallSensor_MspDeInit
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:512    .text.HAL_TIMEx_HallSensor_DeInit:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:518    .text.HAL_TIMEx_HallSensor_DeInit:00000000 HAL_TIMEx_HallSensor_DeInit
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:587    .text.HAL_TIMEx_HallSensor_Start:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:593    .text.HAL_TIMEx_HallSensor_Start:00000000 HAL_TIMEx_HallSensor_Start
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:743    .text.HAL_TIMEx_HallSensor_Start:00000098 $d
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:749    .text.HAL_TIMEx_HallSensor_Stop:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:755    .text.HAL_TIMEx_HallSensor_Stop:00000000 HAL_TIMEx_HallSensor_Stop
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:813    .text.HAL_TIMEx_HallSensor_Start_IT:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:819    .text.HAL_TIMEx_HallSensor_Start_IT:00000000 HAL_TIMEx_HallSensor_Start_IT
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:977    .text.HAL_TIMEx_HallSensor_Start_IT:000000a4 $d
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:983    .text.HAL_TIMEx_HallSensor_Stop_IT:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:989    .text.HAL_TIMEx_HallSensor_Stop_IT:00000000 HAL_TIMEx_HallSensor_Stop_IT
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:1052   .text.HAL_TIMEx_HallSensor_Start_DMA:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:1058   .text.HAL_TIMEx_HallSensor_Start_DMA:00000000 HAL_TIMEx_HallSensor_Start_DMA
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:1239   .text.HAL_TIMEx_HallSensor_Start_DMA:000000bc $d
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:1248   .text.HAL_TIMEx_HallSensor_Stop_DMA:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:1254   .text.HAL_TIMEx_HallSensor_Stop_DMA:00000000 HAL_TIMEx_HallSensor_Stop_DMA
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:1318   .text.HAL_TIMEx_OCN_Start:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:1324   .text.HAL_TIMEx_OCN_Start:00000000 HAL_TIMEx_OCN_Start
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:1498   .text.HAL_TIMEx_OCN_Start:000000d4 $d
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:1504   .text.HAL_TIMEx_OCN_Stop:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:1510   .text.HAL_TIMEx_OCN_Stop:00000000 HAL_TIMEx_OCN_Stop
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:1606   .text.HAL_TIMEx_OCN_Start_IT:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:1612   .text.HAL_TIMEx_OCN_Start_IT:00000000 HAL_TIMEx_OCN_Start_IT
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:1830   .text.HAL_TIMEx_OCN_Start_IT:0000010c $d
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:1836   .text.HAL_TIMEx_OCN_Stop_IT:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:1842   .text.HAL_TIMEx_OCN_Stop_IT:00000000 HAL_TIMEx_OCN_Stop_IT
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:2003   .text.HAL_TIMEx_OCN_Start_DMA:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:2009   .text.HAL_TIMEx_OCN_Start_DMA:00000000 HAL_TIMEx_OCN_Start_DMA
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:2420   .text.HAL_TIMEx_OCN_Start_DMA:000001ec $d
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:2429   .text.HAL_TIMEx_OCN_Stop_DMA:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:2435   .text.HAL_TIMEx_OCN_Stop_DMA:00000000 HAL_TIMEx_OCN_Stop_DMA
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:2594   .text.HAL_TIMEx_PWMN_Start:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:2600   .text.HAL_TIMEx_PWMN_Start:00000000 HAL_TIMEx_PWMN_Start
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:2774   .text.HAL_TIMEx_PWMN_Start:000000d4 $d
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:2780   .text.HAL_TIMEx_PWMN_Stop:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:2786   .text.HAL_TIMEx_PWMN_Stop:00000000 HAL_TIMEx_PWMN_Stop
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:2882   .text.HAL_TIMEx_PWMN_Start_IT:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:2888   .text.HAL_TIMEx_PWMN_Start_IT:00000000 HAL_TIMEx_PWMN_Start_IT
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:3106   .text.HAL_TIMEx_PWMN_Start_IT:0000010c $d
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:3112   .text.HAL_TIMEx_PWMN_Stop_IT:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:3118   .text.HAL_TIMEx_PWMN_Stop_IT:00000000 HAL_TIMEx_PWMN_Stop_IT
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:3279   .text.HAL_TIMEx_PWMN_Start_DMA:00000000 $t
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 180
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:21     .text.TIM_CCxNChannelCmd:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:26     .text.TIM_CCxNChannelCmd:00000000 TIM_CCxNChannelCmd
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:64     .text.TIM_DMAErrorCCxN:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:69     .text.TIM_DMAErrorCCxN:00000000 TIM_DMAErrorCCxN
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:148    .text.TIM_DMADelayPulseNCplt:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:153    .text.TIM_DMADelayPulseNCplt:00000000 TIM_DMADelayPulseNCplt
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:251    .text.HAL_TIMEx_HallSensor_MspInit:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:257    .text.HAL_TIMEx_HallSensor_MspInit:00000000 HAL_TIMEx_HallSensor_MspInit
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:272    .text.HAL_TIMEx_HallSensor_Init:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:278    .text.HAL_TIMEx_HallSensor_Init:00000000 HAL_TIMEx_HallSensor_Init
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:491    .text.HAL_TIMEx_HallSensor_MspDeInit:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:497    .text.HAL_TIMEx_HallSensor_MspDeInit:00000000 HAL_TIMEx_HallSensor_MspDeInit
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:512    .text.HAL_TIMEx_HallSensor_DeInit:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:518    .text.HAL_TIMEx_HallSensor_DeInit:00000000 HAL_TIMEx_HallSensor_DeInit
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:587    .text.HAL_TIMEx_HallSensor_Start:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:593    .text.HAL_TIMEx_HallSensor_Start:00000000 HAL_TIMEx_HallSensor_Start
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:743    .text.HAL_TIMEx_HallSensor_Start:00000098 $d
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:749    .text.HAL_TIMEx_HallSensor_Stop:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:755    .text.HAL_TIMEx_HallSensor_Stop:00000000 HAL_TIMEx_HallSensor_Stop
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:813    .text.HAL_TIMEx_HallSensor_Start_IT:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:819    .text.HAL_TIMEx_HallSensor_Start_IT:00000000 HAL_TIMEx_HallSensor_Start_IT
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:977    .text.HAL_TIMEx_HallSensor_Start_IT:000000a4 $d
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:983    .text.HAL_TIMEx_HallSensor_Stop_IT:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:989    .text.HAL_TIMEx_HallSensor_Stop_IT:00000000 HAL_TIMEx_HallSensor_Stop_IT
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:1052   .text.HAL_TIMEx_HallSensor_Start_DMA:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:1058   .text.HAL_TIMEx_HallSensor_Start_DMA:00000000 HAL_TIMEx_HallSensor_Start_DMA
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:1239   .text.HAL_TIMEx_HallSensor_Start_DMA:000000bc $d
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:1248   .text.HAL_TIMEx_HallSensor_Stop_DMA:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:1254   .text.HAL_TIMEx_HallSensor_Stop_DMA:00000000 HAL_TIMEx_HallSensor_Stop_DMA
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:1318   .text.HAL_TIMEx_OCN_Start:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:1324   .text.HAL_TIMEx_OCN_Start:00000000 HAL_TIMEx_OCN_Start
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:1498   .text.HAL_TIMEx_OCN_Start:000000d4 $d
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:1504   .text.HAL_TIMEx_OCN_Stop:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:1510   .text.HAL_TIMEx_OCN_Stop:00000000 HAL_TIMEx_OCN_Stop
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:1606   .text.HAL_TIMEx_OCN_Start_IT:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:1612   .text.HAL_TIMEx_OCN_Start_IT:00000000 HAL_TIMEx_OCN_Start_IT
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:1830   .text.HAL_TIMEx_OCN_Start_IT:0000010c $d
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:1836   .text.HAL_TIMEx_OCN_Stop_IT:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:1842   .text.HAL_TIMEx_OCN_Stop_IT:00000000 HAL_TIMEx_OCN_Stop_IT
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:2003   .text.HAL_TIMEx_OCN_Start_DMA:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:2009   .text.HAL_TIMEx_OCN_Start_DMA:00000000 HAL_TIMEx_OCN_Start_DMA
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:2420   .text.HAL_TIMEx_OCN_Start_DMA:000001ec $d
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:2429   .text.HAL_TIMEx_OCN_Stop_DMA:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:2435   .text.HAL_TIMEx_OCN_Stop_DMA:00000000 HAL_TIMEx_OCN_Stop_DMA
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:2594   .text.HAL_TIMEx_PWMN_Start:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:2600   .text.HAL_TIMEx_PWMN_Start:00000000 HAL_TIMEx_PWMN_Start
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:2774   .text.HAL_TIMEx_PWMN_Start:000000d4 $d
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:2780   .text.HAL_TIMEx_PWMN_Stop:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:2786   .text.HAL_TIMEx_PWMN_Stop:00000000 HAL_TIMEx_PWMN_Stop
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:2882   .text.HAL_TIMEx_PWMN_Start_IT:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:2888   .text.HAL_TIMEx_PWMN_Start_IT:00000000 HAL_TIMEx_PWMN_Start_IT
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:3106   .text.HAL_TIMEx_PWMN_Start_IT:0000010c $d
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:3112   .text.HAL_TIMEx_PWMN_Stop_IT:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:3118   .text.HAL_TIMEx_PWMN_Stop_IT:00000000 HAL_TIMEx_PWMN_Stop_IT
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:3279   .text.HAL_TIMEx_PWMN_Start_DMA:00000000 $t
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 180
 
 
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:3285   .text.HAL_TIMEx_PWMN_Start_DMA:00000000 HAL_TIMEx_PWMN_Start_DMA
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:3696   .text.HAL_TIMEx_PWMN_Start_DMA:000001ec $d
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:3705   .text.HAL_TIMEx_PWMN_Stop_DMA:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:3711   .text.HAL_TIMEx_PWMN_Stop_DMA:00000000 HAL_TIMEx_PWMN_Stop_DMA
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:3870   .text.HAL_TIMEx_OnePulseN_Start:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:3876   .text.HAL_TIMEx_OnePulseN_Start:00000000 HAL_TIMEx_OnePulseN_Start
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:4003   .text.HAL_TIMEx_OnePulseN_Stop:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:4009   .text.HAL_TIMEx_OnePulseN_Stop:00000000 HAL_TIMEx_OnePulseN_Stop
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:4103   .text.HAL_TIMEx_OnePulseN_Start_IT:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:4109   .text.HAL_TIMEx_OnePulseN_Start_IT:00000000 HAL_TIMEx_OnePulseN_Start_IT
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:4246   .text.HAL_TIMEx_OnePulseN_Stop_IT:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:4252   .text.HAL_TIMEx_OnePulseN_Stop_IT:00000000 HAL_TIMEx_OnePulseN_Stop_IT
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:4356   .text.HAL_TIMEx_ConfigCommutEvent:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:4362   .text.HAL_TIMEx_ConfigCommutEvent:00000000 HAL_TIMEx_ConfigCommutEvent
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:4478   .text.HAL_TIMEx_ConfigCommutEvent_IT:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:4484   .text.HAL_TIMEx_ConfigCommutEvent_IT:00000000 HAL_TIMEx_ConfigCommutEvent_IT
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:4600   .text.HAL_TIMEx_ConfigCommutEvent_DMA:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:4606   .text.HAL_TIMEx_ConfigCommutEvent_DMA:00000000 HAL_TIMEx_ConfigCommutEvent_DMA
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:4739   .text.HAL_TIMEx_ConfigCommutEvent_DMA:00000084 $d
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:5476   .text.TIMEx_DMACommutationCplt:00000000 TIMEx_DMACommutationCplt
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:5532   .text.TIMEx_DMACommutationHalfCplt:00000000 TIMEx_DMACommutationHalfCplt
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:4746   .text.HAL_TIMEx_MasterConfigSynchronization:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:4752   .text.HAL_TIMEx_MasterConfigSynchronization:00000000 HAL_TIMEx_MasterConfigSynchronization
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:4893   .text.HAL_TIMEx_MasterConfigSynchronization:0000006c $d
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:4898   .text.HAL_TIMEx_ConfigBreakDeadTime:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:4904   .text.HAL_TIMEx_ConfigBreakDeadTime:00000000 HAL_TIMEx_ConfigBreakDeadTime
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:5071   .text.HAL_TIMEx_ConfigBreakDeadTime:00000084 $d
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:5076   .text.HAL_TIMEx_ConfigBreakInput:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:5082   .text.HAL_TIMEx_ConfigBreakInput:00000000 HAL_TIMEx_ConfigBreakInput
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:5278   .text.HAL_TIMEx_RemapConfig:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:5284   .text.HAL_TIMEx_RemapConfig:00000000 HAL_TIMEx_RemapConfig
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:5367   .text.HAL_TIMEx_RemapConfig:00000044 $d
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:5372   .text.HAL_TIMEx_GroupChannel5:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:5378   .text.HAL_TIMEx_GroupChannel5:00000000 HAL_TIMEx_GroupChannel5
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:5449   .text.HAL_TIMEx_CommutCallback:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:5455   .text.HAL_TIMEx_CommutCallback:00000000 HAL_TIMEx_CommutCallback
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:5470   .text.TIMEx_DMACommutationCplt:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:5505   .text.HAL_TIMEx_CommutHalfCpltCallback:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:5511   .text.HAL_TIMEx_CommutHalfCpltCallback:00000000 HAL_TIMEx_CommutHalfCpltCallback
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:5526   .text.TIMEx_DMACommutationHalfCplt:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:5561   .text.HAL_TIMEx_BreakCallback:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:5567   .text.HAL_TIMEx_BreakCallback:00000000 HAL_TIMEx_BreakCallback
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:5582   .text.HAL_TIMEx_Break2Callback:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:5588   .text.HAL_TIMEx_Break2Callback:00000000 HAL_TIMEx_Break2Callback
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:5603   .text.HAL_TIMEx_HallSensor_GetState:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:5609   .text.HAL_TIMEx_HallSensor_GetState:00000000 HAL_TIMEx_HallSensor_GetState
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:5627   .text.HAL_TIMEx_GetChannelNState:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s:5633   .text.HAL_TIMEx_GetChannelNState:00000000 HAL_TIMEx_GetChannelNState
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:3285   .text.HAL_TIMEx_PWMN_Start_DMA:00000000 HAL_TIMEx_PWMN_Start_DMA
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:3696   .text.HAL_TIMEx_PWMN_Start_DMA:000001ec $d
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:3705   .text.HAL_TIMEx_PWMN_Stop_DMA:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:3711   .text.HAL_TIMEx_PWMN_Stop_DMA:00000000 HAL_TIMEx_PWMN_Stop_DMA
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:3870   .text.HAL_TIMEx_OnePulseN_Start:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:3876   .text.HAL_TIMEx_OnePulseN_Start:00000000 HAL_TIMEx_OnePulseN_Start
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:4003   .text.HAL_TIMEx_OnePulseN_Stop:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:4009   .text.HAL_TIMEx_OnePulseN_Stop:00000000 HAL_TIMEx_OnePulseN_Stop
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:4103   .text.HAL_TIMEx_OnePulseN_Start_IT:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:4109   .text.HAL_TIMEx_OnePulseN_Start_IT:00000000 HAL_TIMEx_OnePulseN_Start_IT
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:4246   .text.HAL_TIMEx_OnePulseN_Stop_IT:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:4252   .text.HAL_TIMEx_OnePulseN_Stop_IT:00000000 HAL_TIMEx_OnePulseN_Stop_IT
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:4356   .text.HAL_TIMEx_ConfigCommutEvent:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:4362   .text.HAL_TIMEx_ConfigCommutEvent:00000000 HAL_TIMEx_ConfigCommutEvent
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:4478   .text.HAL_TIMEx_ConfigCommutEvent_IT:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:4484   .text.HAL_TIMEx_ConfigCommutEvent_IT:00000000 HAL_TIMEx_ConfigCommutEvent_IT
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:4600   .text.HAL_TIMEx_ConfigCommutEvent_DMA:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:4606   .text.HAL_TIMEx_ConfigCommutEvent_DMA:00000000 HAL_TIMEx_ConfigCommutEvent_DMA
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:4739   .text.HAL_TIMEx_ConfigCommutEvent_DMA:00000084 $d
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:5476   .text.TIMEx_DMACommutationCplt:00000000 TIMEx_DMACommutationCplt
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:5532   .text.TIMEx_DMACommutationHalfCplt:00000000 TIMEx_DMACommutationHalfCplt
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:4746   .text.HAL_TIMEx_MasterConfigSynchronization:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:4752   .text.HAL_TIMEx_MasterConfigSynchronization:00000000 HAL_TIMEx_MasterConfigSynchronization
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:4893   .text.HAL_TIMEx_MasterConfigSynchronization:0000006c $d
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:4898   .text.HAL_TIMEx_ConfigBreakDeadTime:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:4904   .text.HAL_TIMEx_ConfigBreakDeadTime:00000000 HAL_TIMEx_ConfigBreakDeadTime
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:5071   .text.HAL_TIMEx_ConfigBreakDeadTime:00000084 $d
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:5076   .text.HAL_TIMEx_ConfigBreakInput:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:5082   .text.HAL_TIMEx_ConfigBreakInput:00000000 HAL_TIMEx_ConfigBreakInput
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:5278   .text.HAL_TIMEx_RemapConfig:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:5284   .text.HAL_TIMEx_RemapConfig:00000000 HAL_TIMEx_RemapConfig
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:5367   .text.HAL_TIMEx_RemapConfig:00000044 $d
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:5372   .text.HAL_TIMEx_GroupChannel5:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:5378   .text.HAL_TIMEx_GroupChannel5:00000000 HAL_TIMEx_GroupChannel5
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:5449   .text.HAL_TIMEx_CommutCallback:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:5455   .text.HAL_TIMEx_CommutCallback:00000000 HAL_TIMEx_CommutCallback
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:5470   .text.TIMEx_DMACommutationCplt:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:5505   .text.HAL_TIMEx_CommutHalfCpltCallback:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:5511   .text.HAL_TIMEx_CommutHalfCpltCallback:00000000 HAL_TIMEx_CommutHalfCpltCallback
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:5526   .text.TIMEx_DMACommutationHalfCplt:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:5561   .text.HAL_TIMEx_BreakCallback:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:5567   .text.HAL_TIMEx_BreakCallback:00000000 HAL_TIMEx_BreakCallback
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:5582   .text.HAL_TIMEx_Break2Callback:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:5588   .text.HAL_TIMEx_Break2Callback:00000000 HAL_TIMEx_Break2Callback
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:5603   .text.HAL_TIMEx_HallSensor_GetState:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:5609   .text.HAL_TIMEx_HallSensor_GetState:00000000 HAL_TIMEx_HallSensor_GetState
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:5627   .text.HAL_TIMEx_GetChannelNState:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s:5633   .text.HAL_TIMEx_GetChannelNState:00000000 HAL_TIMEx_GetChannelNState
 
 UNDEFINED SYMBOLS
 HAL_TIM_ErrorCallback
@@ -10759,7 +10759,7 @@ TIM_TI1_SetConfig
 TIM_OC2_SetConfig
 TIM_CCxChannelCmd
 HAL_DMA_Start_IT
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccvKJ1jg.s 			page 181
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccLGpX5n.s 			page 181
 
 
 TIM_DMACaptureCplt

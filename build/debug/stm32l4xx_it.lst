@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s 			page 1
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccp7ZimC.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s 			page 1
   28:Core/Src/stm32l4xx_it.c **** /* Private typedef -----------------------------------------------------------*/
   29:Core/Src/stm32l4xx_it.c **** /* USER CODE BEGIN TD */
   30:Core/Src/stm32l4xx_it.c **** 
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s 			page 2
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccp7ZimC.s 			page 2
 
 
   31:Core/Src/stm32l4xx_it.c **** /* USER CODE END TD */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s 			page 1
   78:Core/Src/stm32l4xx_it.c **** 
   79:Core/Src/stm32l4xx_it.c ****   /* USER CODE END NonMaskableInt_IRQn 0 */
   80:Core/Src/stm32l4xx_it.c ****   /* USER CODE BEGIN NonMaskableInt_IRQn 1 */
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s 			page 3
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccp7ZimC.s 			page 3
 
 
   81:Core/Src/stm32l4xx_it.c ****   while (1)
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s 			page 1
   73              	MemManage_Handler:
   74              	.LFB134:
  100:Core/Src/stm32l4xx_it.c **** }
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s 			page 4
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccp7ZimC.s 			page 4
 
 
  101:Core/Src/stm32l4xx_it.c **** 
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s 			page 1
  105              		.loc 1 125 3 discriminator 1 view .LVU13
  126:Core/Src/stm32l4xx_it.c ****   {
  127:Core/Src/stm32l4xx_it.c ****     /* USER CODE BEGIN W1_BusFault_IRQn 0 */
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s 			page 5
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccp7ZimC.s 			page 5
 
 
  128:Core/Src/stm32l4xx_it.c ****     /* USER CODE END W1_BusFault_IRQn 0 */
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s 			page 1
  146:Core/Src/stm32l4xx_it.c **** 
  147:Core/Src/stm32l4xx_it.c **** /**
  148:Core/Src/stm32l4xx_it.c ****   * @brief This function handles System service call via SWI instruction.
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s 			page 6
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccp7ZimC.s 			page 6
 
 
  149:Core/Src/stm32l4xx_it.c ****   */
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s 			page 1
  178              		.thumb_func
  180              	PendSV_Handler:
  181              	.LFB139:
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s 			page 7
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccp7ZimC.s 			page 7
 
 
  172:Core/Src/stm32l4xx_it.c **** 
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s 			page 1
  213              		.loc 1 196 8 is_stmt 0 view .LVU29
  214 0006 024B     		ldr	r3, .L16
  215 0008 0122     		movs	r2, #1
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s 			page 8
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccp7ZimC.s 			page 8
 
 
  216 000a 1A70     		strb	r2, [r3]
@@ -453,16 +453,11 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s 			page 1
  209:Core/Src/stm32l4xx_it.c ****   */
  210:Core/Src/stm32l4xx_it.c **** 
  211:Core/Src/stm32l4xx_it.c **** /**
- 212:Core/Src/stm32l4xx_it.c ****   * @brief This function handles TIM2 global interrupt.
+ 212:Core/Src/stm32l4xx_it.c ****   * @brief This function handles USART1 global interrupt.
  213:Core/Src/stm32l4xx_it.c ****   */
- 214:Core/Src/stm32l4xx_it.c **** 
- 215:Core/Src/stm32l4xx_it.c **** 
- 216:Core/Src/stm32l4xx_it.c **** /**
- 217:Core/Src/stm32l4xx_it.c ****   * @brief This function handles USART1 global interrupt.
- 218:Core/Src/stm32l4xx_it.c ****   */
- 219:Core/Src/stm32l4xx_it.c **** void USART1_IRQHandler(void)
- 220:Core/Src/stm32l4xx_it.c **** {
- 235              		.loc 1 220 1 is_stmt 1 view -0
+ 214:Core/Src/stm32l4xx_it.c **** void USART1_IRQHandler(void)
+ 215:Core/Src/stm32l4xx_it.c **** {
+ 235              		.loc 1 215 1 is_stmt 1 view -0
  236              		.cfi_startproc
  237              		@ args = 0, pretend = 0, frame = 0
  238              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -470,22 +465,22 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s 			page 1
  240              		.cfi_def_cfa_offset 8
  241              		.cfi_offset 3, -8
  242              		.cfi_offset 14, -4
- 221:Core/Src/stm32l4xx_it.c ****   /* USER CODE BEGIN USART1_IRQn 0 */
- 222:Core/Src/stm32l4xx_it.c **** 
- 223:Core/Src/stm32l4xx_it.c ****   /* USER CODE END USART1_IRQn 0 */
- 224:Core/Src/stm32l4xx_it.c ****   HAL_UART_IRQHandler(&huart1);
- 243              		.loc 1 224 3 view .LVU32
+ 216:Core/Src/stm32l4xx_it.c ****   /* USER CODE BEGIN USART1_IRQn 0 */
+ 217:Core/Src/stm32l4xx_it.c **** 
+ 218:Core/Src/stm32l4xx_it.c ****   /* USER CODE END USART1_IRQn 0 */
+ 219:Core/Src/stm32l4xx_it.c ****   HAL_UART_IRQHandler(&huart1);
+ 243              		.loc 1 219 3 view .LVU32
  244 0002 0248     		ldr	r0, .L20
  245 0004 FFF7FEFF 		bl	HAL_UART_IRQHandler
  246              	.LVL1:
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s 			page 9
+ 220:Core/Src/stm32l4xx_it.c ****   /* USER CODE BEGIN USART1_IRQn 1 */
+ 221:Core/Src/stm32l4xx_it.c **** 
+ 222:Core/Src/stm32l4xx_it.c ****   /* USER CODE END USART1_IRQn 1 */
+ 223:Core/Src/stm32l4xx_it.c **** }
+ 247              		.loc 1 223 1 is_stmt 0 view .LVU33
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccp7ZimC.s 			page 9
 
 
- 225:Core/Src/stm32l4xx_it.c ****   /* USER CODE BEGIN USART1_IRQn 1 */
- 226:Core/Src/stm32l4xx_it.c **** 
- 227:Core/Src/stm32l4xx_it.c ****   /* USER CODE END USART1_IRQn 1 */
- 228:Core/Src/stm32l4xx_it.c **** }
- 247              		.loc 1 228 1 is_stmt 0 view .LVU33
  248 0008 08BD     		pop	{r3, pc}
  249              	.L21:
  250 000a 00BF     		.align	2
@@ -501,13 +496,13 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s 			page 1
  261              		.thumb_func
  263              	USART2_IRQHandler:
  264              	.LFB142:
- 229:Core/Src/stm32l4xx_it.c **** 
- 230:Core/Src/stm32l4xx_it.c **** /**
- 231:Core/Src/stm32l4xx_it.c ****   * @brief This function handles USART2 global interrupt.
- 232:Core/Src/stm32l4xx_it.c ****   */
- 233:Core/Src/stm32l4xx_it.c **** void USART2_IRQHandler(void)
- 234:Core/Src/stm32l4xx_it.c **** {
- 265              		.loc 1 234 1 is_stmt 1 view -0
+ 224:Core/Src/stm32l4xx_it.c **** 
+ 225:Core/Src/stm32l4xx_it.c **** /**
+ 226:Core/Src/stm32l4xx_it.c ****   * @brief This function handles USART2 global interrupt.
+ 227:Core/Src/stm32l4xx_it.c ****   */
+ 228:Core/Src/stm32l4xx_it.c **** void USART2_IRQHandler(void)
+ 229:Core/Src/stm32l4xx_it.c **** {
+ 265              		.loc 1 229 1 is_stmt 1 view -0
  266              		.cfi_startproc
  267              		@ args = 0, pretend = 0, frame = 0
  268              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -515,19 +510,19 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s 			page 1
  270              		.cfi_def_cfa_offset 8
  271              		.cfi_offset 3, -8
  272              		.cfi_offset 14, -4
- 235:Core/Src/stm32l4xx_it.c ****   /* USER CODE BEGIN USART2_IRQn 0 */
- 236:Core/Src/stm32l4xx_it.c **** 
- 237:Core/Src/stm32l4xx_it.c ****   /* USER CODE END USART2_IRQn 0 */
- 238:Core/Src/stm32l4xx_it.c ****   HAL_UART_IRQHandler(&huart2);
- 273              		.loc 1 238 3 view .LVU35
+ 230:Core/Src/stm32l4xx_it.c ****   /* USER CODE BEGIN USART2_IRQn 0 */
+ 231:Core/Src/stm32l4xx_it.c **** 
+ 232:Core/Src/stm32l4xx_it.c ****   /* USER CODE END USART2_IRQn 0 */
+ 233:Core/Src/stm32l4xx_it.c ****   HAL_UART_IRQHandler(&huart2);
+ 273              		.loc 1 233 3 view .LVU35
  274 0002 0248     		ldr	r0, .L24
  275 0004 FFF7FEFF 		bl	HAL_UART_IRQHandler
  276              	.LVL2:
- 239:Core/Src/stm32l4xx_it.c ****   /* USER CODE BEGIN USART2_IRQn 1 */
- 240:Core/Src/stm32l4xx_it.c **** 
- 241:Core/Src/stm32l4xx_it.c ****   /* USER CODE END USART2_IRQn 1 */
- 242:Core/Src/stm32l4xx_it.c **** }
- 277              		.loc 1 242 1 is_stmt 0 view .LVU36
+ 234:Core/Src/stm32l4xx_it.c ****   /* USER CODE BEGIN USART2_IRQn 1 */
+ 235:Core/Src/stm32l4xx_it.c **** 
+ 236:Core/Src/stm32l4xx_it.c ****   /* USER CODE END USART2_IRQn 1 */
+ 237:Core/Src/stm32l4xx_it.c **** }
+ 277              		.loc 1 237 1 is_stmt 0 view .LVU36
  278 0008 08BD     		pop	{r3, pc}
  279              	.L25:
  280 000a 00BF     		.align	2
@@ -538,45 +533,45 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s 			page 1
  286              		.text
  287              	.Letext0:
  288              		.file 2 "c:\\users\\igorn\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpa
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s 			page 10
-
-
  289              		.file 3 "c:\\users\\igorn\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpa
  290              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l433xx.h"
  291              		.file 5 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
  292              		.file 6 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h"
  293              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h"
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccp7ZimC.s 			page 10
+
+
  294              		.file 8 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s 			page 11
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccp7ZimC.s 			page 11
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32l4xx_it.c
-C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s:21     .text.NMI_Handler:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s:27     .text.NMI_Handler:00000000 NMI_Handler
-C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s:44     .text.HardFault_Handler:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s:50     .text.HardFault_Handler:00000000 HardFault_Handler
-C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s:67     .text.MemManage_Handler:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s:73     .text.MemManage_Handler:00000000 MemManage_Handler
-C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s:90     .text.BusFault_Handler:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s:96     .text.BusFault_Handler:00000000 BusFault_Handler
-C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s:113    .text.UsageFault_Handler:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s:119    .text.UsageFault_Handler:00000000 UsageFault_Handler
-C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s:136    .text.SVC_Handler:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s:142    .text.SVC_Handler:00000000 SVC_Handler
-C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s:155    .text.DebugMon_Handler:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s:161    .text.DebugMon_Handler:00000000 DebugMon_Handler
-C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s:174    .text.PendSV_Handler:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s:180    .text.PendSV_Handler:00000000 PendSV_Handler
-C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s:193    .text.SysTick_Handler:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s:199    .text.SysTick_Handler:00000000 SysTick_Handler
-C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s:222    .text.SysTick_Handler:00000010 $d
-C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s:227    .text.USART1_IRQHandler:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s:233    .text.USART1_IRQHandler:00000000 USART1_IRQHandler
-C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s:252    .text.USART1_IRQHandler:0000000c $d
-C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s:257    .text.USART2_IRQHandler:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s:263    .text.USART2_IRQHandler:00000000 USART2_IRQHandler
-C:\Users\igorn\AppData\Local\Temp\cc4NQrKt.s:282    .text.USART2_IRQHandler:0000000c $d
+C:\Users\igorn\AppData\Local\Temp\ccp7ZimC.s:21     .text.NMI_Handler:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccp7ZimC.s:27     .text.NMI_Handler:00000000 NMI_Handler
+C:\Users\igorn\AppData\Local\Temp\ccp7ZimC.s:44     .text.HardFault_Handler:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccp7ZimC.s:50     .text.HardFault_Handler:00000000 HardFault_Handler
+C:\Users\igorn\AppData\Local\Temp\ccp7ZimC.s:67     .text.MemManage_Handler:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccp7ZimC.s:73     .text.MemManage_Handler:00000000 MemManage_Handler
+C:\Users\igorn\AppData\Local\Temp\ccp7ZimC.s:90     .text.BusFault_Handler:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccp7ZimC.s:96     .text.BusFault_Handler:00000000 BusFault_Handler
+C:\Users\igorn\AppData\Local\Temp\ccp7ZimC.s:113    .text.UsageFault_Handler:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccp7ZimC.s:119    .text.UsageFault_Handler:00000000 UsageFault_Handler
+C:\Users\igorn\AppData\Local\Temp\ccp7ZimC.s:136    .text.SVC_Handler:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccp7ZimC.s:142    .text.SVC_Handler:00000000 SVC_Handler
+C:\Users\igorn\AppData\Local\Temp\ccp7ZimC.s:155    .text.DebugMon_Handler:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccp7ZimC.s:161    .text.DebugMon_Handler:00000000 DebugMon_Handler
+C:\Users\igorn\AppData\Local\Temp\ccp7ZimC.s:174    .text.PendSV_Handler:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccp7ZimC.s:180    .text.PendSV_Handler:00000000 PendSV_Handler
+C:\Users\igorn\AppData\Local\Temp\ccp7ZimC.s:193    .text.SysTick_Handler:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccp7ZimC.s:199    .text.SysTick_Handler:00000000 SysTick_Handler
+C:\Users\igorn\AppData\Local\Temp\ccp7ZimC.s:222    .text.SysTick_Handler:00000010 $d
+C:\Users\igorn\AppData\Local\Temp\ccp7ZimC.s:227    .text.USART1_IRQHandler:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccp7ZimC.s:233    .text.USART1_IRQHandler:00000000 USART1_IRQHandler
+C:\Users\igorn\AppData\Local\Temp\ccp7ZimC.s:252    .text.USART1_IRQHandler:0000000c $d
+C:\Users\igorn\AppData\Local\Temp\ccp7ZimC.s:257    .text.USART2_IRQHandler:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccp7ZimC.s:263    .text.USART2_IRQHandler:00000000 USART2_IRQHandler
+C:\Users\igorn\AppData\Local\Temp\ccp7ZimC.s:282    .text.USART2_IRQHandler:0000000c $d
 
 UNDEFINED SYMBOLS
 HAL_IncTick

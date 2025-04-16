@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccDJhm3D.s 			page 1
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -39,809 +39,1082 @@ ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccDJhm3D.s 			page 1
   33              		@ frame_needed = 0, uses_anonymous_args = 0
   34              		@ link register save eliminated.
   35              		.loc 1 4 1 is_stmt 0 view .LVU1
-  36 0000 10B4     		push	{r4}
-  37              		.cfi_def_cfa_offset 4
-  38              		.cfi_offset 4, -4
+  36 0000 30B4     		push	{r4, r5}
+  37              		.cfi_def_cfa_offset 8
+  38              		.cfi_offset 4, -8
+  39              		.cfi_offset 5, -4
    5:Core/Src/NOS_Flash.c **** 	bool validated = true;
-  39              		.loc 1 5 2 is_stmt 1 view .LVU2
-  40              	.LVL1:
+  40              		.loc 1 5 2 is_stmt 1 view .LVU2
+  41              	.LVL1:
    6:Core/Src/NOS_Flash.c **** 
    7:Core/Src/NOS_Flash.c **** 	size_t _size = flashMemory->totalSize;
-  41              		.loc 1 7 2 view .LVU3
-  42              		.loc 1 7 9 is_stmt 0 view .LVU4
-  43 0002 816E     		ldr	r1, [r0, #104]
-  44              	.LVL2:
+  42              		.loc 1 7 2 view .LVU3
+  43              		.loc 1 7 9 is_stmt 0 view .LVU4
+  44 0002 846E     		ldr	r4, [r0, #104]
+  45              	.LVL2:
    8:Core/Src/NOS_Flash.c **** 	uint32_t address = flashMemory->baseFlashAddress;
-  45              		.loc 1 8 2 is_stmt 1 view .LVU5
-  46              		.loc 1 8 11 is_stmt 0 view .LVU6
-  47 0004 0468     		ldr	r4, [r0]
-  48              	.LVL3:
+  46              		.loc 1 8 2 is_stmt 1 view .LVU5
+  47              		.loc 1 8 11 is_stmt 0 view .LVU6
+  48 0004 0268     		ldr	r2, [r0]
+  49              	.LVL3:
    9:Core/Src/NOS_Flash.c **** 
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s 			page 2
+
+
   10:Core/Src/NOS_Flash.c **** 	for(int i = 0; i < _size; i++)
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccDJhm3D.s 			page 2
-
-
-  49              		.loc 1 10 2 is_stmt 1 view .LVU7
-  50              	.LBB2:
-  51              		.loc 1 10 6 view .LVU8
-  52              		.loc 1 10 10 is_stmt 0 view .LVU9
-  53 0006 0023     		movs	r3, #0
-  54              	.LBE2:
+  50              		.loc 1 10 2 is_stmt 1 view .LVU7
+  51              	.LBB2:
+  52              		.loc 1 10 6 view .LVU8
+  53              		.loc 1 10 10 is_stmt 0 view .LVU9
+  54 0006 0023     		movs	r3, #0
+  55              	.LBE2:
    5:Core/Src/NOS_Flash.c **** 
-  55              		.loc 1 5 7 view .LVU10
-  56 0008 0120     		movs	r0, #1
-  57              	.LVL4:
-  58              	.LBB3:
-  59              		.loc 1 10 2 view .LVU11
-  60 000a 00E0     		b	.L2
-  61              	.LVL5:
-  62              	.L3:
-  63              		.loc 1 10 29 is_stmt 1 discriminator 2 view .LVU12
-  64 000c 0133     		adds	r3, r3, #1
-  65              	.LVL6:
-  66              	.L2:
-  67              		.loc 1 10 19 discriminator 1 view .LVU13
-  68 000e 8B42     		cmp	r3, r1
-  69 0010 05D2     		bcs	.L7
+  56              		.loc 1 5 7 view .LVU10
+  57 0008 0120     		movs	r0, #1
+  58              	.LVL4:
+  59              	.LBB3:
+  60              		.loc 1 10 2 view .LVU11
+  61 000a 00E0     		b	.L2
+  62              	.LVL5:
+  63              	.L3:
+  64              		.loc 1 10 29 is_stmt 1 discriminator 2 view .LVU12
+  65 000c 0133     		adds	r3, r3, #1
+  66              	.LVL6:
+  67              	.L2:
+  68              		.loc 1 10 19 discriminator 1 view .LVU13
+  69 000e A342     		cmp	r3, r4
+  70 0010 09D2     		bcs	.L7
   11:Core/Src/NOS_Flash.c **** 	{
-  12:Core/Src/NOS_Flash.c **** 		if(*(uint32_t*)address == 0xFFFFFFFF)
-  70              		.loc 1 12 3 view .LVU14
-  71              		.loc 1 12 6 is_stmt 0 view .LVU15
-  72 0012 2268     		ldr	r2, [r4]
-  73              		.loc 1 12 5 view .LVU16
-  74 0014 B2F1FF3F 		cmp	r2, #-1
-  75 0018 F8D1     		bne	.L3
+  12:Core/Src/NOS_Flash.c **** 		if(*(uint64_t*)address == 0xFFFFFFFFFFFFFFFF)
+  71              		.loc 1 12 3 view .LVU14
+  72              		.loc 1 12 6 is_stmt 0 view .LVU15
+  73 0012 5168     		ldr	r1, [r2, #4]
+  74              		.loc 1 12 5 view .LVU16
+  75 0014 1568     		ldr	r5, [r2]
+  76 0016 B1F1FF3F 		cmp	r1, #-1
+  77 001a 08BF     		it	eq
+  78 001c B5F1FF3F 		cmpeq	r5, #-1
+  79 0020 F4D1     		bne	.L3
   13:Core/Src/NOS_Flash.c **** 		{
   14:Core/Src/NOS_Flash.c **** 			validated = false;
-  76              		.loc 1 14 14 view .LVU17
-  77 001a 0020     		movs	r0, #0
-  78              	.LVL7:
-  79              		.loc 1 14 14 view .LVU18
-  80 001c F6E7     		b	.L3
-  81              	.LVL8:
-  82              	.L7:
-  83              		.loc 1 14 14 view .LVU19
-  84              	.LBE3:
+  80              		.loc 1 14 14 view .LVU17
+  81 0022 0020     		movs	r0, #0
+  82              	.LVL7:
+  83              		.loc 1 14 14 view .LVU18
+  84 0024 F2E7     		b	.L3
+  85              	.LVL8:
+  86              	.L7:
+  87              		.loc 1 14 14 view .LVU19
+  88              	.LBE3:
   15:Core/Src/NOS_Flash.c **** 		}
   16:Core/Src/NOS_Flash.c **** 	}
   17:Core/Src/NOS_Flash.c **** 
   18:Core/Src/NOS_Flash.c **** 	return validated;
-  85              		.loc 1 18 2 is_stmt 1 view .LVU20
+  89              		.loc 1 18 2 is_stmt 1 view .LVU20
   19:Core/Src/NOS_Flash.c **** }
-  86              		.loc 1 19 1 is_stmt 0 view .LVU21
-  87 001e 5DF8044B 		ldr	r4, [sp], #4
-  88              		.cfi_restore 4
-  89              		.cfi_def_cfa_offset 0
-  90              	.LVL9:
-  91              		.loc 1 19 1 view .LVU22
-  92 0022 7047     		bx	lr
-  93              		.cfi_endproc
-  94              	.LFE132:
-  96              		.section	.text.NOS_Flash_Chunk_Init,"ax",%progbits
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccDJhm3D.s 			page 3
+  90              		.loc 1 19 1 is_stmt 0 view .LVU21
+  91 0026 30BC     		pop	{r4, r5}
+  92              		.cfi_restore 5
+  93              		.cfi_restore 4
+  94              		.cfi_def_cfa_offset 0
+  95              	.LVL9:
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s 			page 3
 
 
-  97              		.align	1
-  98              		.global	NOS_Flash_Chunk_Init
-  99              		.syntax unified
- 100              		.thumb
- 101              		.thumb_func
- 103              	NOS_Flash_Chunk_Init:
- 104              	.LVL10:
- 105              	.LFB133:
+  96              		.loc 1 19 1 view .LVU22
+  97 0028 7047     		bx	lr
+  98              		.cfi_endproc
+  99              	.LFE132:
+ 101              		.section	.text.NOS_Flash_Chunk_Init,"ax",%progbits
+ 102              		.align	1
+ 103              		.global	NOS_Flash_Chunk_Init
+ 104              		.syntax unified
+ 105              		.thumb
+ 106              		.thumb_func
+ 108              	NOS_Flash_Chunk_Init:
+ 109              	.LVL10:
+ 110              	.LFB133:
   20:Core/Src/NOS_Flash.c **** 
   21:Core/Src/NOS_Flash.c **** void NOS_Flash_Chunk_Init(NOS_Flash_Chunk* chunk,void* dataPtr,size_t size)
   22:Core/Src/NOS_Flash.c **** {
- 106              		.loc 1 22 1 is_stmt 1 view -0
- 107              		.cfi_startproc
- 108              		@ args = 0, pretend = 0, frame = 0
- 109              		@ frame_needed = 0, uses_anonymous_args = 0
- 110              		@ link register save eliminated.
+ 111              		.loc 1 22 1 is_stmt 1 view -0
+ 112              		.cfi_startproc
+ 113              		@ args = 0, pretend = 0, frame = 0
+ 114              		@ frame_needed = 0, uses_anonymous_args = 0
+ 115              		@ link register save eliminated.
   23:Core/Src/NOS_Flash.c **** 	chunk->dataPointer = dataPtr;
- 111              		.loc 1 23 2 view .LVU24
- 112              		.loc 1 23 21 is_stmt 0 view .LVU25
- 113 0000 0160     		str	r1, [r0]
+ 116              		.loc 1 23 2 view .LVU24
+ 117              		.loc 1 23 21 is_stmt 0 view .LVU25
+ 118 0000 0160     		str	r1, [r0]
   24:Core/Src/NOS_Flash.c **** 	chunk->size = size;
- 114              		.loc 1 24 2 is_stmt 1 view .LVU26
- 115              		.loc 1 24 14 is_stmt 0 view .LVU27
- 116 0002 8260     		str	r2, [r0, #8]
+ 119              		.loc 1 24 2 is_stmt 1 view .LVU26
+ 120              		.loc 1 24 14 is_stmt 0 view .LVU27
+ 121 0002 8260     		str	r2, [r0, #8]
   25:Core/Src/NOS_Flash.c **** 	chunk->flashAddress = 0;
- 117              		.loc 1 25 2 is_stmt 1 view .LVU28
- 118              		.loc 1 25 22 is_stmt 0 view .LVU29
- 119 0004 0023     		movs	r3, #0
- 120 0006 4360     		str	r3, [r0, #4]
+ 122              		.loc 1 25 2 is_stmt 1 view .LVU28
+ 123              		.loc 1 25 22 is_stmt 0 view .LVU29
+ 124 0004 0023     		movs	r3, #0
+ 125 0006 4360     		str	r3, [r0, #4]
   26:Core/Src/NOS_Flash.c **** }
- 121              		.loc 1 26 1 view .LVU30
- 122 0008 7047     		bx	lr
- 123              		.cfi_endproc
- 124              	.LFE133:
- 126              		.section	.text.NOS_FlashMemory_Struct_Init,"ax",%progbits
- 127              		.align	1
- 128              		.global	NOS_FlashMemory_Struct_Init
- 129              		.syntax unified
- 130              		.thumb
- 131              		.thumb_func
- 133              	NOS_FlashMemory_Struct_Init:
- 134              	.LVL11:
- 135              	.LFB134:
+ 126              		.loc 1 26 1 view .LVU30
+ 127 0008 7047     		bx	lr
+ 128              		.cfi_endproc
+ 129              	.LFE133:
+ 131              		.section	.text.NOS_FlashMemory_Struct_Init,"ax",%progbits
+ 132              		.align	1
+ 133              		.global	NOS_FlashMemory_Struct_Init
+ 134              		.syntax unified
+ 135              		.thumb
+ 136              		.thumb_func
+ 138              	NOS_FlashMemory_Struct_Init:
+ 139              	.LVL11:
+ 140              	.LFB134:
   27:Core/Src/NOS_Flash.c **** 
   28:Core/Src/NOS_Flash.c **** void NOS_FlashMemory_Struct_Init(NOS_Flash_Memory_Struct* flashMemory,uint32_t baseAddress)
   29:Core/Src/NOS_Flash.c **** {
- 136              		.loc 1 29 1 is_stmt 1 view -0
- 137              		.cfi_startproc
- 138              		@ args = 0, pretend = 0, frame = 0
- 139              		@ frame_needed = 0, uses_anonymous_args = 0
- 140              		@ link register save eliminated.
+ 141              		.loc 1 29 1 is_stmt 1 view -0
+ 142              		.cfi_startproc
+ 143              		@ args = 0, pretend = 0, frame = 0
+ 144              		@ frame_needed = 0, uses_anonymous_args = 0
+ 145              		@ link register save eliminated.
   30:Core/Src/NOS_Flash.c **** 	flashMemory->baseFlashAddress = baseAddress;
- 141              		.loc 1 30 2 view .LVU32
- 142              		.loc 1 30 32 is_stmt 0 view .LVU33
- 143 0000 0160     		str	r1, [r0]
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s 			page 4
+
+
+ 146              		.loc 1 30 2 view .LVU32
+ 147              		.loc 1 30 32 is_stmt 0 view .LVU33
+ 148 0000 0160     		str	r1, [r0]
   31:Core/Src/NOS_Flash.c **** 	flashMemory->chunksCounter = 0;
- 144              		.loc 1 31 2 is_stmt 1 view .LVU34
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccDJhm3D.s 			page 4
-
-
- 145              		.loc 1 31 29 is_stmt 0 view .LVU35
- 146 0002 0023     		movs	r3, #0
- 147 0004 4366     		str	r3, [r0, #100]
+ 149              		.loc 1 31 2 is_stmt 1 view .LVU34
+ 150              		.loc 1 31 29 is_stmt 0 view .LVU35
+ 151 0002 0023     		movs	r3, #0
+ 152 0004 4366     		str	r3, [r0, #100]
   32:Core/Src/NOS_Flash.c **** }
- 148              		.loc 1 32 1 view .LVU36
- 149 0006 7047     		bx	lr
- 150              		.cfi_endproc
- 151              	.LFE134:
- 153              		.section	.text.NOS_Flash_Chunk_Copy,"ax",%progbits
- 154              		.align	1
- 155              		.global	NOS_Flash_Chunk_Copy
- 156              		.syntax unified
- 157              		.thumb
- 158              		.thumb_func
- 160              	NOS_Flash_Chunk_Copy:
- 161              	.LVL12:
- 162              	.LFB135:
+ 153              		.loc 1 32 1 view .LVU36
+ 154 0006 7047     		bx	lr
+ 155              		.cfi_endproc
+ 156              	.LFE134:
+ 158              		.section	.text.NOS_Flash_Chunk_Copy,"ax",%progbits
+ 159              		.align	1
+ 160              		.global	NOS_Flash_Chunk_Copy
+ 161              		.syntax unified
+ 162              		.thumb
+ 163              		.thumb_func
+ 165              	NOS_Flash_Chunk_Copy:
+ 166              	.LVL12:
+ 167              	.LFB135:
   33:Core/Src/NOS_Flash.c **** 
   34:Core/Src/NOS_Flash.c **** void NOS_Flash_Chunk_Copy(NOS_Flash_Chunk* destination,NOS_Flash_Chunk* source)
   35:Core/Src/NOS_Flash.c **** {
- 163              		.loc 1 35 1 is_stmt 1 view -0
- 164              		.cfi_startproc
- 165              		@ args = 0, pretend = 0, frame = 0
- 166              		@ frame_needed = 0, uses_anonymous_args = 0
- 167              		@ link register save eliminated.
+ 168              		.loc 1 35 1 is_stmt 1 view -0
+ 169              		.cfi_startproc
+ 170              		@ args = 0, pretend = 0, frame = 0
+ 171              		@ frame_needed = 0, uses_anonymous_args = 0
+ 172              		@ link register save eliminated.
   36:Core/Src/NOS_Flash.c **** 	destination->dataPointer = source->dataPointer;
- 168              		.loc 1 36 2 view .LVU38
- 169              		.loc 1 36 35 is_stmt 0 view .LVU39
- 170 0000 0B68     		ldr	r3, [r1]
- 171              		.loc 1 36 27 view .LVU40
- 172 0002 0360     		str	r3, [r0]
+ 173              		.loc 1 36 2 view .LVU38
+ 174              		.loc 1 36 35 is_stmt 0 view .LVU39
+ 175 0000 0B68     		ldr	r3, [r1]
+ 176              		.loc 1 36 27 view .LVU40
+ 177 0002 0360     		str	r3, [r0]
   37:Core/Src/NOS_Flash.c **** 	destination->size = source->size;
- 173              		.loc 1 37 2 is_stmt 1 view .LVU41
- 174              		.loc 1 37 28 is_stmt 0 view .LVU42
- 175 0004 8B68     		ldr	r3, [r1, #8]
- 176              		.loc 1 37 20 view .LVU43
- 177 0006 8360     		str	r3, [r0, #8]
+ 178              		.loc 1 37 2 is_stmt 1 view .LVU41
+ 179              		.loc 1 37 28 is_stmt 0 view .LVU42
+ 180 0004 8B68     		ldr	r3, [r1, #8]
+ 181              		.loc 1 37 20 view .LVU43
+ 182 0006 8360     		str	r3, [r0, #8]
   38:Core/Src/NOS_Flash.c **** 	destination->flashAddress = 0;
- 178              		.loc 1 38 2 is_stmt 1 view .LVU44
- 179              		.loc 1 38 28 is_stmt 0 view .LVU45
- 180 0008 0023     		movs	r3, #0
- 181 000a 4360     		str	r3, [r0, #4]
+ 183              		.loc 1 38 2 is_stmt 1 view .LVU44
+ 184              		.loc 1 38 28 is_stmt 0 view .LVU45
+ 185 0008 0023     		movs	r3, #0
+ 186 000a 4360     		str	r3, [r0, #4]
   39:Core/Src/NOS_Flash.c **** }
- 182              		.loc 1 39 1 view .LVU46
- 183 000c 7047     		bx	lr
- 184              		.cfi_endproc
- 185              	.LFE135:
- 187              		.section	.text.NOS_FlashMemory_Struct_AddChunk,"ax",%progbits
- 188              		.align	1
- 189              		.global	NOS_FlashMemory_Struct_AddChunk
- 190              		.syntax unified
- 191              		.thumb
- 192              		.thumb_func
- 194              	NOS_FlashMemory_Struct_AddChunk:
- 195              	.LVL13:
- 196              	.LFB136:
+ 187              		.loc 1 39 1 view .LVU46
+ 188 000c 7047     		bx	lr
+ 189              		.cfi_endproc
+ 190              	.LFE135:
+ 192              		.section	.text.NOS_FlashMemory_Struct_AddChunk,"ax",%progbits
+ 193              		.align	1
+ 194              		.global	NOS_FlashMemory_Struct_AddChunk
+ 195              		.syntax unified
+ 196              		.thumb
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s 			page 5
+
+
+ 197              		.thumb_func
+ 199              	NOS_FlashMemory_Struct_AddChunk:
+ 200              	.LVL13:
+ 201              	.LFB136:
   40:Core/Src/NOS_Flash.c **** 
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccDJhm3D.s 			page 5
-
-
   41:Core/Src/NOS_Flash.c **** void NOS_FlashMemory_Struct_AddChunk(NOS_Flash_Memory_Struct* flashMemory, NOS_Flash_Chunk* chunk)
   42:Core/Src/NOS_Flash.c **** {
- 197              		.loc 1 42 1 is_stmt 1 view -0
- 198              		.cfi_startproc
- 199              		@ args = 0, pretend = 0, frame = 0
- 200              		@ frame_needed = 0, uses_anonymous_args = 0
- 201              		.loc 1 42 1 is_stmt 0 view .LVU48
- 202 0000 38B5     		push	{r3, r4, r5, lr}
- 203              		.cfi_def_cfa_offset 16
- 204              		.cfi_offset 3, -16
- 205              		.cfi_offset 4, -12
- 206              		.cfi_offset 5, -8
- 207              		.cfi_offset 14, -4
- 208 0002 0446     		mov	r4, r0
+ 202              		.loc 1 42 1 is_stmt 1 view -0
+ 203              		.cfi_startproc
+ 204              		@ args = 0, pretend = 0, frame = 0
+ 205              		@ frame_needed = 0, uses_anonymous_args = 0
+ 206              		.loc 1 42 1 is_stmt 0 view .LVU48
+ 207 0000 38B5     		push	{r3, r4, r5, lr}
+ 208              		.cfi_def_cfa_offset 16
+ 209              		.cfi_offset 3, -16
+ 210              		.cfi_offset 4, -12
+ 211              		.cfi_offset 5, -8
+ 212              		.cfi_offset 14, -4
+ 213 0002 0446     		mov	r4, r0
   43:Core/Src/NOS_Flash.c **** 	if(flashMemory->chunksCounter < FLASH_CHUNKS_MAX_COUNTER)
- 209              		.loc 1 43 2 is_stmt 1 view .LVU49
- 210              		.loc 1 43 16 is_stmt 0 view .LVU50
- 211 0004 406E     		ldr	r0, [r0, #100]
- 212              	.LVL14:
- 213              		.loc 1 43 4 view .LVU51
- 214 0006 0728     		cmp	r0, #7
- 215 0008 00D9     		bls	.L14
- 216              	.LVL15:
- 217              	.L11:
+ 214              		.loc 1 43 2 is_stmt 1 view .LVU49
+ 215              		.loc 1 43 16 is_stmt 0 view .LVU50
+ 216 0004 406E     		ldr	r0, [r0, #100]
+ 217              	.LVL14:
+ 218              		.loc 1 43 4 view .LVU51
+ 219 0006 0728     		cmp	r0, #7
+ 220 0008 00D9     		bls	.L14
+ 221              	.LVL15:
+ 222              	.L11:
   44:Core/Src/NOS_Flash.c **** 	{
   45:Core/Src/NOS_Flash.c **** 		NOS_Flash_Chunk_Copy(&flashMemory->chunks[flashMemory->chunksCounter],chunk);
-  46:Core/Src/NOS_Flash.c **** 		flashMemory->chunks[flashMemory->chunksCounter].flashAddress = flashMemory->baseFlashAddress + fl
-  47:Core/Src/NOS_Flash.c **** 		flashMemory->chunksCounter++;
-  48:Core/Src/NOS_Flash.c **** 		flashMemory->totalSize += chunk->size;
-  49:Core/Src/NOS_Flash.c **** 	}
-  50:Core/Src/NOS_Flash.c **** }
- 218              		.loc 1 50 1 view .LVU52
- 219 000a 38BD     		pop	{r3, r4, r5, pc}
- 220              	.LVL16:
- 221              	.L14:
- 222              		.loc 1 50 1 view .LVU53
- 223 000c 0D46     		mov	r5, r1
-  45:Core/Src/NOS_Flash.c **** 		flashMemory->chunks[flashMemory->chunksCounter].flashAddress = flashMemory->baseFlashAddress + fl
- 224              		.loc 1 45 3 is_stmt 1 view .LVU54
- 225 000e 00EB4000 		add	r0, r0, r0, lsl #1
- 226 0012 04EB8000 		add	r0, r4, r0, lsl #2
- 227 0016 0430     		adds	r0, r0, #4
- 228 0018 FFF7FEFF 		bl	NOS_Flash_Chunk_Copy
- 229              	.LVL17:
-  46:Core/Src/NOS_Flash.c **** 		flashMemory->chunksCounter++;
- 230              		.loc 1 46 3 view .LVU55
-  46:Core/Src/NOS_Flash.c **** 		flashMemory->chunksCounter++;
- 231              		.loc 1 46 77 is_stmt 0 view .LVU56
- 232 001c 2168     		ldr	r1, [r4]
-  46:Core/Src/NOS_Flash.c **** 		flashMemory->chunksCounter++;
- 233              		.loc 1 46 109 view .LVU57
- 234 001e A26E     		ldr	r2, [r4, #104]
-  46:Core/Src/NOS_Flash.c **** 		flashMemory->chunksCounter++;
- 235              		.loc 1 46 34 view .LVU58
- 236 0020 636E     		ldr	r3, [r4, #100]
-  46:Core/Src/NOS_Flash.c **** 		flashMemory->chunksCounter++;
- 237              		.loc 1 46 96 view .LVU59
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccDJhm3D.s 			page 6
+  46:Core/Src/NOS_Flash.c **** 
+  47:Core/Src/NOS_Flash.c **** 		flashMemory->chunks[flashMemory->chunksCounter].flashAddress = flashMemory->baseFlashAddress + fl
+  48:Core/Src/NOS_Flash.c **** 
+  49:Core/Src/NOS_Flash.c **** 		flashMemory->chunksCounter++;
+  50:Core/Src/NOS_Flash.c **** 
+  51:Core/Src/NOS_Flash.c **** 		flashMemory->totalSize += chunk->size;
+  52:Core/Src/NOS_Flash.c **** 
+  53:Core/Src/NOS_Flash.c **** 		if(chunk->size % 8 != 0)
+  54:Core/Src/NOS_Flash.c **** 		{
+  55:Core/Src/NOS_Flash.c **** 			flashMemory->totalSize += chunk->size % 8;
+  56:Core/Src/NOS_Flash.c **** 		}
+  57:Core/Src/NOS_Flash.c **** 	}
+  58:Core/Src/NOS_Flash.c **** }
+ 223              		.loc 1 58 1 view .LVU52
+ 224 000a 38BD     		pop	{r3, r4, r5, pc}
+ 225              	.LVL16:
+ 226              	.L14:
+ 227              		.loc 1 58 1 view .LVU53
+ 228 000c 0D46     		mov	r5, r1
+  45:Core/Src/NOS_Flash.c **** 
+ 229              		.loc 1 45 3 is_stmt 1 view .LVU54
+ 230 000e 00EB4000 		add	r0, r0, r0, lsl #1
+ 231 0012 04EB8000 		add	r0, r4, r0, lsl #2
+ 232 0016 0430     		adds	r0, r0, #4
+ 233 0018 FFF7FEFF 		bl	NOS_Flash_Chunk_Copy
+ 234              	.LVL17:
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s 			page 6
 
 
- 238 0022 8818     		adds	r0, r1, r2
-  46:Core/Src/NOS_Flash.c **** 		flashMemory->chunksCounter++;
- 239              		.loc 1 46 64 view .LVU60
- 240 0024 03EB4301 		add	r1, r3, r3, lsl #1
- 241 0028 04EB8101 		add	r1, r4, r1, lsl #2
- 242 002c 8860     		str	r0, [r1, #8]
-  47:Core/Src/NOS_Flash.c **** 		flashMemory->totalSize += chunk->size;
- 243              		.loc 1 47 3 is_stmt 1 view .LVU61
-  47:Core/Src/NOS_Flash.c **** 		flashMemory->totalSize += chunk->size;
- 244              		.loc 1 47 29 is_stmt 0 view .LVU62
- 245 002e 0133     		adds	r3, r3, #1
- 246 0030 6366     		str	r3, [r4, #100]
-  48:Core/Src/NOS_Flash.c **** 	}
- 247              		.loc 1 48 3 is_stmt 1 view .LVU63
-  48:Core/Src/NOS_Flash.c **** 	}
- 248              		.loc 1 48 34 is_stmt 0 view .LVU64
- 249 0032 AB68     		ldr	r3, [r5, #8]
-  48:Core/Src/NOS_Flash.c **** 	}
- 250              		.loc 1 48 26 view .LVU65
- 251 0034 1A44     		add	r2, r2, r3
- 252 0036 A266     		str	r2, [r4, #104]
- 253              		.loc 1 50 1 view .LVU66
- 254 0038 E7E7     		b	.L11
- 255              		.cfi_endproc
- 256              	.LFE136:
- 258              		.section	.text.NOS_FlashMemory_Struct_GetTotalSize,"ax",%progbits
- 259              		.align	1
- 260              		.global	NOS_FlashMemory_Struct_GetTotalSize
- 261              		.syntax unified
- 262              		.thumb
- 263              		.thumb_func
- 265              	NOS_FlashMemory_Struct_GetTotalSize:
- 266              	.LVL18:
- 267              	.LFB137:
+  47:Core/Src/NOS_Flash.c **** 
+ 235              		.loc 1 47 3 view .LVU55
+  47:Core/Src/NOS_Flash.c **** 
+ 236              		.loc 1 47 77 is_stmt 0 view .LVU56
+ 237 001c 2168     		ldr	r1, [r4]
+  47:Core/Src/NOS_Flash.c **** 
+ 238              		.loc 1 47 109 view .LVU57
+ 239 001e A36E     		ldr	r3, [r4, #104]
+  47:Core/Src/NOS_Flash.c **** 
+ 240              		.loc 1 47 34 view .LVU58
+ 241 0020 626E     		ldr	r2, [r4, #100]
+  47:Core/Src/NOS_Flash.c **** 
+ 242              		.loc 1 47 96 view .LVU59
+ 243 0022 C818     		adds	r0, r1, r3
+  47:Core/Src/NOS_Flash.c **** 
+ 244              		.loc 1 47 64 view .LVU60
+ 245 0024 02EB4201 		add	r1, r2, r2, lsl #1
+ 246 0028 04EB8101 		add	r1, r4, r1, lsl #2
+ 247 002c 8860     		str	r0, [r1, #8]
+  49:Core/Src/NOS_Flash.c **** 
+ 248              		.loc 1 49 3 is_stmt 1 view .LVU61
+  49:Core/Src/NOS_Flash.c **** 
+ 249              		.loc 1 49 29 is_stmt 0 view .LVU62
+ 250 002e 0132     		adds	r2, r2, #1
+ 251 0030 6266     		str	r2, [r4, #100]
   51:Core/Src/NOS_Flash.c **** 
-  52:Core/Src/NOS_Flash.c **** size_t NOS_FlashMemory_Struct_GetTotalSize(NOS_Flash_Memory_Struct* flashMemory)
-  53:Core/Src/NOS_Flash.c **** {
- 268              		.loc 1 53 1 is_stmt 1 view -0
- 269              		.cfi_startproc
- 270              		@ args = 0, pretend = 0, frame = 0
- 271              		@ frame_needed = 0, uses_anonymous_args = 0
- 272              		@ link register save eliminated.
-  54:Core/Src/NOS_Flash.c **** 	return flashMemory->totalSize;
- 273              		.loc 1 54 2 view .LVU68
-  55:Core/Src/NOS_Flash.c **** }
- 274              		.loc 1 55 1 is_stmt 0 view .LVU69
- 275 0000 806E     		ldr	r0, [r0, #104]
- 276              	.LVL19:
- 277              		.loc 1 55 1 view .LVU70
- 278 0002 7047     		bx	lr
- 279              		.cfi_endproc
- 280              	.LFE137:
- 282              		.section	.text.NOS_Flash_Memory_Struct_Save,"ax",%progbits
- 283              		.align	1
- 284              		.global	NOS_Flash_Memory_Struct_Save
- 285              		.syntax unified
- 286              		.thumb
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccDJhm3D.s 			page 7
+ 252              		.loc 1 51 3 is_stmt 1 view .LVU63
+  51:Core/Src/NOS_Flash.c **** 
+ 253              		.loc 1 51 34 is_stmt 0 view .LVU64
+ 254 0032 AA68     		ldr	r2, [r5, #8]
+  51:Core/Src/NOS_Flash.c **** 
+ 255              		.loc 1 51 26 view .LVU65
+ 256 0034 1344     		add	r3, r3, r2
+ 257 0036 A366     		str	r3, [r4, #104]
+  53:Core/Src/NOS_Flash.c **** 		{
+ 258              		.loc 1 53 3 is_stmt 1 view .LVU66
+  53:Core/Src/NOS_Flash.c **** 		{
+ 259              		.loc 1 53 11 is_stmt 0 view .LVU67
+ 260 0038 AA68     		ldr	r2, [r5, #8]
+  53:Core/Src/NOS_Flash.c **** 		{
+ 261              		.loc 1 53 5 view .LVU68
+ 262 003a 12F00702 		ands	r2, r2, #7
+ 263 003e E4D0     		beq	.L11
+  55:Core/Src/NOS_Flash.c **** 		}
+ 264              		.loc 1 55 4 is_stmt 1 view .LVU69
+  55:Core/Src/NOS_Flash.c **** 		}
+ 265              		.loc 1 55 27 is_stmt 0 view .LVU70
+ 266 0040 1344     		add	r3, r3, r2
+ 267 0042 A366     		str	r3, [r4, #104]
+ 268              		.loc 1 58 1 view .LVU71
+ 269 0044 E1E7     		b	.L11
+ 270              		.cfi_endproc
+ 271              	.LFE136:
+ 273              		.section	.text.NOS_FlashMemory_Struct_GetTotalSize,"ax",%progbits
+ 274              		.align	1
+ 275              		.global	NOS_FlashMemory_Struct_GetTotalSize
+ 276              		.syntax unified
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s 			page 7
 
 
- 287              		.thumb_func
- 289              	NOS_Flash_Memory_Struct_Save:
- 290              	.LVL20:
- 291              	.LFB138:
-  56:Core/Src/NOS_Flash.c **** 
-  57:Core/Src/NOS_Flash.c **** void NOS_Flash_Memory_Struct_Save(NOS_Flash_Memory_Struct* flashMemory)
-  58:Core/Src/NOS_Flash.c **** {
- 292              		.loc 1 58 1 is_stmt 1 view -0
- 293              		.cfi_startproc
- 294              		@ args = 0, pretend = 0, frame = 32
- 295              		@ frame_needed = 1, uses_anonymous_args = 0
- 296              		.loc 1 58 1 is_stmt 0 view .LVU72
- 297 0000 2DE9F043 		push	{r4, r5, r6, r7, r8, r9, lr}
- 298              		.cfi_def_cfa_offset 28
- 299              		.cfi_offset 4, -28
- 300              		.cfi_offset 5, -24
- 301              		.cfi_offset 6, -20
- 302              		.cfi_offset 7, -16
- 303              		.cfi_offset 8, -12
- 304              		.cfi_offset 9, -8
- 305              		.cfi_offset 14, -4
- 306 0004 89B0     		sub	sp, sp, #36
- 307              		.cfi_def_cfa_offset 64
- 308 0006 00AF     		add	r7, sp, #0
- 309              		.cfi_def_cfa_register 7
- 310 0008 8146     		mov	r9, r0
-  59:Core/Src/NOS_Flash.c **** 	uint32_t address = flashMemory->baseFlashAddress;
- 311              		.loc 1 59 2 is_stmt 1 view .LVU73
- 312              		.loc 1 59 11 is_stmt 0 view .LVU74
- 313 000a D0F80080 		ldr	r8, [r0]
- 314              	.LVL21:
-  60:Core/Src/NOS_Flash.c **** 	uint32_t u32Count = flashMemory->totalSize/4;
- 315              		.loc 1 60 2 is_stmt 1 view .LVU75
- 316              		.loc 1 60 33 is_stmt 0 view .LVU76
- 317 000e 866E     		ldr	r6, [r0, #104]
- 318              		.loc 1 60 11 view .LVU77
- 319 0010 B508     		lsrs	r5, r6, #2
- 320              	.LVL22:
-  61:Core/Src/NOS_Flash.c **** 	uint32_t data_to_flash[u32Count];
- 321              		.loc 1 61 2 is_stmt 1 view .LVU78
- 322              		.loc 1 61 11 is_stmt 0 view .LVU79
- 323 0012 26F00302 		bic	r2, r6, #3
- 324 0016 0732     		adds	r2, r2, #7
- 325 0018 22F00702 		bic	r2, r2, #7
- 326 001c ADEB020D 		sub	sp, sp, r2
- 327 0020 6C46     		mov	r4, sp
- 328              	.LVL23:
-  62:Core/Src/NOS_Flash.c **** 	uint32_t dataCounter = 0;
- 329              		.loc 1 62 2 is_stmt 1 view .LVU80
-  63:Core/Src/NOS_Flash.c **** 	uint8_t pageCount = (flashMemory->totalSize / FLASH_PAGE_SIZE) + 1;
- 330              		.loc 1 63 2 view .LVU81
- 331              		.loc 1 63 65 is_stmt 0 view .LVU82
- 332 0022 C6F38726 		ubfx	r6, r6, #10, #8
- 333              		.loc 1 63 10 view .LVU83
- 334 0026 0136     		adds	r6, r6, #1
- 335 0028 F6B2     		uxtb	r6, r6
- 336              	.LVL24:
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccDJhm3D.s 			page 8
-
-
+ 277              		.thumb
+ 278              		.thumb_func
+ 280              	NOS_FlashMemory_Struct_GetTotalSize:
+ 281              	.LVL18:
+ 282              	.LFB137:
+  59:Core/Src/NOS_Flash.c **** 
+  60:Core/Src/NOS_Flash.c **** size_t NOS_FlashMemory_Struct_GetTotalSize(NOS_Flash_Memory_Struct* flashMemory)
+  61:Core/Src/NOS_Flash.c **** {
+ 283              		.loc 1 61 1 is_stmt 1 view -0
+ 284              		.cfi_startproc
+ 285              		@ args = 0, pretend = 0, frame = 0
+ 286              		@ frame_needed = 0, uses_anonymous_args = 0
+ 287              		@ link register save eliminated.
+  62:Core/Src/NOS_Flash.c **** 	return flashMemory->totalSize;
+ 288              		.loc 1 62 2 view .LVU73
+  63:Core/Src/NOS_Flash.c **** }
+ 289              		.loc 1 63 1 is_stmt 0 view .LVU74
+ 290 0000 806E     		ldr	r0, [r0, #104]
+ 291              	.LVL19:
+ 292              		.loc 1 63 1 view .LVU75
+ 293 0002 7047     		bx	lr
+ 294              		.cfi_endproc
+ 295              	.LFE137:
+ 297              		.section	.text.NOS_Flash_Memory_Struct_Save,"ax",%progbits
+ 298              		.align	1
+ 299              		.global	NOS_Flash_Memory_Struct_Save
+ 300              		.syntax unified
+ 301              		.thumb
+ 302              		.thumb_func
+ 304              	NOS_Flash_Memory_Struct_Save:
+ 305              	.LVL20:
+ 306              	.LFB138:
   64:Core/Src/NOS_Flash.c **** 
-  65:Core/Src/NOS_Flash.c **** 	for(int currChunk = 0; currChunk < flashMemory->chunksCounter; currChunk++)
- 337              		.loc 1 65 2 is_stmt 1 view .LVU84
- 338              	.LBB4:
- 339              		.loc 1 65 6 view .LVU85
- 340              		.loc 1 65 10 is_stmt 0 view .LVU86
- 341 002a 4FF0000E 		mov	lr, #0
- 342              	.LBE4:
-  62:Core/Src/NOS_Flash.c **** 	uint8_t pageCount = (flashMemory->totalSize / FLASH_PAGE_SIZE) + 1;
- 343              		.loc 1 62 11 view .LVU87
- 344 002e 7246     		mov	r2, lr
- 345              	.LBB9:
- 346              		.loc 1 65 2 view .LVU88
- 347 0030 09E0     		b	.L17
- 348              	.LVL25:
- 349              	.L19:
- 350              	.LBB5:
- 351              	.LBB6:
-  66:Core/Src/NOS_Flash.c **** 	{
-  67:Core/Src/NOS_Flash.c **** 		uint32_t* pointer = flashMemory->chunks[currChunk].dataPointer;
-  68:Core/Src/NOS_Flash.c **** 		uint32_t currChunkU32Size = flashMemory->chunks[currChunk].size/4;
-  69:Core/Src/NOS_Flash.c **** 
-  70:Core/Src/NOS_Flash.c **** 		for(int i = 0; i < currChunkU32Size; i++)
-  71:Core/Src/NOS_Flash.c **** 		{
-  72:Core/Src/NOS_Flash.c **** 			data_to_flash[dataCounter] = *pointer;
- 352              		.loc 1 72 4 is_stmt 1 discriminator 3 view .LVU89
- 353              		.loc 1 72 33 is_stmt 0 discriminator 3 view .LVU90
- 354 0032 51F8040B 		ldr	r0, [r1], #4
- 355              	.LVL26:
- 356              		.loc 1 72 31 discriminator 3 view .LVU91
- 357 0036 44F82200 		str	r0, [r4, r2, lsl #2]
-  73:Core/Src/NOS_Flash.c **** 			pointer++;
- 358              		.loc 1 73 4 is_stmt 1 discriminator 3 view .LVU92
- 359              	.LVL27:
-  74:Core/Src/NOS_Flash.c **** 			dataCounter++;
- 360              		.loc 1 74 4 discriminator 3 view .LVU93
- 361              		.loc 1 74 15 is_stmt 0 discriminator 3 view .LVU94
- 362 003a 0132     		adds	r2, r2, #1
- 363              	.LVL28:
-  70:Core/Src/NOS_Flash.c **** 		{
- 364              		.loc 1 70 41 is_stmt 1 discriminator 3 view .LVU95
- 365 003c 0133     		adds	r3, r3, #1
- 366              	.LVL29:
- 367              	.L18:
-  70:Core/Src/NOS_Flash.c **** 		{
- 368              		.loc 1 70 20 discriminator 1 view .LVU96
- 369 003e 6345     		cmp	r3, ip
- 370 0040 F7D3     		bcc	.L19
-  70:Core/Src/NOS_Flash.c **** 		{
- 371              		.loc 1 70 20 is_stmt 0 discriminator 1 view .LVU97
- 372              	.LBE6:
- 373              	.LBE5:
-  65:Core/Src/NOS_Flash.c **** 	{
- 374              		.loc 1 65 74 is_stmt 1 discriminator 2 view .LVU98
- 375 0042 0EF1010E 		add	lr, lr, #1
- 376              	.LVL30:
- 377              	.L17:
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccDJhm3D.s 			page 9
+  65:Core/Src/NOS_Flash.c **** void NOS_Flash_Memory_Struct_Save(NOS_Flash_Memory_Struct* flashMemory)
+  66:Core/Src/NOS_Flash.c **** {
+ 307              		.loc 1 66 1 is_stmt 1 view -0
+ 308              		.cfi_startproc
+ 309              		@ args = 0, pretend = 0, frame = 48
+ 310              		@ frame_needed = 1, uses_anonymous_args = 0
+ 311              		.loc 1 66 1 is_stmt 0 view .LVU77
+ 312 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 313              		.cfi_def_cfa_offset 24
+ 314              		.cfi_offset 4, -24
+ 315              		.cfi_offset 5, -20
+ 316              		.cfi_offset 6, -16
+ 317              		.cfi_offset 7, -12
+ 318              		.cfi_offset 8, -8
+ 319              		.cfi_offset 14, -4
+ 320 0004 8CB0     		sub	sp, sp, #48
+ 321              		.cfi_def_cfa_offset 72
+ 322 0006 00AF     		add	r7, sp, #0
+ 323              		.cfi_def_cfa_register 7
+ 324 0008 8046     		mov	r8, r0
+  67:Core/Src/NOS_Flash.c **** 	uint32_t address = flashMemory->baseFlashAddress;
+ 325              		.loc 1 67 2 is_stmt 1 view .LVU78
+ 326              		.loc 1 67 11 is_stmt 0 view .LVU79
+ 327 000a 0668     		ldr	r6, [r0]
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s 			page 8
 
 
-  65:Core/Src/NOS_Flash.c **** 	{
- 378              		.loc 1 65 35 discriminator 1 view .LVU99
-  65:Core/Src/NOS_Flash.c **** 	{
- 379              		.loc 1 65 48 is_stmt 0 discriminator 1 view .LVU100
- 380 0046 D9F86430 		ldr	r3, [r9, #100]
-  65:Core/Src/NOS_Flash.c **** 	{
- 381              		.loc 1 65 35 discriminator 1 view .LVU101
- 382 004a 7345     		cmp	r3, lr
- 383 004c 09D9     		bls	.L26
- 384              	.LBB8:
-  67:Core/Src/NOS_Flash.c **** 		uint32_t currChunkU32Size = flashMemory->chunks[currChunk].size/4;
- 385              		.loc 1 67 3 is_stmt 1 view .LVU102
-  67:Core/Src/NOS_Flash.c **** 		uint32_t currChunkU32Size = flashMemory->chunks[currChunk].size/4;
- 386              		.loc 1 67 13 is_stmt 0 view .LVU103
- 387 004e 0EEB4E03 		add	r3, lr, lr, lsl #1
- 388 0052 09EB8303 		add	r3, r9, r3, lsl #2
- 389 0056 5968     		ldr	r1, [r3, #4]
- 390              	.LVL31:
+ 328              	.LVL21:
   68:Core/Src/NOS_Flash.c **** 
- 391              		.loc 1 68 3 is_stmt 1 view .LVU104
-  68:Core/Src/NOS_Flash.c **** 
- 392              		.loc 1 68 61 is_stmt 0 view .LVU105
- 393 0058 DB68     		ldr	r3, [r3, #12]
-  68:Core/Src/NOS_Flash.c **** 
- 394              		.loc 1 68 12 view .LVU106
- 395 005a 4FEA930C 		lsr	ip, r3, #2
- 396              	.LVL32:
-  70:Core/Src/NOS_Flash.c **** 		{
- 397              		.loc 1 70 3 is_stmt 1 view .LVU107
- 398              	.LBB7:
-  70:Core/Src/NOS_Flash.c **** 		{
- 399              		.loc 1 70 7 view .LVU108
-  70:Core/Src/NOS_Flash.c **** 		{
- 400              		.loc 1 70 11 is_stmt 0 view .LVU109
- 401 005e 0023     		movs	r3, #0
-  70:Core/Src/NOS_Flash.c **** 		{
- 402              		.loc 1 70 3 view .LVU110
- 403 0060 EDE7     		b	.L18
- 404              	.LVL33:
- 405              	.L26:
-  70:Core/Src/NOS_Flash.c **** 		{
- 406              		.loc 1 70 3 view .LVU111
- 407              	.LBE7:
- 408              	.LBE8:
- 409              	.LBE9:
-  75:Core/Src/NOS_Flash.c **** 		}
+  69:Core/Src/NOS_Flash.c **** 	uint32_t u64Count = 0;
+ 329              		.loc 1 69 2 is_stmt 1 view .LVU80
+  70:Core/Src/NOS_Flash.c **** 
+  71:Core/Src/NOS_Flash.c **** 	uint16_t sizes[FLASH_CHUNKS_MAX_COUNTER];
+ 330              		.loc 1 71 2 view .LVU81
+  72:Core/Src/NOS_Flash.c **** 
+  73:Core/Src/NOS_Flash.c **** 	for(int i = 0; i < FLASH_CHUNKS_MAX_COUNTER; i++)
+ 331              		.loc 1 73 2 view .LVU82
+ 332              	.LBB4:
+ 333              		.loc 1 73 6 view .LVU83
+ 334              		.loc 1 73 10 is_stmt 0 view .LVU84
+ 335 000c 0023     		movs	r3, #0
+ 336              		.loc 1 73 2 view .LVU85
+ 337 000e 07E0     		b	.L17
+ 338              	.LVL22:
+ 339              	.L18:
+  74:Core/Src/NOS_Flash.c **** 	{
+  75:Core/Src/NOS_Flash.c **** 		sizes[i] = 0;
+ 340              		.loc 1 75 3 is_stmt 1 discriminator 3 view .LVU86
+ 341              		.loc 1 75 12 is_stmt 0 discriminator 3 view .LVU87
+ 342 0010 07F13002 		add	r2, r7, #48
+ 343 0014 02EB4302 		add	r2, r2, r3, lsl #1
+ 344 0018 0021     		movs	r1, #0
+ 345 001a 22F8101C 		strh	r1, [r2, #-16]	@ movhi
+  73:Core/Src/NOS_Flash.c **** 	{
+ 346              		.loc 1 73 48 is_stmt 1 discriminator 3 view .LVU88
+ 347 001e 0133     		adds	r3, r3, #1
+ 348              	.LVL23:
+ 349              	.L17:
+  73:Core/Src/NOS_Flash.c **** 	{
+ 350              		.loc 1 73 19 discriminator 1 view .LVU89
+ 351 0020 072B     		cmp	r3, #7
+ 352 0022 F5DD     		ble	.L18
+ 353              	.LBE4:
+ 354              	.LBB5:
   76:Core/Src/NOS_Flash.c **** 	}
   77:Core/Src/NOS_Flash.c **** 
-  78:Core/Src/NOS_Flash.c **** 	HAL_FLASH_Unlock();
- 410              		.loc 1 78 2 is_stmt 1 view .LVU112
- 411 0062 FFF7FEFF 		bl	HAL_FLASH_Unlock
- 412              	.LVL34:
-  79:Core/Src/NOS_Flash.c **** 	HAL_FLASH_OB_Unlock();
- 413              		.loc 1 79 2 view .LVU113
- 414 0066 FFF7FEFF 		bl	HAL_FLASH_OB_Unlock
- 415              	.LVL35:
-  80:Core/Src/NOS_Flash.c **** 	
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccDJhm3D.s 			page 10
+  78:Core/Src/NOS_Flash.c **** 	for(int i = 0; i < flashMemory->chunksCounter; i++) //checking every chunk for size an adding to u
+ 355              		.loc 1 78 10 is_stmt 0 view .LVU90
+ 356 0024 0023     		movs	r3, #0
+ 357              	.LVL24:
+ 358              		.loc 1 78 10 view .LVU91
+ 359              	.LBE5:
+  69:Core/Src/NOS_Flash.c **** 
+ 360              		.loc 1 69 11 view .LVU92
+ 361 0026 1D46     		mov	r5, r3
+ 362 0028 11E0     		b	.L19
+ 363              	.LVL25:
+ 364              	.L20:
+ 365              	.LBB6:
+  79:Core/Src/NOS_Flash.c **** 	{
+  80:Core/Src/NOS_Flash.c **** 		u64Count += flashMemory->chunks[i].size / 8;
+ 366              		.loc 1 80 3 is_stmt 1 discriminator 3 view .LVU93
+ 367              		.loc 1 80 37 is_stmt 0 discriminator 3 view .LVU94
+ 368 002a 03EB4302 		add	r2, r3, r3, lsl #1
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s 			page 9
 
 
-  81:Core/Src/NOS_Flash.c **** 	volatile HAL_StatusTypeDef status = HAL_OK;
- 416              		.loc 1 81 2 view .LVU114
- 417              		.loc 1 81 29 is_stmt 0 view .LVU115
- 418 006a 0023     		movs	r3, #0
- 419 006c FB77     		strb	r3, [r7, #31]
-  82:Core/Src/NOS_Flash.c **** 	volatile uint32_t write_cnt=0, index=0;
- 420              		.loc 1 82 2 is_stmt 1 view .LVU116
- 421              		.loc 1 82 20 is_stmt 0 view .LVU117
- 422 006e BB61     		str	r3, [r7, #24]
- 423              		.loc 1 82 33 view .LVU118
- 424 0070 7B61     		str	r3, [r7, #20]
+ 369 002e 08EB8202 		add	r2, r8, r2, lsl #2
+ 370 0032 D068     		ldr	r0, [r2, #12]
+ 371              		.loc 1 80 12 discriminator 3 view .LVU95
+ 372 0034 05EBD005 		add	r5, r5, r0, lsr #3
+ 373              	.LVL26:
+  81:Core/Src/NOS_Flash.c **** 		sizes[i] += flashMemory->chunks[i].size / 8;
+ 374              		.loc 1 81 3 is_stmt 1 discriminator 3 view .LVU96
+ 375              		.loc 1 81 8 is_stmt 0 discriminator 3 view .LVU97
+ 376 0038 07F13002 		add	r2, r7, #48
+ 377 003c 02EB4301 		add	r1, r2, r3, lsl #1
+ 378 0040 31F8102C 		ldrh	r2, [r1, #-16]
+ 379              		.loc 1 81 12 discriminator 3 view .LVU98
+ 380 0044 02EBD002 		add	r2, r2, r0, lsr #3
+ 381 0048 21F8102C 		strh	r2, [r1, #-16]	@ movhi
+  78:Core/Src/NOS_Flash.c **** 	{
+ 382              		.loc 1 78 50 is_stmt 1 discriminator 3 view .LVU99
+ 383 004c 0133     		adds	r3, r3, #1
+ 384              	.LVL27:
+ 385              	.L19:
+  78:Core/Src/NOS_Flash.c **** 	{
+ 386              		.loc 1 78 19 discriminator 1 view .LVU100
+  78:Core/Src/NOS_Flash.c **** 	{
+ 387              		.loc 1 78 32 is_stmt 0 discriminator 1 view .LVU101
+ 388 004e D8F86420 		ldr	r2, [r8, #100]
+  78:Core/Src/NOS_Flash.c **** 	{
+ 389              		.loc 1 78 19 discriminator 1 view .LVU102
+ 390 0052 9A42     		cmp	r2, r3
+ 391 0054 E9D8     		bhi	.L20
+ 392              	.LBE6:
+  82:Core/Src/NOS_Flash.c **** 	}
   83:Core/Src/NOS_Flash.c **** 
-  84:Core/Src/NOS_Flash.c **** 	FLASH_EraseInitTypeDef EraseInitStruct;
- 425              		.loc 1 84 2 is_stmt 1 view .LVU119
-  85:Core/Src/NOS_Flash.c **** 	EraseInitStruct.Banks = FLASH_BANK_1;
- 426              		.loc 1 85 2 view .LVU120
- 427              		.loc 1 85 24 is_stmt 0 view .LVU121
- 428 0072 0122     		movs	r2, #1
- 429 0074 BA60     		str	r2, [r7, #8]
-  86:Core/Src/NOS_Flash.c **** 	EraseInitStruct.TypeErase = FLASH_TYPEERASE_PAGES;
- 430              		.loc 1 86 2 is_stmt 1 view .LVU122
- 431              		.loc 1 86 28 is_stmt 0 view .LVU123
- 432 0076 7B60     		str	r3, [r7, #4]
-  87:Core/Src/NOS_Flash.c **** 	EraseInitStruct.Page = 200;
- 433              		.loc 1 87 2 is_stmt 1 view .LVU124
- 434              		.loc 1 87 23 is_stmt 0 view .LVU125
- 435 0078 C823     		movs	r3, #200
- 436 007a FB60     		str	r3, [r7, #12]
-  88:Core/Src/NOS_Flash.c **** 	EraseInitStruct.NbPages = pageCount;
- 437              		.loc 1 88 2 is_stmt 1 view .LVU126
- 438              		.loc 1 88 26 is_stmt 0 view .LVU127
- 439 007c 3E61     		str	r6, [r7, #16]
-  89:Core/Src/NOS_Flash.c **** 	uint32_t PageError;
- 440              		.loc 1 89 2 is_stmt 1 view .LVU128
-  90:Core/Src/NOS_Flash.c **** 	status = HAL_FLASHEx_Erase(&EraseInitStruct, &PageError);
- 441              		.loc 1 90 2 view .LVU129
- 442              		.loc 1 90 11 is_stmt 0 view .LVU130
- 443 007e 3946     		mov	r1, r7
- 444 0080 381D     		adds	r0, r7, #4
- 445 0082 FFF7FEFF 		bl	HAL_FLASHEx_Erase
- 446              	.LVL36:
- 447              		.loc 1 90 9 view .LVU131
- 448 0086 F877     		strb	r0, [r7, #31]
-  91:Core/Src/NOS_Flash.c **** 	
-  92:Core/Src/NOS_Flash.c **** 	
-  93:Core/Src/NOS_Flash.c **** 
-  94:Core/Src/NOS_Flash.c **** 	while(index < u32Count)
- 449              		.loc 1 94 2 is_stmt 1 view .LVU132
- 450              	.L22:
- 451              		.loc 1 94 14 view .LVU133
- 452 0088 7B69     		ldr	r3, [r7, #20]
- 453 008a AB42     		cmp	r3, r5
- 454 008c 16D2     		bcs	.L27
-  95:Core/Src/NOS_Flash.c **** 	{
-  96:Core/Src/NOS_Flash.c **** 		if (status == HAL_OK)
- 455              		.loc 1 96 3 view .LVU134
- 456              		.loc 1 96 14 is_stmt 0 view .LVU135
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccDJhm3D.s 			page 11
+  84:Core/Src/NOS_Flash.c **** 	uint64_t data_to_flash[u64Count];
+ 393              		.loc 1 84 2 is_stmt 1 view .LVU103
+ 394              	.LVL28:
+ 395              		.loc 1 84 11 is_stmt 0 view .LVU104
+ 396 0056 6B46     		mov	r3, sp
+ 397              	.LVL29:
+ 398              		.loc 1 84 11 view .LVU105
+ 399 0058 A3EBC503 		sub	r3, r3, r5, lsl #3
+ 400 005c 9D46     		mov	sp, r3
+ 401 005e 6C46     		mov	r4, sp
+ 402              	.LVL30:
+  85:Core/Src/NOS_Flash.c **** 	uint32_t dataCounter = 0;
+ 403              		.loc 1 85 2 is_stmt 1 view .LVU106
+  86:Core/Src/NOS_Flash.c **** 
+  87:Core/Src/NOS_Flash.c **** 	for(int i = 0; i < u64Count; i++)
+ 404              		.loc 1 87 2 view .LVU107
+ 405              	.LBB7:
+ 406              		.loc 1 87 6 view .LVU108
+ 407              		.loc 1 87 10 is_stmt 0 view .LVU109
+ 408 0060 0023     		movs	r3, #0
+ 409              	.LVL31:
+ 410              		.loc 1 87 2 view .LVU110
+ 411 0062 06E0     		b	.L21
+ 412              	.LVL32:
+ 413              	.L22:
+  88:Core/Src/NOS_Flash.c **** 	{
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s 			page 10
 
 
- 457 008e FB7F     		ldrb	r3, [r7, #31]	@ zero_extendqisi2
- 458              		.loc 1 96 6 view .LVU136
- 459 0090 002B     		cmp	r3, #0
- 460 0092 F9D1     		bne	.L22
-  97:Core/Src/NOS_Flash.c **** 		{
-  98:Core/Src/NOS_Flash.c **** 			status = HAL_FLASH_Program(FLASH_TYPEPROGRAM_FAST, address+write_cnt, data_to_flash[index]);
- 461              		.loc 1 98 4 is_stmt 1 view .LVU137
- 462              		.loc 1 98 13 is_stmt 0 view .LVU138
- 463 0094 B969     		ldr	r1, [r7, #24]
- 464              		.loc 1 98 87 view .LVU139
- 465 0096 7B69     		ldr	r3, [r7, #20]
- 466              		.loc 1 98 13 view .LVU140
- 467 0098 54F82320 		ldr	r2, [r4, r3, lsl #2]
- 468 009c 0023     		movs	r3, #0
- 469 009e 4144     		add	r1, r1, r8
- 470 00a0 0120     		movs	r0, #1
- 471 00a2 FFF7FEFF 		bl	HAL_FLASH_Program
- 472              	.LVL37:
- 473              		.loc 1 98 11 view .LVU141
- 474 00a6 F877     		strb	r0, [r7, #31]
-  99:Core/Src/NOS_Flash.c **** 			if(status == HAL_OK)
- 475              		.loc 1 99 4 is_stmt 1 view .LVU142
- 476              		.loc 1 99 14 is_stmt 0 view .LVU143
- 477 00a8 FB7F     		ldrb	r3, [r7, #31]	@ zero_extendqisi2
- 478              		.loc 1 99 6 view .LVU144
- 479 00aa 002B     		cmp	r3, #0
- 480 00ac ECD1     		bne	.L22
- 100:Core/Src/NOS_Flash.c **** 			{
- 101:Core/Src/NOS_Flash.c **** 				write_cnt += 4;
- 481              		.loc 1 101 5 is_stmt 1 view .LVU145
- 482              		.loc 1 101 15 is_stmt 0 view .LVU146
- 483 00ae BB69     		ldr	r3, [r7, #24]
- 484 00b0 0433     		adds	r3, r3, #4
- 485 00b2 BB61     		str	r3, [r7, #24]
- 102:Core/Src/NOS_Flash.c **** 				index++;
- 486              		.loc 1 102 5 is_stmt 1 view .LVU147
- 487              		.loc 1 102 10 is_stmt 0 view .LVU148
- 488 00b4 7B69     		ldr	r3, [r7, #20]
- 489 00b6 0133     		adds	r3, r3, #1
- 490 00b8 7B61     		str	r3, [r7, #20]
- 491 00ba E5E7     		b	.L22
- 492              	.L27:
- 103:Core/Src/NOS_Flash.c **** 			}
- 104:Core/Src/NOS_Flash.c **** 		}
- 105:Core/Src/NOS_Flash.c **** 	}
- 106:Core/Src/NOS_Flash.c **** 
- 107:Core/Src/NOS_Flash.c **** 	HAL_FLASH_OB_Lock();
- 493              		.loc 1 107 2 is_stmt 1 view .LVU149
- 494 00bc FFF7FEFF 		bl	HAL_FLASH_OB_Lock
- 495              	.LVL38:
- 108:Core/Src/NOS_Flash.c **** 	HAL_FLASH_Lock();
- 496              		.loc 1 108 2 view .LVU150
- 497 00c0 FFF7FEFF 		bl	HAL_FLASH_Lock
- 498              	.LVL39:
- 109:Core/Src/NOS_Flash.c **** }
- 499              		.loc 1 109 1 is_stmt 0 view .LVU151
- 500 00c4 2437     		adds	r7, r7, #36
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccDJhm3D.s 			page 12
+  89:Core/Src/NOS_Flash.c **** 		data_to_flash[i] = 0;
+ 414              		.loc 1 89 3 is_stmt 1 discriminator 3 view .LVU111
+ 415              		.loc 1 89 20 is_stmt 0 discriminator 3 view .LVU112
+ 416 0064 04EBC302 		add	r2, r4, r3, lsl #3
+ 417 0068 0020     		movs	r0, #0
+ 418 006a 0021     		movs	r1, #0
+ 419 006c C2E90001 		strd	r0, [r2]
+  87:Core/Src/NOS_Flash.c **** 	{
+ 420              		.loc 1 87 32 is_stmt 1 discriminator 3 view .LVU113
+ 421 0070 0133     		adds	r3, r3, #1
+ 422              	.LVL33:
+ 423              	.L21:
+  87:Core/Src/NOS_Flash.c **** 	{
+ 424              		.loc 1 87 19 discriminator 1 view .LVU114
+ 425 0072 AB42     		cmp	r3, r5
+ 426 0074 F6D3     		bcc	.L22
+ 427              	.LBE7:
+ 428              	.LBB8:
+  90:Core/Src/NOS_Flash.c **** 	}
+  91:Core/Src/NOS_Flash.c **** 
+  92:Core/Src/NOS_Flash.c **** 	for(int currChunk = 0; currChunk < flashMemory->chunksCounter; currChunk++)
+ 429              		.loc 1 92 10 is_stmt 0 view .LVU115
+ 430 0076 0020     		movs	r0, #0
+ 431              	.LBE8:
+  85:Core/Src/NOS_Flash.c **** 
+ 432              		.loc 1 85 11 view .LVU116
+ 433 0078 0246     		mov	r2, r0
+ 434 007a 0AE0     		b	.L23
+ 435              	.LVL34:
+ 436              	.L25:
+ 437              	.LBB13:
+ 438              	.LBB9:
+ 439              	.LBB10:
+  93:Core/Src/NOS_Flash.c **** 	{
+  94:Core/Src/NOS_Flash.c **** 		uint64_t* pointer = flashMemory->chunks[currChunk].dataPointer;
+  95:Core/Src/NOS_Flash.c **** 		uint64_t* bufferPointer = &data_to_flash[dataCounter];
+  96:Core/Src/NOS_Flash.c **** 
+  97:Core/Src/NOS_Flash.c **** 		uint16_t currChunkU64Size = sizes[currChunk];
+  98:Core/Src/NOS_Flash.c **** 
+  99:Core/Src/NOS_Flash.c **** 		for(int i = 0; i < currChunkU64Size; i++)
+ 100:Core/Src/NOS_Flash.c **** 		{
+ 101:Core/Src/NOS_Flash.c **** 			data_to_flash[dataCounter] = *pointer;
+ 440              		.loc 1 101 4 is_stmt 1 discriminator 3 view .LVU117
+ 441              		.loc 1 101 33 is_stmt 0 discriminator 3 view .LVU118
+ 442 007c B1EC027B 		vldmia.64	r1!, {d7}	@ int
+ 443              	.LVL35:
+ 444              		.loc 1 101 31 discriminator 3 view .LVU119
+ 445 0080 04EBC20C 		add	ip, r4, r2, lsl #3
+ 446 0084 8CED007B 		vstr.64	d7, [ip]	@ int
+ 102:Core/Src/NOS_Flash.c **** 			pointer++;
+ 447              		.loc 1 102 4 is_stmt 1 discriminator 3 view .LVU120
+ 448              	.LVL36:
+ 103:Core/Src/NOS_Flash.c **** 			dataCounter++;
+ 449              		.loc 1 103 4 discriminator 3 view .LVU121
+ 450              		.loc 1 103 15 is_stmt 0 discriminator 3 view .LVU122
+ 451 0088 0132     		adds	r2, r2, #1
+ 452              	.LVL37:
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s 			page 11
 
 
- 501              		.cfi_def_cfa_offset 28
- 502 00c6 BD46     		mov	sp, r7
- 503              		.cfi_def_cfa_register 13
- 504              		@ sp needed
- 505 00c8 BDE8F083 		pop	{r4, r5, r6, r7, r8, r9, pc}
- 506              		.loc 1 109 1 view .LVU152
- 507              		.cfi_endproc
- 508              	.LFE138:
- 510              		.section	.text.NOS_Flash_Memory_Struct_Load,"ax",%progbits
- 511              		.align	1
- 512              		.global	NOS_Flash_Memory_Struct_Load
- 513              		.syntax unified
- 514              		.thumb
- 515              		.thumb_func
- 517              	NOS_Flash_Memory_Struct_Load:
- 518              	.LVL40:
- 519              	.LFB139:
- 110:Core/Src/NOS_Flash.c **** 
- 111:Core/Src/NOS_Flash.c **** void NOS_Flash_Memory_Struct_Load(NOS_Flash_Memory_Struct* flashMemory)
- 112:Core/Src/NOS_Flash.c **** {
- 520              		.loc 1 112 1 is_stmt 1 view -0
- 521              		.cfi_startproc
- 522              		@ args = 0, pretend = 0, frame = 0
- 523              		@ frame_needed = 0, uses_anonymous_args = 0
- 524              		.loc 1 112 1 is_stmt 0 view .LVU154
- 525 0000 10B5     		push	{r4, lr}
- 526              		.cfi_def_cfa_offset 8
- 527              		.cfi_offset 4, -8
- 528              		.cfi_offset 14, -4
- 529 0002 0446     		mov	r4, r0
- 113:Core/Src/NOS_Flash.c **** 	for(int currChunk = 0; currChunk < flashMemory->chunksCounter; currChunk++)
- 530              		.loc 1 113 2 is_stmt 1 view .LVU155
- 531              	.LBB10:
- 532              		.loc 1 113 6 view .LVU156
- 533              	.LVL41:
- 534              		.loc 1 113 10 is_stmt 0 view .LVU157
- 535 0004 4FF0000E 		mov	lr, #0
- 536              		.loc 1 113 2 view .LVU158
- 537 0008 08E0     		b	.L29
- 538              	.LVL42:
- 539              	.L31:
- 540              	.LBB11:
- 541              	.LBB12:
- 114:Core/Src/NOS_Flash.c **** 	{
- 115:Core/Src/NOS_Flash.c **** 		uint32_t currAddress = flashMemory->chunks[currChunk].flashAddress;
- 116:Core/Src/NOS_Flash.c **** 		uint32_t* pointer = flashMemory->chunks[currChunk].dataPointer;
- 117:Core/Src/NOS_Flash.c **** 		uint32_t currChunkU32Size = flashMemory->chunks[currChunk].size/4;
- 118:Core/Src/NOS_Flash.c **** 		uint32_t data = 0;
- 119:Core/Src/NOS_Flash.c **** 
- 120:Core/Src/NOS_Flash.c **** 		for(int i = 0; i < currChunkU32Size; i++)
- 121:Core/Src/NOS_Flash.c **** 		{	
- 122:Core/Src/NOS_Flash.c **** 			data = *(uint32_t*)currAddress;
- 542              		.loc 1 122 4 is_stmt 1 discriminator 3 view .LVU159
- 543              		.loc 1 122 9 is_stmt 0 discriminator 3 view .LVU160
- 544 000a 51F8040B 		ldr	r0, [r1], #4
- 545              	.LVL43:
- 123:Core/Src/NOS_Flash.c **** 			*pointer = data;
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccDJhm3D.s 			page 13
+ 104:Core/Src/NOS_Flash.c **** 			bufferPointer++;
+ 453              		.loc 1 104 4 is_stmt 1 discriminator 3 view .LVU123
+  99:Core/Src/NOS_Flash.c **** 		{
+ 454              		.loc 1 99 41 discriminator 3 view .LVU124
+ 455 008a 0133     		adds	r3, r3, #1
+ 456              	.LVL38:
+ 457              	.L24:
+  99:Core/Src/NOS_Flash.c **** 		{
+ 458              		.loc 1 99 20 discriminator 1 view .LVU125
+ 459 008c 9E45     		cmp	lr, r3
+ 460 008e F5DC     		bgt	.L25
+  99:Core/Src/NOS_Flash.c **** 		{
+ 461              		.loc 1 99 20 is_stmt 0 discriminator 1 view .LVU126
+ 462              	.LBE10:
+ 463              	.LBE9:
+  92:Core/Src/NOS_Flash.c **** 	{
+ 464              		.loc 1 92 74 is_stmt 1 discriminator 2 view .LVU127
+ 465 0090 0130     		adds	r0, r0, #1
+ 466              	.LVL39:
+ 467              	.L23:
+  92:Core/Src/NOS_Flash.c **** 	{
+ 468              		.loc 1 92 35 discriminator 1 view .LVU128
+  92:Core/Src/NOS_Flash.c **** 	{
+ 469              		.loc 1 92 48 is_stmt 0 discriminator 1 view .LVU129
+ 470 0092 D8F86430 		ldr	r3, [r8, #100]
+  92:Core/Src/NOS_Flash.c **** 	{
+ 471              		.loc 1 92 35 discriminator 1 view .LVU130
+ 472 0096 8342     		cmp	r3, r0
+ 473 0098 0CD9     		bls	.L32
+ 474              	.LBB12:
+  94:Core/Src/NOS_Flash.c **** 		uint64_t* bufferPointer = &data_to_flash[dataCounter];
+ 475              		.loc 1 94 3 is_stmt 1 view .LVU131
+  94:Core/Src/NOS_Flash.c **** 		uint64_t* bufferPointer = &data_to_flash[dataCounter];
+ 476              		.loc 1 94 13 is_stmt 0 view .LVU132
+ 477 009a 00EB4003 		add	r3, r0, r0, lsl #1
+ 478 009e 08EB8303 		add	r3, r8, r3, lsl #2
+ 479 00a2 5968     		ldr	r1, [r3, #4]
+ 480              	.LVL40:
+  95:Core/Src/NOS_Flash.c **** 
+ 481              		.loc 1 95 3 is_stmt 1 view .LVU133
+  97:Core/Src/NOS_Flash.c **** 
+ 482              		.loc 1 97 3 view .LVU134
+  97:Core/Src/NOS_Flash.c **** 
+ 483              		.loc 1 97 12 is_stmt 0 view .LVU135
+ 484 00a4 07F13003 		add	r3, r7, #48
+ 485 00a8 03EB4003 		add	r3, r3, r0, lsl #1
+ 486 00ac 33F810EC 		ldrh	lr, [r3, #-16]
+ 487              	.LVL41:
+  99:Core/Src/NOS_Flash.c **** 		{
+ 488              		.loc 1 99 3 is_stmt 1 view .LVU136
+ 489              	.LBB11:
+  99:Core/Src/NOS_Flash.c **** 		{
+ 490              		.loc 1 99 7 view .LVU137
+  99:Core/Src/NOS_Flash.c **** 		{
+ 491              		.loc 1 99 11 is_stmt 0 view .LVU138
+ 492 00b0 0023     		movs	r3, #0
+  99:Core/Src/NOS_Flash.c **** 		{
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s 			page 12
 
 
- 546              		.loc 1 123 4 is_stmt 1 discriminator 3 view .LVU161
- 547              		.loc 1 123 13 is_stmt 0 discriminator 3 view .LVU162
- 548 000e 42F8040B 		str	r0, [r2], #4
- 549              	.LVL44:
- 124:Core/Src/NOS_Flash.c **** 			currAddress += 4;
- 550              		.loc 1 124 4 is_stmt 1 discriminator 3 view .LVU163
- 125:Core/Src/NOS_Flash.c **** 			pointer++;
- 551              		.loc 1 125 4 discriminator 3 view .LVU164
- 120:Core/Src/NOS_Flash.c **** 		{	
- 552              		.loc 1 120 41 discriminator 3 view .LVU165
- 553 0012 0133     		adds	r3, r3, #1
- 554              	.LVL45:
- 555              	.L30:
- 120:Core/Src/NOS_Flash.c **** 		{	
- 556              		.loc 1 120 20 discriminator 1 view .LVU166
- 557 0014 6345     		cmp	r3, ip
- 558 0016 F8D3     		bcc	.L31
- 120:Core/Src/NOS_Flash.c **** 		{	
- 559              		.loc 1 120 20 is_stmt 0 discriminator 1 view .LVU167
- 560              	.LBE12:
- 561              	.LBE11:
- 113:Core/Src/NOS_Flash.c **** 	{
- 562              		.loc 1 113 74 is_stmt 1 discriminator 2 view .LVU168
- 563 0018 0EF1010E 		add	lr, lr, #1
- 564              	.LVL46:
- 565              	.L29:
- 113:Core/Src/NOS_Flash.c **** 	{
- 566              		.loc 1 113 35 discriminator 1 view .LVU169
- 113:Core/Src/NOS_Flash.c **** 	{
- 567              		.loc 1 113 48 is_stmt 0 discriminator 1 view .LVU170
- 568 001c 636E     		ldr	r3, [r4, #100]
- 113:Core/Src/NOS_Flash.c **** 	{
- 569              		.loc 1 113 35 discriminator 1 view .LVU171
- 570 001e 7345     		cmp	r3, lr
- 571 0020 0AD9     		bls	.L34
- 572              	.LBB14:
- 115:Core/Src/NOS_Flash.c **** 		uint32_t* pointer = flashMemory->chunks[currChunk].dataPointer;
- 573              		.loc 1 115 3 is_stmt 1 view .LVU172
- 115:Core/Src/NOS_Flash.c **** 		uint32_t* pointer = flashMemory->chunks[currChunk].dataPointer;
- 574              		.loc 1 115 12 is_stmt 0 view .LVU173
- 575 0022 0EEB4E03 		add	r3, lr, lr, lsl #1
- 576 0026 04EB8303 		add	r3, r4, r3, lsl #2
- 577 002a 9968     		ldr	r1, [r3, #8]
- 578              	.LVL47:
- 116:Core/Src/NOS_Flash.c **** 		uint32_t currChunkU32Size = flashMemory->chunks[currChunk].size/4;
- 579              		.loc 1 116 3 is_stmt 1 view .LVU174
- 116:Core/Src/NOS_Flash.c **** 		uint32_t currChunkU32Size = flashMemory->chunks[currChunk].size/4;
- 580              		.loc 1 116 13 is_stmt 0 view .LVU175
- 581 002c 5A68     		ldr	r2, [r3, #4]
- 582              	.LVL48:
- 117:Core/Src/NOS_Flash.c **** 		uint32_t data = 0;
- 583              		.loc 1 117 3 is_stmt 1 view .LVU176
- 117:Core/Src/NOS_Flash.c **** 		uint32_t data = 0;
- 584              		.loc 1 117 61 is_stmt 0 view .LVU177
- 585 002e DB68     		ldr	r3, [r3, #12]
- 117:Core/Src/NOS_Flash.c **** 		uint32_t data = 0;
- 586              		.loc 1 117 12 view .LVU178
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccDJhm3D.s 			page 14
+ 493              		.loc 1 99 3 view .LVU139
+ 494 00b2 EBE7     		b	.L24
+ 495              	.LVL42:
+ 496              	.L32:
+  99:Core/Src/NOS_Flash.c **** 		{
+ 497              		.loc 1 99 3 view .LVU140
+ 498              	.LBE11:
+ 499              	.LBE12:
+ 500              	.LBE13:
+ 105:Core/Src/NOS_Flash.c **** 		}
+ 106:Core/Src/NOS_Flash.c **** 	}
+ 107:Core/Src/NOS_Flash.c **** 
+ 108:Core/Src/NOS_Flash.c **** 	HAL_FLASH_Unlock();
+ 501              		.loc 1 108 2 is_stmt 1 view .LVU141
+ 502 00b4 FFF7FEFF 		bl	HAL_FLASH_Unlock
+ 503              	.LVL43:
+ 109:Core/Src/NOS_Flash.c **** 	HAL_FLASH_OB_Unlock();
+ 504              		.loc 1 109 2 view .LVU142
+ 505 00b8 FFF7FEFF 		bl	HAL_FLASH_OB_Unlock
+ 506              	.LVL44:
+ 110:Core/Src/NOS_Flash.c **** 	
+ 111:Core/Src/NOS_Flash.c **** 	volatile HAL_StatusTypeDef status = HAL_OK;
+ 507              		.loc 1 111 2 view .LVU143
+ 508              		.loc 1 111 29 is_stmt 0 view .LVU144
+ 509 00bc 0023     		movs	r3, #0
+ 510 00be FB77     		strb	r3, [r7, #31]
+ 112:Core/Src/NOS_Flash.c **** 	volatile uint32_t write_cnt=0, index=0;
+ 511              		.loc 1 112 2 is_stmt 1 view .LVU145
+ 512              		.loc 1 112 20 is_stmt 0 view .LVU146
+ 513 00c0 BB61     		str	r3, [r7, #24]
+ 514              		.loc 1 112 33 view .LVU147
+ 515 00c2 7B61     		str	r3, [r7, #20]
+ 113:Core/Src/NOS_Flash.c **** 
+ 114:Core/Src/NOS_Flash.c **** 	FLASH_EraseInitTypeDef EraseInitStruct;
+ 516              		.loc 1 114 2 is_stmt 1 view .LVU148
+ 115:Core/Src/NOS_Flash.c **** 	EraseInitStruct.Banks = FLASH_BANK_1;
+ 517              		.loc 1 115 2 view .LVU149
+ 518              		.loc 1 115 24 is_stmt 0 view .LVU150
+ 519 00c4 0122     		movs	r2, #1
+ 520 00c6 BA60     		str	r2, [r7, #8]
+ 116:Core/Src/NOS_Flash.c **** 	EraseInitStruct.TypeErase = FLASH_TYPEERASE_PAGES;
+ 521              		.loc 1 116 2 is_stmt 1 view .LVU151
+ 522              		.loc 1 116 28 is_stmt 0 view .LVU152
+ 523 00c8 7B60     		str	r3, [r7, #4]
+ 117:Core/Src/NOS_Flash.c **** 	EraseInitStruct.Page = FLASH_PAGE_NUMBER;
+ 524              		.loc 1 117 2 is_stmt 1 view .LVU153
+ 525              		.loc 1 117 23 is_stmt 0 view .LVU154
+ 526 00ca 3F23     		movs	r3, #63
+ 527 00cc FB60     		str	r3, [r7, #12]
+ 118:Core/Src/NOS_Flash.c **** 	EraseInitStruct.NbPages = 1;
+ 528              		.loc 1 118 2 is_stmt 1 view .LVU155
+ 529              		.loc 1 118 26 is_stmt 0 view .LVU156
+ 530 00ce 3A61     		str	r2, [r7, #16]
+ 119:Core/Src/NOS_Flash.c **** 	uint32_t PageError;
+ 531              		.loc 1 119 2 is_stmt 1 view .LVU157
+ 120:Core/Src/NOS_Flash.c **** 	status = HAL_FLASHEx_Erase(&EraseInitStruct, &PageError);
+ 532              		.loc 1 120 2 view .LVU158
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s 			page 13
 
 
- 587 0030 4FEA930C 		lsr	ip, r3, #2
- 588              	.LVL49:
- 118:Core/Src/NOS_Flash.c **** 
- 589              		.loc 1 118 3 is_stmt 1 view .LVU179
- 120:Core/Src/NOS_Flash.c **** 		{	
- 590              		.loc 1 120 3 view .LVU180
- 591              	.LBB13:
- 120:Core/Src/NOS_Flash.c **** 		{	
- 592              		.loc 1 120 7 view .LVU181
- 120:Core/Src/NOS_Flash.c **** 		{	
- 593              		.loc 1 120 11 is_stmt 0 view .LVU182
- 594 0034 0023     		movs	r3, #0
- 120:Core/Src/NOS_Flash.c **** 		{	
- 595              		.loc 1 120 3 view .LVU183
- 596 0036 EDE7     		b	.L30
- 597              	.LVL50:
- 598              	.L34:
- 120:Core/Src/NOS_Flash.c **** 		{	
- 599              		.loc 1 120 3 view .LVU184
- 600              	.LBE13:
- 601              	.LBE14:
- 602              	.LBE10:
- 126:Core/Src/NOS_Flash.c **** 		}
- 127:Core/Src/NOS_Flash.c **** 
- 128:Core/Src/NOS_Flash.c **** 	}
- 129:Core/Src/NOS_Flash.c **** }...
- 603              		.loc 1 129 1 view .LVU185
- 604 0038 10BD     		pop	{r4, pc}
- 605              		.loc 1 129 1 view .LVU186
- 606              		.cfi_endproc
- 607              	.LFE139:
- 609              		.text
- 610              	.Letext0:
- 611              		.file 2 "c:\\users\\igorn\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpa
- 612              		.file 3 "c:\\users\\igorn\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpa
- 613              		.file 4 "c:\\users\\igorn\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpa
- 614              		.file 5 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
- 615              		.file 6 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash.h"
- 616              		.file 7 "Core/Inc/NOS_Typedefs.h"
- 617              		.file 8 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash_ex.h"
-ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccDJhm3D.s 			page 15
+ 533              		.loc 1 120 11 is_stmt 0 view .LVU159
+ 534 00d0 3946     		mov	r1, r7
+ 535 00d2 381D     		adds	r0, r7, #4
+ 536 00d4 FFF7FEFF 		bl	HAL_FLASHEx_Erase
+ 537              	.LVL45:
+ 538              		.loc 1 120 9 view .LVU160
+ 539 00d8 F877     		strb	r0, [r7, #31]
+ 121:Core/Src/NOS_Flash.c **** 	
+ 122:Core/Src/NOS_Flash.c **** 	
+ 123:Core/Src/NOS_Flash.c **** 
+ 124:Core/Src/NOS_Flash.c **** 	while(index < u64Count)
+ 540              		.loc 1 124 2 is_stmt 1 view .LVU161
+ 541              	.L28:
+ 542              		.loc 1 124 14 view .LVU162
+ 543 00da 7B69     		ldr	r3, [r7, #20]
+ 544 00dc AB42     		cmp	r3, r5
+ 545 00de 17D2     		bcs	.L33
+ 125:Core/Src/NOS_Flash.c **** 	{
+ 126:Core/Src/NOS_Flash.c **** 		if (status == HAL_OK)
+ 546              		.loc 1 126 3 view .LVU163
+ 547              		.loc 1 126 14 is_stmt 0 view .LVU164
+ 548 00e0 FB7F     		ldrb	r3, [r7, #31]	@ zero_extendqisi2
+ 549              		.loc 1 126 6 view .LVU165
+ 550 00e2 002B     		cmp	r3, #0
+ 551 00e4 F9D1     		bne	.L28
+ 127:Core/Src/NOS_Flash.c **** 		{
+ 128:Core/Src/NOS_Flash.c **** 			status = HAL_FLASH_Program(FLASH_TYPEPROGRAM_DOUBLEWORD, address+write_cnt, data_to_flash[index]
+ 552              		.loc 1 128 4 is_stmt 1 view .LVU166
+ 553              		.loc 1 128 13 is_stmt 0 view .LVU167
+ 554 00e6 B969     		ldr	r1, [r7, #24]
+ 555 00e8 7B69     		ldr	r3, [r7, #20]
+ 556 00ea 04EBC303 		add	r3, r4, r3, lsl #3
+ 557 00ee D3E90023 		ldrd	r2, [r3]
+ 558 00f2 3144     		add	r1, r1, r6
+ 559 00f4 0020     		movs	r0, #0
+ 560 00f6 FFF7FEFF 		bl	HAL_FLASH_Program
+ 561              	.LVL46:
+ 562              		.loc 1 128 11 view .LVU168
+ 563 00fa F877     		strb	r0, [r7, #31]
+ 129:Core/Src/NOS_Flash.c **** 			if(status == HAL_OK)
+ 564              		.loc 1 129 4 is_stmt 1 view .LVU169
+ 565              		.loc 1 129 14 is_stmt 0 view .LVU170
+ 566 00fc FB7F     		ldrb	r3, [r7, #31]	@ zero_extendqisi2
+ 567              		.loc 1 129 6 view .LVU171
+ 568 00fe 002B     		cmp	r3, #0
+ 569 0100 EBD1     		bne	.L28
+ 130:Core/Src/NOS_Flash.c **** 			{
+ 131:Core/Src/NOS_Flash.c **** 				write_cnt += 8;
+ 570              		.loc 1 131 5 is_stmt 1 view .LVU172
+ 571              		.loc 1 131 15 is_stmt 0 view .LVU173
+ 572 0102 BB69     		ldr	r3, [r7, #24]
+ 573 0104 0833     		adds	r3, r3, #8
+ 574 0106 BB61     		str	r3, [r7, #24]
+ 132:Core/Src/NOS_Flash.c **** 				index++;
+ 575              		.loc 1 132 5 is_stmt 1 view .LVU174
+ 576              		.loc 1 132 10 is_stmt 0 view .LVU175
+ 577 0108 7B69     		ldr	r3, [r7, #20]
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s 			page 14
+
+
+ 578 010a 0133     		adds	r3, r3, #1
+ 579 010c 7B61     		str	r3, [r7, #20]
+ 580 010e E4E7     		b	.L28
+ 581              	.L33:
+ 133:Core/Src/NOS_Flash.c **** 			}
+ 134:Core/Src/NOS_Flash.c **** 		}
+ 135:Core/Src/NOS_Flash.c **** 	}
+ 136:Core/Src/NOS_Flash.c **** 
+ 137:Core/Src/NOS_Flash.c **** 	HAL_FLASH_OB_Lock();
+ 582              		.loc 1 137 2 is_stmt 1 view .LVU176
+ 583 0110 FFF7FEFF 		bl	HAL_FLASH_OB_Lock
+ 584              	.LVL47:
+ 138:Core/Src/NOS_Flash.c **** 	HAL_FLASH_Lock();
+ 585              		.loc 1 138 2 view .LVU177
+ 586 0114 FFF7FEFF 		bl	HAL_FLASH_Lock
+ 587              	.LVL48:
+ 139:Core/Src/NOS_Flash.c **** }
+ 588              		.loc 1 139 1 is_stmt 0 view .LVU178
+ 589 0118 3037     		adds	r7, r7, #48
+ 590              		.cfi_def_cfa_offset 24
+ 591 011a BD46     		mov	sp, r7
+ 592              		.cfi_def_cfa_register 13
+ 593              		@ sp needed
+ 594 011c BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 595              		.loc 1 139 1 view .LVU179
+ 596              		.cfi_endproc
+ 597              	.LFE138:
+ 599              		.section	.text.NOS_Flash_Memory_Struct_Load,"ax",%progbits
+ 600              		.align	1
+ 601              		.global	NOS_Flash_Memory_Struct_Load
+ 602              		.syntax unified
+ 603              		.thumb
+ 604              		.thumb_func
+ 606              	NOS_Flash_Memory_Struct_Load:
+ 607              	.LVL49:
+ 608              	.LFB139:
+ 140:Core/Src/NOS_Flash.c **** 
+ 141:Core/Src/NOS_Flash.c **** void NOS_Flash_Memory_Struct_Load(NOS_Flash_Memory_Struct* flashMemory)
+ 142:Core/Src/NOS_Flash.c **** {
+ 609              		.loc 1 142 1 is_stmt 1 view -0
+ 610              		.cfi_startproc
+ 611              		@ args = 0, pretend = 0, frame = 0
+ 612              		@ frame_needed = 0, uses_anonymous_args = 0
+ 613              		.loc 1 142 1 is_stmt 0 view .LVU181
+ 614 0000 10B5     		push	{r4, lr}
+ 615              		.cfi_def_cfa_offset 8
+ 616              		.cfi_offset 4, -8
+ 617              		.cfi_offset 14, -4
+ 618 0002 0446     		mov	r4, r0
+ 143:Core/Src/NOS_Flash.c **** 	uint64_t data = 0;
+ 619              		.loc 1 143 2 is_stmt 1 view .LVU182
+ 620              	.LVL50:
+ 144:Core/Src/NOS_Flash.c **** 	uint16_t lastBytes = 0;
+ 621              		.loc 1 144 2 view .LVU183
+ 145:Core/Src/NOS_Flash.c **** 
+ 146:Core/Src/NOS_Flash.c **** 	for(int currChunk = 0; currChunk < flashMemory->chunksCounter; currChunk++)
+ 622              		.loc 1 146 2 view .LVU184
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s 			page 15
+
+
+ 623              	.LBB14:
+ 624              		.loc 1 146 6 view .LVU185
+ 625              		.loc 1 146 10 is_stmt 0 view .LVU186
+ 626 0004 4FF0000E 		mov	lr, #0
+ 627              		.loc 1 146 2 view .LVU187
+ 628 0008 0AE0     		b	.L35
+ 629              	.LVL51:
+ 630              	.L37:
+ 631              	.LBB15:
+ 632              	.LBB16:
+ 147:Core/Src/NOS_Flash.c **** 	{
+ 148:Core/Src/NOS_Flash.c **** 		uint32_t currAddress = flashMemory->chunks[currChunk].flashAddress;
+ 149:Core/Src/NOS_Flash.c **** 		uint64_t* pointer = flashMemory->chunks[currChunk].dataPointer;
+ 150:Core/Src/NOS_Flash.c **** 		uint16_t currChunkU64Size = flashMemory->chunks[currChunk].size / 8;
+ 151:Core/Src/NOS_Flash.c **** 
+ 152:Core/Src/NOS_Flash.c **** 		for(int i = 0; i < currChunkU64Size; i++)
+ 153:Core/Src/NOS_Flash.c **** 		{	
+ 154:Core/Src/NOS_Flash.c **** 			data = *(uint64_t*)currAddress;
+ 633              		.loc 1 154 4 is_stmt 1 discriminator 3 view .LVU188
+ 634              		.loc 1 154 9 is_stmt 0 discriminator 3 view .LVU189
+ 635 000a B0EC027B 		vldmia.64	r0!, {d7}	@ int
+ 636              	.LVL52:
+ 155:Core/Src/NOS_Flash.c **** 			*pointer = data;
+ 637              		.loc 1 155 4 is_stmt 1 discriminator 3 view .LVU190
+ 638              		.loc 1 155 13 is_stmt 0 discriminator 3 view .LVU191
+ 639 000e A1EC027B 		vstmia.64	r1!, {d7}	@ int
+ 640              	.LVL53:
+ 156:Core/Src/NOS_Flash.c **** 			currAddress += 8;
+ 641              		.loc 1 156 4 is_stmt 1 discriminator 3 view .LVU192
+ 157:Core/Src/NOS_Flash.c **** 			pointer++;
+ 642              		.loc 1 157 4 discriminator 3 view .LVU193
+ 152:Core/Src/NOS_Flash.c **** 		{	
+ 643              		.loc 1 152 41 discriminator 3 view .LVU194
+ 644 0012 0133     		adds	r3, r3, #1
+ 645              	.LVL54:
+ 646              	.L36:
+ 152:Core/Src/NOS_Flash.c **** 		{	
+ 647              		.loc 1 152 20 discriminator 1 view .LVU195
+ 648 0014 1FFA8CF2 		uxth	r2, ip
+ 649 0018 9A42     		cmp	r2, r3
+ 650 001a F6DC     		bgt	.L37
+ 152:Core/Src/NOS_Flash.c **** 		{	
+ 651              		.loc 1 152 20 is_stmt 0 discriminator 1 view .LVU196
+ 652              	.LBE16:
+ 653              	.LBE15:
+ 146:Core/Src/NOS_Flash.c **** 	{
+ 654              		.loc 1 146 74 is_stmt 1 discriminator 2 view .LVU197
+ 655 001c 0EF1010E 		add	lr, lr, #1
+ 656              	.LVL55:
+ 657              	.L35:
+ 146:Core/Src/NOS_Flash.c **** 	{
+ 658              		.loc 1 146 35 discriminator 1 view .LVU198
+ 146:Core/Src/NOS_Flash.c **** 	{
+ 659              		.loc 1 146 48 is_stmt 0 discriminator 1 view .LVU199
+ 660 0020 636E     		ldr	r3, [r4, #100]
+ 146:Core/Src/NOS_Flash.c **** 	{
+ 661              		.loc 1 146 35 discriminator 1 view .LVU200
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s 			page 16
+
+
+ 662 0022 7345     		cmp	r3, lr
+ 663 0024 0AD9     		bls	.L40
+ 664              	.LBB18:
+ 148:Core/Src/NOS_Flash.c **** 		uint64_t* pointer = flashMemory->chunks[currChunk].dataPointer;
+ 665              		.loc 1 148 3 is_stmt 1 view .LVU201
+ 148:Core/Src/NOS_Flash.c **** 		uint64_t* pointer = flashMemory->chunks[currChunk].dataPointer;
+ 666              		.loc 1 148 12 is_stmt 0 view .LVU202
+ 667 0026 0EEB4E03 		add	r3, lr, lr, lsl #1
+ 668 002a 04EB8303 		add	r3, r4, r3, lsl #2
+ 669 002e 9868     		ldr	r0, [r3, #8]
+ 670              	.LVL56:
+ 149:Core/Src/NOS_Flash.c **** 		uint16_t currChunkU64Size = flashMemory->chunks[currChunk].size / 8;
+ 671              		.loc 1 149 3 is_stmt 1 view .LVU203
+ 149:Core/Src/NOS_Flash.c **** 		uint16_t currChunkU64Size = flashMemory->chunks[currChunk].size / 8;
+ 672              		.loc 1 149 13 is_stmt 0 view .LVU204
+ 673 0030 5968     		ldr	r1, [r3, #4]
+ 674              	.LVL57:
+ 150:Core/Src/NOS_Flash.c **** 
+ 675              		.loc 1 150 3 is_stmt 1 view .LVU205
+ 150:Core/Src/NOS_Flash.c **** 
+ 676              		.loc 1 150 61 is_stmt 0 view .LVU206
+ 677 0032 DB68     		ldr	r3, [r3, #12]
+ 150:Core/Src/NOS_Flash.c **** 
+ 678              		.loc 1 150 67 view .LVU207
+ 679 0034 4FEAD30C 		lsr	ip, r3, #3
+ 680              	.LVL58:
+ 152:Core/Src/NOS_Flash.c **** 		{	
+ 681              		.loc 1 152 3 is_stmt 1 view .LVU208
+ 682              	.LBB17:
+ 152:Core/Src/NOS_Flash.c **** 		{	
+ 683              		.loc 1 152 7 view .LVU209
+ 152:Core/Src/NOS_Flash.c **** 		{	
+ 684              		.loc 1 152 11 is_stmt 0 view .LVU210
+ 685 0038 0023     		movs	r3, #0
+ 152:Core/Src/NOS_Flash.c **** 		{	
+ 686              		.loc 1 152 3 view .LVU211
+ 687 003a EBE7     		b	.L36
+ 688              	.LVL59:
+ 689              	.L40:
+ 152:Core/Src/NOS_Flash.c **** 		{	
+ 690              		.loc 1 152 3 view .LVU212
+ 691              	.LBE17:
+ 692              	.LBE18:
+ 693              	.LBE14:
+ 158:Core/Src/NOS_Flash.c **** 		}
+ 159:Core/Src/NOS_Flash.c **** 	}
+ 160:Core/Src/NOS_Flash.c **** }
+ 694              		.loc 1 160 1 view .LVU213
+ 695 003c 10BD     		pop	{r4, pc}
+ 696              		.loc 1 160 1 view .LVU214
+ 697              		.cfi_endproc
+ 698              	.LFE139:
+ 700              		.section	.text.GetPage,"ax",%progbits
+ 701              		.align	1
+ 702              		.global	GetPage
+ 703              		.syntax unified
+ 704              		.thumb
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s 			page 17
+
+
+ 705              		.thumb_func
+ 707              	GetPage:
+ 708              	.LVL60:
+ 709              	.LFB140:
+ 161:Core/Src/NOS_Flash.c **** 
+ 162:Core/Src/NOS_Flash.c **** uint32_t GetPage(uint32_t Addr)
+ 163:Core/Src/NOS_Flash.c **** {
+ 710              		.loc 1 163 1 is_stmt 1 view -0
+ 711              		.cfi_startproc
+ 712              		@ args = 0, pretend = 0, frame = 0
+ 713              		@ frame_needed = 0, uses_anonymous_args = 0
+ 714              		@ link register save eliminated.
+ 164:Core/Src/NOS_Flash.c ****   uint32_t page = 0;
+ 715              		.loc 1 164 3 view .LVU216
+ 165:Core/Src/NOS_Flash.c **** 
+ 166:Core/Src/NOS_Flash.c ****   if (Addr < (FLASH_BASE + FLASH_BANK_SIZE))
+ 716              		.loc 1 166 3 view .LVU217
+ 717              		.loc 1 166 28 is_stmt 0 view .LVU218
+ 718 0000 0B4B     		ldr	r3, .L46
+ 719 0002 D3F8E025 		ldr	r2, [r3, #1504]
+ 720 0006 91B2     		uxth	r1, r2
+ 721              		.loc 1 166 26 view .LVU219
+ 722 0008 4FF6FF73 		movw	r3, #65535
+ 723 000c 9942     		cmp	r1, r3
+ 724 000e 0AD0     		beq	.L45
+ 725              		.loc 1 166 28 discriminator 1 view .LVU220
+ 726 0010 084B     		ldr	r3, .L46+4
+ 727 0012 03EA8223 		and	r3, r3, r2, lsl #10
+ 728              		.loc 1 166 26 discriminator 1 view .LVU221
+ 729 0016 03F10063 		add	r3, r3, #134217728
+ 730              	.L42:
+ 731              		.loc 1 166 6 discriminator 4 view .LVU222
+ 732 001a 8342     		cmp	r3, r0
+ 733 001c 05D9     		bls	.L43
+ 167:Core/Src/NOS_Flash.c ****   {
+ 168:Core/Src/NOS_Flash.c ****     /* Bank 1 */
+ 169:Core/Src/NOS_Flash.c ****     page = (Addr - FLASH_BASE) / FLASH_PAGE_SIZE;
+ 734              		.loc 1 169 5 is_stmt 1 view .LVU223
+ 735              		.loc 1 169 18 is_stmt 0 view .LVU224
+ 736 001e 00F17840 		add	r0, r0, #-134217728
+ 737              	.LVL61:
+ 738              		.loc 1 169 10 view .LVU225
+ 739 0022 C00A     		lsrs	r0, r0, #11
+ 740              	.LVL62:
+ 741              		.loc 1 169 10 view .LVU226
+ 742 0024 7047     		bx	lr
+ 743              	.LVL63:
+ 744              	.L45:
+ 166:Core/Src/NOS_Flash.c ****   {
+ 745              		.loc 1 166 26 view .LVU227
+ 746 0026 044B     		ldr	r3, .L46+8
+ 747 0028 F7E7     		b	.L42
+ 748              	.L43:
+ 170:Core/Src/NOS_Flash.c ****   }
+ 171:Core/Src/NOS_Flash.c ****   else
+ 172:Core/Src/NOS_Flash.c ****   {
+ 173:Core/Src/NOS_Flash.c ****     /* Bank 2 */
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s 			page 18
+
+
+ 174:Core/Src/NOS_Flash.c ****     page = (Addr - (FLASH_BASE + FLASH_BANK_SIZE)) / FLASH_PAGE_SIZE;
+ 749              		.loc 1 174 5 is_stmt 1 discriminator 4 view .LVU228
+ 750              		.loc 1 174 18 is_stmt 0 discriminator 4 view .LVU229
+ 751 002a C01A     		subs	r0, r0, r3
+ 752              	.LVL64:
+ 753              		.loc 1 174 10 discriminator 4 view .LVU230
+ 754 002c C00A     		lsrs	r0, r0, #11
+ 755              	.LVL65:
+ 175:Core/Src/NOS_Flash.c ****   }
+ 176:Core/Src/NOS_Flash.c **** 
+ 177:Core/Src/NOS_Flash.c ****   return page;
+ 756              		.loc 1 177 3 is_stmt 1 discriminator 4 view .LVU231
+ 178:Core/Src/NOS_Flash.c **** }
+ 757              		.loc 1 178 1 is_stmt 0 discriminator 4 view .LVU232
+ 758 002e 7047     		bx	lr
+ 759              	.L47:
+ 760              		.align	2
+ 761              	.L46:
+ 762 0030 0070FF1F 		.word	536834048
+ 763 0034 00FCFF03 		.word	67107840
+ 764 0038 00000408 		.word	134479872
+ 765              		.cfi_endproc
+ 766              	.LFE140:
+ 768              		.section	.text.GetAddress,"ax",%progbits
+ 769              		.align	1
+ 770              		.global	GetAddress
+ 771              		.syntax unified
+ 772              		.thumb
+ 773              		.thumb_func
+ 775              	GetAddress:
+ 776              	.LVL66:
+ 777              	.LFB141:
+ 179:Core/Src/NOS_Flash.c **** 
+ 180:Core/Src/NOS_Flash.c **** uint32_t GetAddress(uint32_t page)
+ 181:Core/Src/NOS_Flash.c **** {
+ 778              		.loc 1 181 1 is_stmt 1 view -0
+ 779              		.cfi_startproc
+ 780              		@ args = 0, pretend = 0, frame = 0
+ 781              		@ frame_needed = 0, uses_anonymous_args = 0
+ 782              		@ link register save eliminated.
+ 182:Core/Src/NOS_Flash.c **** 	uint32_t address = NULL;
+ 783              		.loc 1 182 2 view .LVU234
+ 183:Core/Src/NOS_Flash.c **** 
+ 184:Core/Src/NOS_Flash.c **** 	return FLASH_BASE + FLASH_PAGE_SIZE * page;
+ 784              		.loc 1 184 2 view .LVU235
+ 785              		.loc 1 184 20 is_stmt 0 view .LVU236
+ 786 0000 00F58030 		add	r0, r0, #65536
+ 787              	.LVL67:
+ 185:Core/Src/NOS_Flash.c **** }...
+ 788              		.loc 1 185 1 view .LVU237
+ 789 0004 C002     		lsls	r0, r0, #11
+ 790              	.LVL68:
+ 791              		.loc 1 185 1 view .LVU238
+ 792 0006 7047     		bx	lr
+ 793              		.cfi_endproc
+ 794              	.LFE141:
+ 796              		.text
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s 			page 19
+
+
+ 797              	.Letext0:
+ 798              		.file 2 "c:\\users\\igorn\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpa
+ 799              		.file 3 "c:\\users\\igorn\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpa
+ 800              		.file 4 "c:\\users\\igorn\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpa
+ 801              		.file 5 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
+ 802              		.file 6 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash.h"
+ 803              		.file 7 "Core/Inc/NOS_Typedefs.h"
+ 804              		.file 8 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash_ex.h"
+ARM GAS  C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s 			page 20
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 NOS_Flash.c
-C:\Users\igorn\AppData\Local\Temp\ccDJhm3D.s:21     .text.NOS_FlashMemory_Struct_Validate:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccDJhm3D.s:27     .text.NOS_FlashMemory_Struct_Validate:00000000 NOS_FlashMemory_Struct_Validate
-C:\Users\igorn\AppData\Local\Temp\ccDJhm3D.s:97     .text.NOS_Flash_Chunk_Init:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccDJhm3D.s:103    .text.NOS_Flash_Chunk_Init:00000000 NOS_Flash_Chunk_Init
-C:\Users\igorn\AppData\Local\Temp\ccDJhm3D.s:127    .text.NOS_FlashMemory_Struct_Init:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccDJhm3D.s:133    .text.NOS_FlashMemory_Struct_Init:00000000 NOS_FlashMemory_Struct_Init
-C:\Users\igorn\AppData\Local\Temp\ccDJhm3D.s:154    .text.NOS_Flash_Chunk_Copy:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccDJhm3D.s:160    .text.NOS_Flash_Chunk_Copy:00000000 NOS_Flash_Chunk_Copy
-C:\Users\igorn\AppData\Local\Temp\ccDJhm3D.s:188    .text.NOS_FlashMemory_Struct_AddChunk:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccDJhm3D.s:194    .text.NOS_FlashMemory_Struct_AddChunk:00000000 NOS_FlashMemory_Struct_AddChunk
-C:\Users\igorn\AppData\Local\Temp\ccDJhm3D.s:259    .text.NOS_FlashMemory_Struct_GetTotalSize:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccDJhm3D.s:265    .text.NOS_FlashMemory_Struct_GetTotalSize:00000000 NOS_FlashMemory_Struct_GetTotalSize
-C:\Users\igorn\AppData\Local\Temp\ccDJhm3D.s:283    .text.NOS_Flash_Memory_Struct_Save:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccDJhm3D.s:289    .text.NOS_Flash_Memory_Struct_Save:00000000 NOS_Flash_Memory_Struct_Save
-C:\Users\igorn\AppData\Local\Temp\ccDJhm3D.s:511    .text.NOS_Flash_Memory_Struct_Load:00000000 $t
-C:\Users\igorn\AppData\Local\Temp\ccDJhm3D.s:517    .text.NOS_Flash_Memory_Struct_Load:00000000 NOS_Flash_Memory_Struct_Load
+C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s:21     .text.NOS_FlashMemory_Struct_Validate:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s:27     .text.NOS_FlashMemory_Struct_Validate:00000000 NOS_FlashMemory_Struct_Validate
+C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s:102    .text.NOS_Flash_Chunk_Init:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s:108    .text.NOS_Flash_Chunk_Init:00000000 NOS_Flash_Chunk_Init
+C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s:132    .text.NOS_FlashMemory_Struct_Init:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s:138    .text.NOS_FlashMemory_Struct_Init:00000000 NOS_FlashMemory_Struct_Init
+C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s:159    .text.NOS_Flash_Chunk_Copy:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s:165    .text.NOS_Flash_Chunk_Copy:00000000 NOS_Flash_Chunk_Copy
+C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s:193    .text.NOS_FlashMemory_Struct_AddChunk:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s:199    .text.NOS_FlashMemory_Struct_AddChunk:00000000 NOS_FlashMemory_Struct_AddChunk
+C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s:274    .text.NOS_FlashMemory_Struct_GetTotalSize:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s:280    .text.NOS_FlashMemory_Struct_GetTotalSize:00000000 NOS_FlashMemory_Struct_GetTotalSize
+C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s:298    .text.NOS_Flash_Memory_Struct_Save:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s:304    .text.NOS_Flash_Memory_Struct_Save:00000000 NOS_Flash_Memory_Struct_Save
+C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s:600    .text.NOS_Flash_Memory_Struct_Load:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s:606    .text.NOS_Flash_Memory_Struct_Load:00000000 NOS_Flash_Memory_Struct_Load
+C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s:701    .text.GetPage:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s:707    .text.GetPage:00000000 GetPage
+C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s:762    .text.GetPage:00000030 $d
+C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s:769    .text.GetAddress:00000000 $t
+C:\Users\igorn\AppData\Local\Temp\ccHC7mYD.s:775    .text.GetAddress:00000000 GetAddress
 
 UNDEFINED SYMBOLS
 HAL_FLASH_Unlock

@@ -156,7 +156,14 @@ void NOS_WS2812B_Strip_Effect_Copy(Effect_Struct* destination,Effect_Struct* sou
     destination->step.data = source->step.data;
     destination->enabled = source->enabled;
     NOS_PixelColor_SetColor(&destination->color,source->color.R,source->color.G,source->color.B);
-    destination->effectId = source->effectId;   
+    destination->effectId = source->effectId;
+
+    destination->timer = 0;
+    destination->param1 = source->param1;
+    destination->param2 = source->param2;
+    destination->param3 = source->param3;
+    destination->param4 = source->param4;
+    
 }
 
 void NOS_WS2812B_Strip_Effect_Breathe_Handler(WS2812B_Strip* strip,Effect_Struct* effect)
