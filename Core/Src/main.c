@@ -96,7 +96,7 @@ Effect_Struct dotsA = {0};
 Effect_Struct walkingPixelA = {0};
 Effect_Struct steadyColorA = {0};
 
-Effect_Wrap effects[5];
+Effect_Wrap* effects;
 
 NOS_Short value;
 
@@ -106,6 +106,7 @@ UART_Message bluetoothMessage;
 NOS_Flash_Chunk tempInitChunk = {0};
 
 NOS_Flash_Memory_Struct flashMemoryStruct = {0};
+NOS_RAM_Struct ramMemoryStruct;
 
 PixelColor nullColor = {0,0,0};
 PixelColor white = {255,255,255};
@@ -289,6 +290,10 @@ int main(void)
   NOS_UART_ReceiveAbort(&UART2,&huart2);
   NOS_UART_ReceiveAbort(&UART1,&huart1);
 
+  NOS_RAM_Init(&ramMemoryStruct);
+
+  effects = NOS_RAM_Alloc(&ramMemoryStruct, sizeof(Effect_Struct) * 5);
+
   NOS_WS2812B_Strip_Effect_Copy(&effects[0],&breatheA);
   NOS_WS2812B_Strip_Effect_Copy(&effects[1],&rainbowA);
   NOS_WS2812B_Strip_Effect_Copy(&effects[2],&dotsA);
@@ -335,30 +340,13 @@ int main(void)
   NOS_WS2812B_Strip_Effect_Init(&effects[4],&white,0,0,0,0,0,0,0,0,EFFECT_STEADY_COLOR_ID,false);
   #endif
 
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripA,effects[0].effect);
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripB,effects[0].effect);
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripC,effects[0].effect);
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripD,effects[0].effect);
-
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripA,effects[1].effect);
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripB,effects[1].effect);
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripC,effects[1].effect);
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripD,effects[1].effect);
-
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripA,effects[2].effect);
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripB,effects[2].effect);
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripC,effects[2].effect);
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripD,effects[2].effect);
-
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripA,effects[3].effect);
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripB,effects[3].effect);
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripC,effects[3].effect);
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripD,effects[3].effect);
-
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripA,effects[4].effect);
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripB,effects[4].effect);
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripC,effects[4].effect);
-  NOS_WS2812B_Strip_Effects_AddEffect(&stripD,effects[4].effect);
+  for(int i = 0; i < 5; i++)
+  {
+    NOS_WS2812B_Strip_Effects_AddEffect(&stripA,effects[i].effect);
+    NOS_WS2812B_Strip_Effects_AddEffect(&stripB,effects[i].effect);
+    NOS_WS2812B_Strip_Effects_AddEffect(&stripC,effects[i].effect);
+    NOS_WS2812B_Strip_Effects_AddEffect(&stripD,effects[i].effect);
+  }
 
   SetRealTimeUnion(&RealTimeUnion,sTime.Seconds,sTime.Minutes,sTime.Hours,sDate.Date,sDate.Month,sDate.Year);
   PrintRealTimeUnion(&huart1,&RealTimeUnion);
@@ -403,13 +391,10 @@ int main(void)
         NOS_Strip_UART_ParseStringCommand(&stripC,UART1.rx_buff,UART1.lastMessageSize);
         NOS_Strip_UART_ParseStringCommand(&stripD,UART1.rx_buff,UART1.lastMessageSize);
 
-        
-        NOS_WS2812B_Strip_Effect_Copy(&effects[0].effect,&stripA.effects[0]);
-        NOS_WS2812B_Strip_Effect_Copy(&effects[1].effect,&stripA.effects[1]);
-        NOS_WS2812B_Strip_Effect_Copy(&effects[2].effect,&stripA.effects[2]);
-        NOS_WS2812B_Strip_Effect_Copy(&effects[3].effect,&stripA.effects[3]);
-        NOS_WS2812B_Strip_Effect_Copy(&effects[4].effect,&stripA.effects[4]);
-        
+        for(int i = 0; i < 5; i++)
+        {
+          NOS_WS2812B_Strip_Effect_Copy(&effects[i].effect,&stripA.effects[i]);
+        }
 
         NOS_Flash_Memory_Struct_Save(&flashMemoryStruct);
       }
@@ -427,8 +412,7 @@ int main(void)
 
     if(NOS_UART_CheckReceive(&UART2))
     {
-      NOS_Flash_Memory_Struct_Load(&flashMemoryStruct);
-      /*
+      
       if(NOS_UART_ParsePacket(&UART2,&lastMessage)) 
       {
       
@@ -503,7 +487,7 @@ int main(void)
       NOS_WS2812B_Strip_Update(&stripC);
       NOS_WS2812B_Strip_Update(&stripD);
       visHandle();
-      */
+      
      NOS_UART_EndReceive(&UART2);
     }
 
